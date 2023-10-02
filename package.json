@@ -1,0 +1,41 @@
+{
+  "name": "wordpress_theme_boilerplate",
+  "version": "1.0.2",
+  "description": "wordpress theme boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wp-start": "wp-env start",
+    "wp-stop": "wp-env stop",
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp",
+    "wp-env": "wp-env"
+  },
+  "author": "Mai_kotou",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@wordpress/env": "^4.1.2",
+    "autoprefixer": "^10.3.7",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.5",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.8",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "postcss": "^8.3.9",
+    "sass": "^1.43.2",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.8.0",
+    "jquery": "^3.6.0"
+  }
+}

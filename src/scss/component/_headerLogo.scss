@@ -1,0 +1,12 @@
+@use "./foundation/color" as color;
+@use "./foundation/mixin" as mix;
+
+.c-headerLogo{
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: color.$accent;
+  &__sub{
+    font-size: initial;
+    font-weight: normal;
+  }
+}

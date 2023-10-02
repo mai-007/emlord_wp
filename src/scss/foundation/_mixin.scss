@@ -1,0 +1,30 @@
+// ==============================
+//  width
+// ==============================
+
+//contents
+$content-pc: 960px;//1rem=10pxならば、960px
+$content-sp: 95%;
+
+// ==============================
+//  device-width
+//
+//  sp基準
+//  *sp・・・・設定なし（実質599px以下）
+//  *tb・・・・600px(min-width: 600px)
+//  *pc・・・・1025px(min-width: 1025px)
+// ==============================
+
+$tablet: 600px; //1rem=10pxならば、600px
+$desktop: 1025px; //1rem=10pxならば、1025px
+
+@mixin bp-tb {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin bp-pc {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}

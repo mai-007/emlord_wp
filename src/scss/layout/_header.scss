@@ -1,0 +1,20 @@
+// ==============================
+//  layout/header.scss
+// ==============================
+@use "./foundation/mixin" as mix;
+
+body{
+  position: relative;
+}
+
+.l-header{
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  @include mix.bp-pc{
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 1.6rem 3.2rem;
+  }
+}

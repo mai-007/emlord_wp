@@ -1,0 +1,16 @@
+// ==============================
+//  default_link
+// ==============================
+@use "./foundation/color" as color;
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover{
+  color: color.$blue;
+  text-decoration: underline;
+  transition: 0.8s;
+}
+button{
+  cursor: pointer;
+}
