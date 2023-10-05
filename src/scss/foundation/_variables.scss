@@ -1,0 +1,26 @@
+// ==============================
+//  variable
+// ==============================
+
+
+//color----------------------
+$gold: #a67c49;
+$gray:#e9e5e1;
+$sub: #0f0;
+$accent: #f0f;
+$blue: #00f;
+$darkBrown: #3a322a;
+
+
+//font-----------------------
+$kaisei: 'Kaisei Opti', serif;
+$en: 'Alex Brush', cursive;
+
+//media--------------------
+$sp: 375px; //1rem=10pxならば、1025px
+$tablet: 799px; //1rem=10pxならば、600px
+$desktop: 1280px; //1rem=10pxならば、1025px
+
+//other--------------------
+$border: 1px solid $darkBrown;
+$dropShadow: drop-shadow(0 6px 15px rgba(50,50,93,0.25)) drop-shadow(0 3px 7px rgba(0,0,0,0.3));

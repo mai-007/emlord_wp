@@ -1,0 +1,87 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-service{
+  &__tabs{
+    @include mix.flex(row,space-between);
+    &__item{
+      position: relative;
+      font-family: var.$kaisei;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 32px 72px;
+      border-radius: 8px 8px 0 0 ;
+      border: var.$border;
+    }
+    .active{
+      background: var.$darkBrown;
+      color: #fff;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 15px solid var.$darkBrown;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+      }
+    }
+  }
+  &__wrapper{
+    @include mix.flex(row, space-between, center);
+    flex-wrap: wrap;
+    padding: 56px;
+    background: #fff;
+    border: var.$border;
+    border-radius: 0 0 16px 16px;
+  }
+  &__btn{
+    width: 240px;
+    height: 240px;
+    margin-bottom: 32px;
+    padding: 32px;
+    border-radius: 16px;
+    background: #fff;
+    filter: var.$dropShadow;
+    &__image{
+      width: 72px;
+      height: 64px;
+      margin-bottom: 16px;
+    }
+    &__title{
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    &__subtitle{
+      @include mix.flex;
+      width: 100%;
+      font-size: 1rem;
+      font-family: var.$en;
+      color: var.$gold;
+      letter-spacing: 0.1em;
+      word-break: keep-all;
+      &::before{
+        content: '';
+        display: block;
+        width: 100%;
+        margin-right: 1rem;
+        height: 2.5px;
+        border-top: 1px solid var.$gold;
+        border-bottom: 0.5px solid var.$gold;
+      }
+      &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        margin-left: 1rem;
+        height: 2.5px;
+        border-top: 1px solid var.$gold;
+        border-bottom: 0.5px solid var.$gold;
+      }
+    }
+    &__inner{
+      @include mix.flex(column,center,center);
+    }
+  }
+}

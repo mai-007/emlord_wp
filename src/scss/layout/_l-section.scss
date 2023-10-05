@@ -1,0 +1,35 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.l-section01{
+  position: relative;
+  max-width: mix.$content-l;
+  margin: 0 auto;
+  padding: 7.5rem 0 10rem;
+}
+.l-section02{
+  padding: 7.5rem 0 10rem;
+  &--bg01{
+    @extend .l-section02;
+    background: var.$darkBrown;
+  }
+  &--bg02{
+    @extend .l-section02;
+    background: var.$gray;
+  }
+}
+.l-section03{
+  max-width: mix.$content-m;
+  margin: 0 auto;
+}
+.l-section--half{
+  max-width: calc((100% - 56px) / 2);
+}
+
+.l-flexRowToColumn{
+  display: flex;
+  justify-content: space-between;
+  @include mix.mq(tab){
+    flex-direction: column;
+  }
+}

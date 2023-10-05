@@ -8,13 +8,17 @@ body{
 }
 
 .l-header{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,50%);
+  z-index: 99999;
+  width: 88.8889%;
+  height: 6.5rem;
   display: flex;
-  flex-direction: column;
-  padding: 0.8rem;
-  @include mix.bp-pc{
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 1.6rem 3.2rem;
+  padding: 0 2.5rem;
+  background: #fff;
+  border-radius: 2rem;
   }
-}

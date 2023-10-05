@@ -1,0 +1,30 @@
+@use "./foundation/variables" as val;
+
+
+.c-information{
+  position: absolute;
+  top: -2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45rem;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid val.$darkBrown;
+  &__item{
+    display: flex;
+    align-items: center;
+  }
+  &__controller{
+    position: relative;
+    img:first-of-type{
+      margin-right: 8px;
+      &::after{
+        content: '|';
+        display: block;
+        position: absolute;
+      }
+    }
+  }
+}

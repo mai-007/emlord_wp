@@ -3,28 +3,29 @@
 // ==============================
 
 //contents
-$content-pc: 960px;//1rem=10pxならば、960px
+$content-l: 80rem;//1rem=10pxならば、1280px
+$content-m: 60rem;//1rem=10pxならば、960px
 $content-sp: 95%;
 
-// ==============================
-//  device-width
-//
-//  sp基準
-//  *sp・・・・設定なし（実質599px以下）
-//  *tb・・・・600px(min-width: 600px)
-//  *pc・・・・1025px(min-width: 1025px)
-// ==============================
 
-$tablet: 600px; //1rem=10pxならば、600px
-$desktop: 1025px; //1rem=10pxならば、1025px
+/* mediaQuery */
+$breakpoint:(
+  'pc': 'screen and (max-width:1379px)',
+  '1000': 'screen and (max-width:1000px)',
+  'tab': 'screen and (max-width:799px)',
+  'sp': 'screen and (max-width:599px)',
+)!default;
 
-@mixin bp-tb {
-  @media screen and (min-width: $tablet) {
+@mixin mq($bp){
+  @media #{map-get($breakpoint,$bp)}{
     @content;
   }
 }
-@mixin bp-pc {
-  @media screen and (min-width: $desktop) {
-    @content;
-  }
+
+/* flexItem */
+@mixin flex($direction: row, $justify: center, $align: center){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }

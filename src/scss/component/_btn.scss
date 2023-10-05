@@ -1,0 +1,14 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-circleArrow{
+  @include mix.flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: var.$border;
+  &__image{
+    width: 7.5px;
+    height: auto;
+  }
+}

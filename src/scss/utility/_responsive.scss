@@ -4,15 +4,15 @@
 @use "./foundation/mixin" as mix;
 
 .u-sp{
-  display: block;
-  @include mix.bp-pc{
-    display: none;
+  display: none;
+  @include mix.mq(sp){
+    display: block;
   }
 }
 
 .u-pc{
   display: none;
-  @include mix.bp-pc{
+  @include mix.mq(pc){
     display: block;
   }
 }

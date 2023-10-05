@@ -1,0 +1,17 @@
+@use "./foundation/variables" as val;
+
+.c-title{
+  &--half{
+    @extend .c-title;
+    margin-bottom: 1rem;
+  }
+  &__m{
+    font-size: 2.5rem;
+    &__sub{
+      font-family: val.$en;
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      color: val.$gold
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use "./foundation/variables" as val;
+@use "./foundation/mixin" as mix;
+
+.c-mailMember{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  &__btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: val.$gold;
+    color: #fff;
+    border-radius: 0.5rem;
+    img{
+      padding-right: 0.5rem;
+    }
+  }
+}

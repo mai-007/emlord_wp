@@ -24,6 +24,8 @@ jquery削除
 # できること
 - ローカルでWordPressのテーマ開発
 
+- 画像パスの簡略化
+
 - SCSSのコンパイル
 
 - JSのバンドル
@@ -58,7 +60,6 @@ package.json : パッケージの設定ファイル
 webpack.config.js : webpackの設定ファイル
 
 
-
 # 開発スタート
 1. `npm start` でBrowserSyncを起動させると、http://localhost:8888/ でブラウザが開きます。
 
@@ -75,5 +76,6 @@ webpack.config.js : webpackの設定ファイル
 7. my_themeのフォルダ名、style.cssのTheme Name:を変更してアップしましょう。
 
 
-# scssについて
-既存のscssファイルは、モバイルファーストで開発することを前提としています。
+# 画像のパス
+function.phpでパス簡略化を設定。
+例.echo get_theme_img('/images/common/logo.png')

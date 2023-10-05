@@ -1,0 +1,51 @@
+@use "./foundation/variables" as var;
+
+.c-news{
+  &__card{
+    position: relative;
+    border: 3px solid var.$darkBrown;
+    border-radius: 32px;
+    color: #fff;
+    &__inner{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 32px;
+    }
+    &__image img{
+      border-radius: 32px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    &__title{
+      max-width: 45%;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    &__date{
+      letter-spacing: 0.01em;
+    }
+    &__controller{
+      position: absolute;
+      top: 50%;
+      transform: translate(50%, -50%);
+      right: 32px;
+      span{
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-bottom: 8px;
+        border-radius: 50%;
+        background: #fff;
+      }
+    }
+    &__change{
+      position: absolute;
+      right: 32px;
+      bottom: 32px;
+    }
+  }
+}

@@ -1,36 +1,32 @@
-@use "./foundation/color" as color;
+@use "./foundation/variables" as val;
 @use "./foundation/mixin" as mix;
 
 .c-nav{
-  width: 100vw;
-  position: absolute;
-  top:0;
-  right:100rem;
-  padding: 8rem 0;
-  font-size: 2.4rem;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: color.$black;
-  transition: all 1s ease-in;
-  @include mix.bp-pc{
-    position: initial;
-    justify-content: space-between;
-    flex-direction: row;
-    background: color.$blue;
-    width: 60vw;
-    padding: 2.4rem;
-  }
+  flex-direction: row;
   &__li{
-    padding-bottom: 3.2rem;
-    @include mix.bp-pc{
-      padding-bottom: 0;
-      padding-right: 1.6rem;
-    }
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
   }
   &__item{
-    color: #fff;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: val.$kaisei;
+    color: val.$darkBrown;
+    border-left:1px dotted rgba(58, 50, 42, 0.3);
+    font-size: 0.875rem;
+    word-break: keep-all;
+    &:hover{
+      color: val.$gold;
+    }
+    &__image{
+      margin-bottom: 0.5rem;
+    }
   }
   &.active{
   top: 0;
