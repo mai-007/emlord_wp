@@ -1,9 +1,34 @@
 @use "./foundation/variables" as val;
 
 .c-title{
-  &--half{
-    @extend .c-title;
-    margin-bottom: 1rem;
+  &__l{
+    font-size: 3rem;
+    line-height: 2em;
+    text-align: center;
+    &__sub{
+      display: flex;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto 56px;
+      font-family: val.$en;
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      color: val.$gold;
+      &::before,&::after{
+        content: '';
+        display: block;
+        border-top: 1px solid val.$gold;
+        border-bottom: 0.5px solid val.$gold;
+        height: 4px;
+        flex-grow: 1;
+      }
+      &::before{
+        margin-right: 1rem;;
+      }
+      &::after{
+        margin-left: 1rem;
+      }
+    }
   }
   &__m{
     font-size: 2.5rem;
@@ -13,5 +38,12 @@
       letter-spacing: 0.1em;
       color: val.$gold
     }
+  }
+  &--half{
+    @extend .c-title;
+    margin-bottom: 1rem;
+  }
+  &__left{
+    font-size: 3rem;
   }
 }

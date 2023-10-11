@@ -3,3 +3,13 @@
   height: auto;
   object-fit: cover;
 }
+
+/*page-nation*/
+.splide__pagination{
+  position: unset;
+  margin-top: 2rem;
+  &__page{
+    width: 10px;
+    height: 10px;
+  }
+}

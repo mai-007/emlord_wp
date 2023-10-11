@@ -1,20 +1,25 @@
 <div class="l-section03 c-service">
+  <h3 class="c-title__left">サービス一覧</h3>
+  <p class="c-service__text">車に関することならお近くのエムロードへお任せください。</p>
+
   <ul class="c-service__tabs">
     <?php
       $tabNavigation = [
         '愛車のメンテナンス',
         '修理・交換',
-        '車に乗る・保険'
+        '車に乗る・保険',
       ];?>
-      <?php foreach($tabNavigation as $value):?>
-    <li class="c-service__tabs__item active">
+      <?php foreach($tabNavigation as $index=>$value):?>
+    <li class="c-service__tabs__item" data-tab=<?php echo $index;?>>
       <?php echo $value;?>
     </li>
     <?php endforeach;?>
   </ul>
-  <div class="c-service__wrapper">
+
+<div>
+  <div class="c-service__wrapper is-show" data-panel="0">
   <?php
-      $tabItem = [
+      $tabItem01 = [
         [ 'name' => '車検・法定点検',
           'en' => 'inspection',
           'href' => '#',
@@ -46,7 +51,98 @@
           'image' => 'service/battery.svg'
         ],
       ];?>
-    <?php foreach($tabItem as $key => $value):?>
+
+    <?php foreach($tabItem01 as $key => $value):?>
+    <div class="c-service__btn">
+      <a href="<?php echo $value['href'];?>">
+        <div class="c-service__btn__inner">
+          <img class="c-service__btn__image"
+            src="<?php echo get_theme_img($value['image']);?>" alt="">
+          <h3 class="c-service__btn__title">
+          <?php echo $value['name'];?>
+          </h3>
+          <p class="c-service__btn__subtitle">
+          <?php echo $value['en'];?>
+          </p>
+          <div class="c-circleArrow">
+            <img class="c-circleArrow__image" src="<?php echo get_theme_img('common/arrow_right-small.svg');?>" alt="クリック">
+          </div>
+        </div>
+      </a>
+    </div>
+    <?php endforeach;?>
+    </div>
+
+    <div class="c-service__wrapper" data-panel="1">
+    <?php
+      $tabItem02 = [
+        [ 'name' => 'キズ・凹み修理',
+          'en' => 'repair',
+          'href' => '#',
+          'image' => 'service/repair.svg'
+        ],
+        [ 'name' => 'ブレーキ関連',
+        'en' => 'brake',
+        'href' => '#',
+        'image' => 'service/brake.svg'
+        ],
+        [ 'name' => 'エアコン',
+        'en' => 'aircon',
+        'href' => '#',
+        'image' => 'service/aircon.svg'
+        ],
+        [ 'name' => 'ラジエーター',
+          'en' => 'radiator',
+          'href' => '#',
+          'image' => 'service/radiator.svg'
+        ],
+      ];?>
+    <?php foreach($tabItem02 as $key => $value):?>
+    <div class="c-service__btn">
+      <a href="<?php echo $value['href'];?>">
+        <div class="c-service__btn__inner">
+          <img class="c-service__btn__image"
+            src="<?php echo get_theme_img($value['image']);?>" alt="">
+          <h3 class="c-service__btn__title">
+          <?php echo $value['name'];?>
+          </h3>
+          <p class="c-service__btn__subtitle">
+          <?php echo $value['en'];?>
+          </p>
+          <div class="c-circleArrow">
+            <img class="c-circleArrow__image" src="<?php echo get_theme_img('common/arrow_right-small.svg');?>" alt="クリック">
+          </div>
+        </div>
+      </a>
+    </div>
+    <?php endforeach;?>
+    </div>
+
+    <div class="c-service__wrapper" data-panel="2">
+    <?php
+      $tabItem03 = [
+        [ 'name' => '車買取・販売',
+          'en' => 'sales',
+          'href' => '#',
+          'image' => 'service/purchaseAndSales.svg'
+        ],
+        [ 'name' => 'レンタカー',
+        'en' => 'rental',
+        'href' => '#',
+        'image' => 'service/rental.svg'
+        ],
+        [ 'name' => '自動車保険',
+        'en' => 'insurance',
+        'href' => '#',
+        'image' => 'service/insurance.svg'
+        ],
+        [ 'name' => 'カーリース',
+          'en' => 'lease',
+          'href' => '#',
+          'image' => 'service/carLease.svg'
+        ],
+      ];?>
+    <?php foreach($tabItem03 as $key => $value):?>
     <div class="c-service__btn">
       <a href="<?php echo $value['href'];?>">
         <div class="c-service__btn__inner">

@@ -27,9 +27,9 @@
 @use "./component/c-splide";
 @use "./component/c-service";
 
-// project ----------------------------
-//@use "./project/align";
+// page ----------------------------
+@use "./page/p-frontPage";
 
 // utility ----------------------------
-@use "./utility/align";
+@use "./utility/utility";
 @use "./utility/responsive";

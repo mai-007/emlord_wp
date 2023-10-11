@@ -1,0 +1,22 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+// ==============================
+//  utility/utility.scss
+// ==============================
+
+
+//align------------------------------
+.u-align-center {text-align: center;}
+.u-align-left {text-align: left;}
+.u-align-right {text-align: right;}
+
+//text------------------------------
+.u-textM{
+  font-size: 1.5rem;
+}
+
+//color-----------------------------
+.u-red{
+  color: var.$red;
+}

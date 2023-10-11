@@ -2,6 +2,13 @@
 @use "./foundation/mixin" as mix;
 
 .c-service{
+  .c-title__left{
+    margin-bottom: 42px;
+  }
+  .c-service__text{
+    font-size: 1.5rem;
+    margin-bottom: 42px;
+  }
   &__tabs{
     @include mix.flex(row,space-between);
     &__item{
@@ -13,7 +20,7 @@
       border-radius: 8px 8px 0 0 ;
       border: var.$border;
     }
-    .active{
+    .is-active{
       background: var.$darkBrown;
       color: #fff;
       &::after{
@@ -35,6 +42,10 @@
     background: #fff;
     border: var.$border;
     border-radius: 0 0 16px 16px;
+    display: none;
+    &.is-show{
+      display: flex;
+    }
   }
   &__btn{
     width: 240px;
