@@ -4,21 +4,24 @@
 .c-nav{
   display: flex;
   flex-direction: row;
+  width: 100%;
   &__li{
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    width: calc(100% / 6);
+    border-left:1px dotted rgba(58, 50, 42, 0.3);
+    &:first-of-type{
+      border: none;
+    }
   }
   &__item{
-    width: 100%;
-    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: val.$kaisei;
     color: val.$darkBrown;
-    border-left:1px dotted rgba(58, 50, 42, 0.3);
     font-size: 0.875rem;
     word-break: keep-all;
     &:hover{

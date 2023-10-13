@@ -9,4 +9,16 @@
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.01em;
+  .c-mapIcon{
+    display: flex;
+    align-items: center;
+    &__text{
+      margin-right: 4px;
+    }
+  }
+  &--footer{
+    @extend .c-sns-nav;
+    position: unset;
+    width: 22rem;
+  }
 }

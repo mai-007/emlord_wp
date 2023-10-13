@@ -1,4 +1,4 @@
-@use "./foundation/variables" as val;
+@use "./foundation/variables" as var;
 @use "./foundation/mixin" as mix;
 
 .c-mailMember{
@@ -13,7 +13,7 @@
     justify-content: center;
     width: 100%;
     padding: 1rem 2rem;
-    background: val.$gold;
+    background: var.$gold;
     color: #fff;
     border-radius: 0.5rem;
     img{

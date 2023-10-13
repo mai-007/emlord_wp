@@ -17,8 +17,12 @@
     @extend .l-section02;
     background: var.$gray;
   }
+  &--bg03{
+    @extend .l-section02;
+    background: #fff;
+  }
 }
-.l-section03{
+.l-containerM{
   max-width: mix.$content-m;
   margin: 0 auto;
 }
@@ -32,4 +36,8 @@
   @include mix.mq(tab){
     flex-direction: column;
   }
+}
+.l-flexColumn{
+  display: flex;
+  flex-direction: column;
 }

@@ -9,8 +9,9 @@ body{
 
 .l-header{
   position: absolute;
+  top: 16px;
   left: 50%;
-  transform: translate(-50%,50%);
+  transform: translateX(-50%);
   z-index: 99999;
   width: 88.8889%;
   height: 6.5rem;
@@ -21,4 +22,15 @@ body{
   padding: 0 2.5rem;
   background: #fff;
   border-radius: 2rem;
+  @include mix.mq(pc){
+    width: 95%;
+  }
+  }
+
+.l-nav{
+  width: 75%;
+  max-width: 1520px;
+  @include mix.mq(pc){
+    width: 60%;
+  }
   }

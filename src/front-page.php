@@ -78,31 +78,154 @@
       <h3 class="c-title__l">熊本地方に<span class="u-red">18店舗</span><br>お近くのサービスステーションが<span class="u-red">見つかります</span></h3>
       <p class="c-title__l__sub">Always close to you</p>
   </div>
-    <p class="u-textM u-align-center">
+    <p class="c-title__text">
         いつでも貴方の近くに。<br>
         困った際にはお気軽にお近くの店舗へご相談ください。
       </p>
       <div class="p-map">
         <iframe src="https://www.google.com/maps/d/embed?mid=11VoNUq8872gqM3knLCiq0WXCKSjzBrc&ehbc=2E312F&noprof=1" width="100%" height="645px" allowfullscreen>
         </iframe>
+        <button class="c-button01">
+          <a href="#">
+          店舗一覧へ
+          <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+          </a>
+        </button>
       </div>
-
 </section>
 
-<section class="l-section c-company">
-  <!-- company -->
+<!-- About -->
+<section class="l-section02--bg03 p-company">
+  <div class="l-containerM">
+  <img class="p-company__logo" src="<?php echo get_theme_img('common/logo.png');?>" alt="エムロード ロゴ">
+  <div class="c-title">
+      <h3 class="c-title__l">エムロードは<span class="u-gold">車のトータルサポート</span>企業です</span></h3>
+      <p class="c-title__l__sub">Total support</p>
+  </div>
+    <p class="c-title__text">
+    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+      </p>
+      <button class="c-button01">
+          <a href="#">
+          会社案内
+          <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+          </a>
+        </button>
+  </div>
 </section>
 
-<section class="l-section">
-  <!-- 法人むけ -->
+<!-- Services for Businesses -->
+<section class="l-section02 p-business">
+  <div class="l-containerM">
+    <div class="c-title">
+        <h3 class="c-title__l">
+          <span class="u-gold">企業</span>向けサービス</h3>
+        <p class="c-title__l__sub">
+          Services for Businesses
+        </p>
+        <p class="c-title__text">
+エムロードでは多数の法人様へのサービスも行っております。<br>
+お気軽にお問い合わせください。
+      </p>
+    </div>
+  <div class="c-service--business">
+  <?php
+      $businessItem = [
+        [ 'name' => '法人給油カード',
+          'en' => 'EneosFC',
+          'href' => '#',
+          'image' => 'businessService/businessCard.svg'
+        ],
+        [ 'name' => '産業エネルギー',
+        'en' => 'Energy',
+        'href' => '#',
+        'image' => 'businessService/industrialEnergy.svg'
+        ],
+        [ 'name' => '太陽光関連事業',
+        'en' => 'Sunlight',
+        'href' => '#',
+        'image' => 'businessService/sunlight.svg'
+        ],
+      ];?>
+
+    <?php foreach($businessItem as $key => $value):?>
+    <div class="c-service__btn">
+      <a href="<?php echo $value['href'];?>">
+        <div class="c-service__btn__inner">
+          <img class="c-service__btn__image"
+            src="<?php echo get_theme_img($value['image']);?>" alt="">
+          <h3 class="c-service__btn__title">
+          <?php echo $value['name'];?>
+          </h3>
+          <p class="c-service__btn__subtitle">
+          <?php echo $value['en'];?>
+          </p>
+          <div class="c-circleArrow">
+            <img class="c-circleArrow__image" src="<?php echo get_theme_img('common/arrow_right-small.svg');?>" alt="クリック">
+          </div>
+        </div>
+      </a>
+    </div>
+      <?php endforeach;?>
+    </div>
+  </div>
 </section>
 
-<section class="l-section c-recruit">
-  <!-- 採用 -->
+<section class="l-section02--bg03 p-recruit">
+  <div class="l-containerM">
+    <div class="c-title">
+        <h3 class="c-title__l">
+          <span class="u-gold">採用</span>について</h3>
+        <p class="c-title__l__sub">
+          Recruit
+        </p>
+        <p class="c-title__text">
+        人が好き過ぎて面倒見すぎてしまう。<br>そんな、人と会社と熊本を輝かせる企業で一緒に働きませんか？
+      </p>
+    </div>
+    <button class="c-button01">
+          <a href="#">
+          採用情報ページへ
+          <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+          </a>
+        </button>
+  </div>
 </section>
 
-<section class="l-section c-video">
-  <!-- 動画 -->
+
+<!-- media -->
+<section class="l-section02 p-media">
+  <div class="c-title">
+    <h3 class="c-title__l">
+      <span class="u-gold">
+        動画・CM</span>一覧
+      </h3>
+      <p class="c-title__l__sub">
+          Media
+      </p>
+      <p class="c-title__text">
+        エムロードの本気とユーモアを是非ご覧ください</p>
+  </div>
+  <picture class="p-media__image">
+    <source
+      media="(max-width: 799px)"
+      srcset="#"
+      sizes="100%"
+    >
+    <source
+      media="(min-width: 799px)"
+      srcset="  <?php echo get_theme_img('frontpage/sd_youtube.jpg');?> w849,
+  <?php echo get_theme_img('frontpage/sd_youtube@2x.jpg');?> w1695,"
+      sizes="849px"
+    >
+    <img src="<?php echo get_theme_img('frontpage/sd_youtube.jpg');?>" alt="">
+  </picture>
+  <button class="c-button01">
+          <a href="#">
+          動画・CM一覧へ
+          <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+          </a>
+        </button>
 </section>
 </main>
 <?php

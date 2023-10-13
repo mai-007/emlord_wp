@@ -7,15 +7,15 @@
 // layout -----------------------------
 @use "./layout/base";
 @use "./layout/header";
-@use "./layout/footer";
+@use "./layout/l-footer";
 @use "./layout/l-section";
 @use "./layout/l-mainView";
 
 // component --------------------------
-@use "./component/btn";
+@use "./component/c-button";
 @use "./component/hamburger";
-@use "./component/headerLogo";
-@use "./component/nav";
+@use "./component/c-logo";
+@use "./component/c-nav";
 @use "./component/c-mailMember";
 @use "./component/c-hightLight";
 @use "./component/c-information";

@@ -11,9 +11,8 @@
 </head>
 <body id="<?php echo esc_attr( $post->post_name ); ?>" <?php body_class(); ?>>
 <header id="header" class="l-header">
-  <div class="c-headerLogo">
-    <h1><img src="<?php echo get_theme_img('common/logo.png');?>" alt="エムロードのロゴマーク"></h1>
-  </div>
+    <h1 class="c-logo"><img src="<?php echo get_theme_img('common/logo.png');?>" alt="エムロードのロゴマーク">
+  </h1>
   <!-- /.c-headerLogo -->
   <nav id="nav" class="l-nav">
     <button id="js-hamburger" class="c-hamburger u-sp">
@@ -44,8 +43,9 @@
         </a>
       </li>
       <?php endforeach;?>
-
-      <div class="c-mailMember">
+    </ul>
+  </nav>
+  <div class="c-mailMember">
         <span class="c-hightLight-01">
         \ スマホへ割引きクーポンをお届け /
         </span>
@@ -53,9 +53,7 @@
           <img src="<?php echo get_theme_img('common/icon_mail-white.svg');?>" alt="">
           メール会員登録
         </a>
-      </div><!-- /.c-contact -->
-    </ul>
-  </nav>
+      </div>
 </header>
 
 <section id="js-vegas" class="l-mainView">
