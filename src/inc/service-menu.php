@@ -1,3 +1,22 @@
+<ul class="c-service__tabs">
+    <?php
+      $tabNavigation = [
+        '愛車のメンテナンス',
+        '修理・交換',
+        '車に乗る・保険',
+      ];?>
+      <?php foreach($tabNavigation as $index=>$value):?>
+        <?php if($index == 0):?>
+          <li class="c-service__tabs__item is-active" data-tab=<?php echo $index;?>>
+          <?php echo $value;?>
+        <?php else:?>
+    <li class="c-service__tabs__item" data-tab=<?php echo $index;?>>
+      <?php echo $value;?>
+    </li>
+    <?php endif;?>
+    <?php endforeach;?>
+  </ul>
+
 <div>
   <div class="c-service__wrapper is-show" data-panel="0">
   <?php

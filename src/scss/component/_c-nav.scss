@@ -6,6 +6,7 @@
   flex-direction: row;
   width: 100%;
   &__li{
+    position: relative;
     width: 9.5rem;
     display: flex;
     justify-content: center;
@@ -38,5 +39,24 @@
   top: 0;
   left: 0;
   z-index: 100;
+  }
+  &__dropMenu{
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: -5rem;
+    width: 60rem;
+    &:before{
+      content: "";
+      display: block;
+      margin-left: 6rem;
+      width: 56px;
+      height: 30px;
+      background: #fff;
+      clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    }
+    &.is-show{
+      display: block;
+    }
   }
 }

@@ -13,14 +13,11 @@ export default function serviceTab() {
 
     // クリックされた要素の親要素と、その子要素を取得
     const tabList = e.currentTarget.closest('.c-service__tabs');
-    console.log(tabList);
 
     const tabItems = tabList.querySelectorAll('.c-service__tabs__item');
 
     // クリックされた要素の親要素の兄弟要素の子要素を取得
     const tabPanelItems = tabList.nextElementSibling.querySelectorAll('.c-service__wrapper');
-
-    console.log(tabPanelItems);
 
     // クリックされたtabの同階層のmenuとpanelのクラスを削除
     tabItems.forEach((tabItem) => {
