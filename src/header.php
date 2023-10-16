@@ -35,7 +35,6 @@
       ;?>
       <?php foreach($navlist as $key => $value):?>
       <?php if($key == 0):?>
-
       <li class="c-nav__li" data-tab="<?php echo $key;?>">
         <a class="c-nav__item" href="<?php echo $value['href'];?>">
           <span class="c-nav__item__image">
@@ -45,6 +44,18 @@
         </a>
         <div class="c-nav__dropMenu" data-panel="0">
         <?php include('inc/service-menu.php');?>
+        </div>
+      </li>
+      <?php elseif($key == 1):?>
+      <li class="c-nav__li" data-tab="<?php echo $key;?>">
+        <a class="c-nav__item" href="<?php echo $value['href'];?>">
+          <span class="c-nav__item__image">
+            <img src="<?php echo get_theme_img($value['image']);?>" alt="">
+          </span>
+          <span class="c-nav__item__text"><?php echo $value['name'];?></span>
+        </a>
+        <div class="c-nav__dropMenu" data-panel="1">
+        <?php include('inc/store-nav.php');?>
         </div>
       </li>
       <?php else:?>
