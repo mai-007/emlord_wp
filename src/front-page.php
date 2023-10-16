@@ -70,7 +70,7 @@
 </section>
 
 <section class="l-section02--bg02">
-  <?php include('inc/service.php');?>
+  <?php include('inc/service-section.php');?>
 </section>
 
 <section class="l-section02 c-map">

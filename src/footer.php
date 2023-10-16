@@ -18,10 +18,10 @@
     <img src="<?php echo get_theme_img('common/banner_coating-sp.png') ;?>" alt="" alt="">
     <img src="<?php echo get_theme_img('common/banner_inspection-sp.png') ;?>" alt="" alt="">
   </div>
-  <div class="l-flexColumn">
-    <nav class="l-footer__service">
-      <ul class="l-footer__service__block">
-          <h6 class="l-footer__title">
+  <div class="l-flexColumn l-footerList">
+    <nav class="l-footerList__service">
+      <ul class="l-footerList__service__block">
+          <h6 class="l-footerList__title">
             愛車のメンテナンス
           </h6>
           <?php
@@ -52,7 +52,7 @@
             ]
           ;?>
             <?php foreach($footerService01 as $value):?>
-            <li class="l-footer__item">
+            <li class="l-footerList__item">
               <a href="<?php echo $value['href'];?>">
               <span><?php echo $value['name'];?></span>
               <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
@@ -60,8 +60,8 @@
             </li>
             <?php endforeach;?>
           </ul>
-          <ul class="l-footer__service__block">
-          <h6 class="l-footer__title">
+          <ul class="l-footerList__service__block">
+          <h6 class="l-footerList__title">
             修理・交換
           </h6>
           <?php
@@ -84,7 +84,7 @@
             ]
           ;?>
             <?php foreach($footerService02 as $value):?>
-            <li class="l-footer__item">
+            <li class="l-footerList__item">
               <a href="<?php echo $value['href'];?>">
               <span><?php echo $value['name'];?></span>
               <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
@@ -92,8 +92,8 @@
             </li>
             <?php endforeach;?>
           </ul>
-          <ul class="l-footer__service__block">
-          <h6 class="l-footer__title">
+          <ul class="l-footerList__service__block">
+          <h6 class="l-footerList__title">
             修理・交換
           </h6>
           <?php
@@ -116,7 +116,7 @@
             ]
           ;?>
             <?php foreach($footerService03 as $value):?>
-            <li class="l-footer__item">
+            <li class="l-footerList__item">
               <a href="<?php echo $value['href'];?>">
               <span><?php echo $value['name'];?></span>
               <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
@@ -126,7 +126,7 @@
           </ul>
         </nav>
 
-    <nav class="l-footer__sitemap">
+    <nav class="l-footerList__sitemap">
       <ul>
       <?php
             $footerSitemap = [
@@ -160,7 +160,7 @@
             ]
           ;?>
             <?php foreach($footerSitemap as $value):?>
-            <li class="l-footer__title">
+            <li class="l-footerList__title">
               <a href="<?php echo $value['href'];?>">
               <?php echo $value['name'];?>
               <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">

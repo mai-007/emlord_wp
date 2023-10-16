@@ -6,13 +6,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
   &__btn{
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 10px 24px;
     background: var.$gold;
     color: #fff;
     border-radius: 0.5rem;

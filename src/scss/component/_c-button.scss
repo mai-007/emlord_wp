@@ -7,6 +7,11 @@
   height: 40px;
   border-radius: 50%;
   border: var.$border;
+  transition: .5s;
+  &:hover{
+    background: var.$gold;
+    border: none;
+  }
   &__image{
     width: 7.5px;
     height: auto;
@@ -36,14 +41,21 @@
   width: 40rem;
   padding: 6px;
   background: var.$darkBrown;
+  transition: 0.5s;
   a{
     border: 1px dashed #fff;
     border-radius: 2rem;
+    &:hover{
+      color: #fff;
+    }
   }
   img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 2rem;
+  }
+  &:hover{
+    background: var.$gold;
   }
 }

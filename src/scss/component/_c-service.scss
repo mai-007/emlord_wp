@@ -61,6 +61,10 @@
     border-radius: 16px;
     background: #fff;
     filter: var.$dropShadow;
+    transition: .5s;
+    &:hover{
+      filter: var.$dropShadowHover;
+    }
     &__image{
       width: 72px;
       height: 64px;

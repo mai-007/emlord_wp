@@ -8,27 +8,26 @@ body{
 }
 
 .l-header{
-  position: absolute;
+  position: fixed;
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99999;
   width: 88.8889%;
-  height: 6.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2.5rem;
+  padding: 1rem 1.5rem;
   background: #fff;
-  border-radius: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0,0,0,.05);
   @include mix.mq(pc){
     width: 95%;
   }
   }
 
 .l-nav{
-  width: 75%;
   max-width: 1520px;
   @include mix.mq(pc){
     width: 60%;
