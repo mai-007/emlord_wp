@@ -1,12 +1,14 @@
+<!-- 404.php -->
 <?php get_header(); ?>
-
-<main class="c-notFound__wrap">
-  <h1 class="c-notFound__title">404エラー</h1>
-  <p class="c-notFound__text">お探しのページは見つかりませんでした。</p>
-  <button class="c-btnWrap">
-    <a href="<?php echo home_url();?>">トップページへ戻る</a>
-  </button>
-</main>
-
+<div id="main">
+  <h2>404 Not Found（ページが見つかりませんでした）</h2>
+  <p><img src="<?php echo get_theme_file_uri('/images/error_message.png'); ?>" alt="エラーメッセージの画像"></p>
+  <p>指定された以下のページは存在しないか、または移動した可能性があります。</p>
+  <p class="error_url">URL ：<span><?php echo get_pagenum_link(); ?></span></p>
+  <p>現在表示する記事がありません。よろしければ、検索ボックスにお探しのコンテンツに該当するキーワードを入力して下さい。</p>
+  <?php get_search_form(); ?><!-- 検索フォームを表示 -->
+  <p><a href="<?php echo home_url(); ?>">トップページへ</a></p>
+</div>
 <?php
+get_sidebar();
 get_footer();
