@@ -18,7 +18,7 @@
   </ul>
 
 <div>
-  <div class="c-service__wrapper is-show" data-panel="0">
+  <div class="c-service__wrap is-show" data-panel="0">
   <?php
       $tabItem01 = [
         [ 'name' => '車検・法定点検',
@@ -74,7 +74,7 @@
     <?php endforeach;?>
     </div>
 
-    <div class="c-service__wrapper" data-panel="1">
+    <div class="c-service__wrap" data-panel="1">
     <?php
       $tabItem02 = [
         [ 'name' => 'キズ・凹み修理',
@@ -119,7 +119,7 @@
     <?php endforeach;?>
     </div>
 
-    <div class="c-service__wrapper" data-panel="2">
+    <div class="c-service__wrap" data-panel="2">
     <?php
       $tabItem03 = [
         [ 'name' => '車買取・販売',

@@ -5,12 +5,7 @@
       src="<?php echo get_theme_img('common/logo.png');?>" alt="エムロードのロゴマーク">
     <div class="c-sns-nav--footer">
       <span>FOLLOW US</span>
-      <img src="<?php echo get_theme_img('common/sns_icon-instagram.svg') ;?>" alt="">
-      <img src="<?php echo get_theme_img('common/sns_icon-youtube.svg') ;?>" alt="">
-      <span class="c-mapIcon">
-        <span class="c-mapIcon__text">MAP</span>
-        <img src="<?php echo get_theme_img('common/icon_map.svg') ;?>" alt="">
-      </span>
+        <?php include('inc/sns.php');?>
     </div>
   </div>
 <div class="l-footer__main l-flexRowToColumn">

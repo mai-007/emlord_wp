@@ -1,4 +1,6 @@
-<ul class="c-service__tabs c-store-nav">
+<div class="c-dropMenu__wrap">
+<h3 class="c-title__m c-dropMenu__title">サービスステーション一覧</h3>
+<ul>
     <?php
       $stores = [
         [
@@ -70,19 +72,13 @@
           'href' => '#'
         ],
       ];?>
-
-<div>
-  <div class="c-service__wrapper">
-  <h3 class="c-title__m">サービスステーション一覧</h3>
     <?php foreach($stores as $store => $value):?>
-    <div class="c-service__btn">
       <li class="l-footerList__title">
         <a href="<?php echo $value['href'];?>">
         <?php echo $value['name'];?>
-        <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+        <img src="<?php echo get_theme_img('common/arrow_02.svg');?>" alt="">
         </a>
       </li>
-    </div>
     <?php endforeach;?>
-    </div>
+    </ul>
   </div>

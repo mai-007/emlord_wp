@@ -7,12 +7,7 @@
 <?php include('inc/information.php');?>
 
   <div class="c-sns-nav">
-    <img src="<?php echo get_theme_img('common/sns_icon-instagram.svg') ;?>" alt="">
-    <img src="<?php echo get_theme_img('common/sns_icon-youtube.svg') ;?>" alt="">
-    <span class="c-mapIcon">
-      <span class="c-mapIcon__text">MAP</span>
-      <img src="<?php echo get_theme_img('common/icon_map.svg') ;?>" alt="">
-    </span>
+  <?php include('inc/sns.php');?>
   </div>
 
   <section class="c-news l-section--half">
@@ -73,7 +68,7 @@
   <?php include('inc/service-section.php');?>
 </section>
 
-<section class="l-section02 c-map">
+<section id="storeMap" class="l-section02 c-map">
   <div class="c-title">
       <h3 class="c-title__l">熊本地方に<span class="u-red">18店舗</span><br>お近くのサービスステーションが<span class="u-red">見つかります</span></h3>
       <p class="c-title__l__sub">Always close to you</p>
@@ -128,47 +123,9 @@
 お気軽にお問い合わせください。
       </p>
     </div>
-  <div class="c-service--business">
-  <?php
-      $businessItem = [
-        [ 'name' => '法人給油カード',
-          'en' => 'EneosFC',
-          'href' => '#',
-          'image' => 'businessService/businessCard.svg'
-        ],
-        [ 'name' => '産業エネルギー',
-        'en' => 'Energy',
-        'href' => '#',
-        'image' => 'businessService/industrialEnergy.svg'
-        ],
-        [ 'name' => '太陽光関連事業',
-        'en' => 'Sunlight',
-        'href' => '#',
-        'image' => 'businessService/sunlight.svg'
-        ],
-      ];?>
-
-    <?php foreach($businessItem as $key => $value):?>
-    <div class="c-service__btn">
-      <a href="<?php echo $value['href'];?>">
-        <div class="c-service__btn__inner">
-          <img class="c-service__btn__image"
-            src="<?php echo get_theme_img($value['image']);?>" alt="">
-          <h3 class="c-service__btn__title">
-          <?php echo $value['name'];?>
-          </h3>
-          <p class="c-service__btn__subtitle">
-          <?php echo $value['en'];?>
-          </p>
-          <div class="c-circleArrow">
-            <img class="c-circleArrow__image" src="<?php echo get_theme_img('common/arrow_right-small.svg');?>" alt="クリック">
-          </div>
-        </div>
-      </a>
+    <div class="p-business__content">
+      <?php include('inc/business.php');?>
     </div>
-      <?php endforeach;?>
-    </div>
-  </div>
 </section>
 
 <section class="l-section02--bg03 p-recruit">

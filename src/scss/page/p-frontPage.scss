@@ -34,6 +34,15 @@
   }
 }
 
+//bussiness{
+  .p-business{
+    &__content{
+      display: flex;
+      width: max-content;
+      margin: 0 auto;
+    }
+  }
+
 // recruit
 .p-recruit{
   .c-title__text{

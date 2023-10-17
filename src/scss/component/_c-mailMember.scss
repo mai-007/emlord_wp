@@ -20,5 +20,9 @@
       padding-right: 0.5rem;
       height: auto;
     }
+    &:hover{
+      color: #fff;
+      background: var.$darkBrown;
+    }
   }
 }

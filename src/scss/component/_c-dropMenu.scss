@@ -1,0 +1,85 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-dropMenu{
+  display: none;
+  position: absolute;
+  top: 88px;
+  left: -5rem;
+  width: 60rem;
+  &.is-show{
+    display: block;
+  }
+  &__title{
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+  }
+  &.c-business{
+    left: unset;
+    width: fit-content;
+    background: #fff;
+    border-radius: 16px;
+    .c-dropMenu__wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:before{
+        left: 37%;
+        transform: translateX(-37%);
+      }
+      .c-service__btn{
+        margin-right: 24px;
+      }
+    }
+  }
+  .c-service--business{
+    width: max-content;
+  }
+}
+.c-dropMenu__wrap{
+  width: fit-content;
+  display: block;
+  padding: 40px;
+  border-radius: 16px;
+  border: none;
+  background: #fff;
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: max-content;
+    max-height: 22.5rem;
+    li{
+      width: 10rem;
+      border-bottom: 1px solid var.$darkBrown;
+      margin-right: 40px;
+      padding-bottom: .5rem;
+      font-size: 0.875rem;
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+          margin-right: 1rem;
+          transition: .5s;
+        }
+      }
+      &:hover{
+        img{
+            margin-right: 0;
+          }
+        }
+    }
+  }
+    &:before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    display: block;
+    margin-left: 6rem;
+    width: 56px;
+    height: 30px;
+    background: #fff;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  }
+}
