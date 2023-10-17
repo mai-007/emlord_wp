@@ -1,3 +1,6 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
 .c-sns-nav{
   display: flex;
   align-items: center;
@@ -11,6 +14,10 @@
   letter-spacing: 0.01em;
   img{
     vertical-align: middle;
+    cursor: pointer;
+    &:hover{
+        filter: var.$gold-filter;
+    }
   }
   .c-mapIcon{
     display: flex;

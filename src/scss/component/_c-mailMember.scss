@@ -13,7 +13,7 @@
     justify-content: center;
     width: 100%;
     padding: 10px 24px;
-    background: var.$gold;
+    background: var.$darkBrown;
     color: #fff;
     border-radius: 0.5rem;
     img{
@@ -22,7 +22,7 @@
     }
     &:hover{
       color: #fff;
-      background: var.$darkBrown;
+      background: var.$gold;
     }
   }
 }

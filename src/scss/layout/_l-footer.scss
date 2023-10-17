@@ -46,6 +46,12 @@
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #fff;
+    &:hover{
+      img{
+        margin-right: 0;
+        filter: var.$gold-filter;
+      }
+    }
   }
   &__item{
     width: 192px;
@@ -72,12 +78,13 @@
     &:hover{
       img{
         margin-right: 0;
+        filter: var.$gold-filter;
       }
       span{
         &::before{
           border-bottom: 1px solid var.$gold;
         }
-    }
+      }
     }
   }
   &__sitemap{
