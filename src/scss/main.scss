@@ -6,11 +6,10 @@
 
 // layout -----------------------------
 @use "./layout/base";
-@use "./layout/header";
+@use "./layout/l-header";
 @use "./layout/l-footer";
 @use "./layout/l-section";
 @use "./layout/l-mainView";
-@use "./layout/l-header-sub";
 
 // component --------------------------
 @use "./component/c-button";
@@ -28,9 +27,12 @@
 @use "./component/c-splide";
 @use "./component/c-dropMenu";
 @use "./component/c-service";
+@use "./component/c-breadcrumb";
+@use "./component/c-linkInPage";
 
 // page ----------------------------
 @use "./page/p-frontPage";
+@use "./page/p-coating";
 
 // utility ----------------------------
 @use "./utility/utility";

@@ -1,14 +1,14 @@
 // ==============================
-//  width
+//  mixin
 // ==============================
 
-//contents
+//Contents
 $content-l: 80rem;//1rem=10pxならば、1280px
 $content-m: 60rem;//1rem=10pxならば、960px
 $content-sp: 95%;
 
 
-/* mediaQuery */
+/* MediaQuery */
 $breakpoint:(
   'pc': 'screen and (max-width:1379px)',
   '1000': 'screen and (max-width:1000px)',
@@ -22,10 +22,16 @@ $breakpoint:(
   }
 }
 
-/* flexItem */
+/* FlexItem */
 @mixin flex($direction: row, $justify: center, $align: center){
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+/* Expand to parent's size */
+@mixin expand{
+  width: 100%;
+  height: 100%;
 }

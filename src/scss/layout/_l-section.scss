@@ -1,12 +1,15 @@
 @use "./foundation/variables" as var;
 @use "./foundation/mixin" as mix;
 
+/* w1280px---bg/none */
 .l-section01{
   position: relative;
   max-width: mix.$content-l;
   margin: 0 auto;
   padding: 7.5rem 0 10rem;
 }
+
+/* section内paddingのみ */
 .l-section02{
   padding: 7.5rem 0 10rem;
   &--bg01{
@@ -22,14 +25,45 @@
     background: #fff;
   }
 }
+
+/* subPage 一番目のsection */
+.l-section03{
+  position: relative;
+  margin: 0 auto;
+  padding: 4.5rem 0 10rem;
+  &--bg01{
+    @extend .l-section03;
+    background: var.$darkBrown;
+  }
+  &--bg02{
+    @extend .l-section03;
+    background: var.$gray;
+  }
+  &--bg03{
+    @extend .l-section03;
+    background: #fff;
+  }
+}
+
+/* w1280 */
+.l-containerL{
+  max-width: mix.$content-l;
+  margin: 0 auto;
+}
+
+/* w960 */
 .l-containerM{
   max-width: mix.$content-m;
   margin: 0 auto;
 }
+
+/* half */
 .l-section--half{
   max-width: calc((100% - 56px) / 2);
 }
 
+
+/* flex-------------------------------- */
 .l-flexRowToColumn{
   display: flex;
   justify-content: space-between;

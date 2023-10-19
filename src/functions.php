@@ -99,6 +99,18 @@ include('inc/wp-head.php');
 include('inc/disable.php');
 
 //--------------------------------------------------------
+// 固定ページbodyにclassを付与
+//--------------------------------------------------------
+function my_body_class($classes)
+{
+    if (is_page()) {
+        $page = get_post();
+        $classes[] = $page->post_name;
+    }
+    return 'p-'.$classes;
+}
+add_filter('body_class', 'my_body_class');
+//--------------------------------------------------------
 //画像までのパスの簡略化
 // echo gat_theme_img('パス')で画像を呼び出す
 //--------------------------------------------------------
@@ -115,115 +127,103 @@ function get_theme_img($img_name)
 
 function breadcrumb() {
   ?>
-<div class="breadcrumb">
-      <ol class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<div class="c-breadcrumb">
+      <ul class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a itemprop="item" href="<?php echo esc_url(home_url()); ?>">
-            <span itemprop="name">HOME</span>
+            <span itemprop="name">
+            <img class="c-breadcrumb__list__home" src="<?php echo get_theme_img('common/home.svg');?>" alt="">
+            </span>
           </a>
           <meta itemprop="position" content="1">
         </li>
 
-        <!-- 固定ページの子ページの場合 -->
-        <?php if(is_page() && $post->post_parent): ?>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_page_link($post->post_parent); ?>" href="<?php echo get_page_link($post->post_parent); ?>">
-              <span itemprop="name"><?php echo get_the_title($post->post_parent); ?></span>
-            </a>
-            <meta itemprop="position" content="2">
-          </li>
-
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <span itemprop="name"><?php echo get_the_title(); ?></span>
-            <meta itemprop="position" content="3">
-          </li>
-
         <!-- 固定ページの場合 -->
-        <?php elseif(is_page()): ?>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <?php if(is_page()): ?>
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name"><?php echo get_the_title(); ?></span>
             <meta itemprop="position" content="2">
           </li>
 
         <!-- 年別アーカイブページの場合 -->
         <?php elseif(is_year()): ?>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_post_type_archive_link(get_post_type()); ?>" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
               <span itemprop="name"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></span>
             </a>
             <meta itemprop="position" content="2">
           </li>
 
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name"><?php echo get_query_var('year'); ?>年</span>
             <meta itemprop="position" content="3">
           </li>
 
         <!-- 月別アーカイブページの場合 -->
         <?php elseif(is_month()): ?>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_post_type_archive_link(get_post_type()); ?>" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
               <span itemprop="name"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></span>
             </a>
             <meta itemprop="position" content="2">
           </li>
 
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_year_link(get_query_var("year")); ?>?post_type=<?php echo esc_html(get_post_type_object(get_post_type())->name); ?>" href="<?php echo get_year_link(get_query_var("year")); ?>?post_type=<?php echo esc_html(get_post_type_object(get_post_type())->name); ?>">
               <span itemprop="name"><?php echo get_query_var('year');?>年</span>
             </a>
             <meta itemprop="position" content="3">
           </li>
 
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name"><?php echo get_query_var('monthnum'); ?>月</span>
             <meta itemprop="position" content="4">
           </li>
 
         <!-- タクソノミーのアーカイブページの場合 -->
         <?php elseif(is_tax()): ?>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_post_type_archive_link(get_post_type()); ?>" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
               <span itemprop="name"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></span>
             </a>
             <meta itemprop="position" content="2">
           </li>
 
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name"><?php single_term_title(); ?></span>
             <meta itemprop="position" content="3">
           </li>
 
         <!-- カスタム投稿のアーカイブページの場合 -->
         <?php elseif(is_post_type_archive()): ?>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name"><?php post_type_archive_title(); ?></span>
             <meta itemprop="position" content="2">
           </li>
 
         <!-- 記事ページの場合 -->
         <?php elseif(is_single()): ?>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="<?php echo get_post_type_archive_link(get_post_type()); ?>" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
               <span itemprop="name"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></span>
             </a>
             <meta itemprop="position" content="2">
           </li>
 
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name"><?php single_post_title(); ?></span>
             <meta itemprop="position" content="3">
           </li>
 
         <!--  404エラーページの場合 -->
         <?php elseif(is_404()): ?>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name">404</span>
             <meta itemprop="position" content="2">
           </li>
 
         <?php endif; ?>
-      </ol>
+        </ul>
     </div>
     <?php
 }

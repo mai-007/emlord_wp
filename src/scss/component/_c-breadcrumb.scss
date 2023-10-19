@@ -1,0 +1,36 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-breadcrumb{
+  width: 100%;
+  background: #fff;
+  &__list{
+    display: flex;
+    align-items: center;
+    max-width: mix.$content-m;
+    margin: 0 auto;
+    padding: 8px 0;
+    &__home{
+      vertical-align: text-bottom;
+    }
+  }
+  &__item{
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    &::after{
+      content: '';
+      background: url('//localhost:3000/wp-content/themes/my_theme/images/common/arrow_right.svg') no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+      display: inline-block;
+      width: 4px;
+      height: 8px;
+      margin-left: 16px;
+    }
+    &:hover{
+      filter: var.$gold-filter;
+    }
+  }
+}

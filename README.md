@@ -14,12 +14,6 @@
 7. `npm run build` でテーマをビルドします。
 
 
-# update
-## var 1.1
-2023.10
-パッケージのupdate
-jquery削除
-
 
 # できること
 - ローカルでWordPressのテーマ開発

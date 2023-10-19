@@ -1,0 +1,77 @@
+// ==============================
+//  layout/header.scss
+// ==============================
+@use "./foundation/mixin" as mix;
+@use "./foundation/variables" as var;
+
+body{
+  position: relative;
+}
+
+.l-header{
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  width: 88.8889%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0,0,0,.05);
+  @include mix.mq(pc){
+    width: 95%;
+  }
+  }
+
+.l-nav{
+  max-width: 1520px;
+  @include mix.mq(pc){
+    width: 60%;
+  }
+  }
+
+  /* 下層ページ */
+
+.l-headerSub{
+  position: relative;
+  aspect-ratio: 1440/320;
+  overflow: hidden;
+  &__inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+  }
+  &__title{
+    font-size: 2.5rem;
+    font-family: var.$kaisei;
+    margin-bottom: 40px;
+  }
+  &__text{
+    font-size: 1.5rem;
+    font-family: var.$en;
+    letter-spacing: 0.1em;
+  }
+  &__image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    aspect-ratio: 1440/320;
+    z-index: 1;
+    img{
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}

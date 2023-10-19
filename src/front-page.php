@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 <main>
 
-
-
 <section class="l-section01 l-flexRowToColumn">
 <?php include('inc/information.php');?>
 
@@ -170,8 +168,8 @@
       sizes="100%"
     >
     <source
-      media="(min-width: 799px)"
-      srcset="  <?php echo get_theme_img('frontpage/sd_youtube.jpg');?> w849,
+      media="(min-width: 800px)"
+      srcset="<?php echo get_theme_img('frontpage/sd_youtube.jpg');?> w849,
   <?php echo get_theme_img('frontpage/sd_youtube@2x.jpg');?> w1695,"
       sizes="849px"
     >

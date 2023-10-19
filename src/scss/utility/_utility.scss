@@ -14,6 +14,10 @@
 //text------------------------------
 .u-textM{
   font-size: 1.5rem;
+  margin-bottom: 1rem;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
 }
 
 //color-----------------------------

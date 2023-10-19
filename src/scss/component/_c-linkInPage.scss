@@ -1,0 +1,35 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-linkInPage{
+  width: 100%;
+  @include mix.flex(row,space-between);
+  &__btn{
+    width: calc((100% - 32px) /3);
+    height: 5.5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    background: var.$gold;
+    border-radius: 4px;
+    a{
+      @include mix.expand;
+      @include mix.flex(row,center);
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        right: 16px;
+        width: 32px;
+        height: 32px;
+        background: url('../images/common/arrow_right-small-white.svg') no-repeat;
+        background-position: center;
+        background-size: 7px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+    }
+  }
+}
