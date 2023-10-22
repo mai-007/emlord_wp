@@ -51,7 +51,7 @@ function buildSass() {
 // JSのバンドル
 // ==============================
 function buildJS() {
-  return src(`.src/js/**/*.js`)
+  return src('.src/js/**/*.js')
     .pipe(webpackStream(webpackConfig, webpack))
     .pipe(dest('./my_theme/js'));
 };

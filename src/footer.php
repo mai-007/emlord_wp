@@ -22,27 +22,27 @@
           <?php
             $footerService01 = [
               [ 'name' => '車検・法定点検',
-                'href' => '#'
+                'href' => 'sale'
               ],
               [
               'name' => '洗車',
-              'href' => '#'
+              'href' => 'carwash'
               ],
               [
                 'name' => 'コーティング',
-                'href' => '#'
+                'href' => 'coating'
               ],
               [
                 'name' => 'エアコン',
-                'href' => '#'
+                'href' => 'aircon'
               ],
               [
                 'name' => 'ブレーキ',
-                'href' => '#'
+                'href' => 'brake'
               ],
               [
                 'name' => 'ラジエーター',
-                'href' => '#'
+                'href' => 'radiator'
               ],
             ]
           ;?>
@@ -62,19 +62,19 @@
           <?php
             $footerService02 = [
               [ 'name' => 'キズ・凹み修理',
-                'href' => '#'
+                'href' => 'repair'
               ],
               [
               'name' => 'タイヤ交換',
-              'href' => '#'
+              'href' => 'tire'
               ],
               [
                 'name' => 'オイル交換',
-                'href' => '#'
+                'href' => 'oil'
               ],
               [
                 'name' => 'バッテリー交換',
-                'href' => '#'
+                'href' => 'battery'
               ],
             ]
           ;?>
@@ -89,24 +89,24 @@
           </ul>
           <ul class="l-footerList__service__block">
           <h6 class="l-footerList__title">
-            修理・交換
+            車に乗る・保険
           </h6>
           <?php
             $footerService03 = [
               [ 'name' => '車買取・販売',
-                'href' => '#'
+                'href' => 'sale'
               ],
               [
               'name' => 'レンタカー',
-              'href' => '#'
+              'href' => 'rental'
               ],
               [
                 'name' => '自動車保険',
-                'href' => '#'
+                'href' => 'insurance'
               ],
               [
                 'name' => 'カーリース',
-                'href' => '#'
+                'href' => 'lease'
               ],
             ]
           ;?>
@@ -130,7 +130,7 @@
               ],
               [
               'name' => '会社案内',
-              'href' => '#'
+              'href' => 'company'
               ],
               [
                 'name' => 'カーライフ豆知識',
@@ -138,11 +138,11 @@
               ],
               [
                 'name' => 'お得なメール会員',
-                'href' => '#'
+                'href' => 'member'
               ],
               [
                 'name' => '動画・CM一覧',
-                'href' => '#'
+                'href' => 'movie'
               ],
               [
                 'name' => '採用情報',

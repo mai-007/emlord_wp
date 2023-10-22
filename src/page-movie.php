@@ -1,9 +1,8 @@
 <?php
 /*
-Template Name: キズ・凹み(鈑金)
+Template Name: CM/動画一覧
 */
 ?>
-
 <?php get_header(); ?>
 <section class="#">
   <div class="l-containerM">

@@ -1,0 +1,26 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-flow{
+  max-width: 60rem;
+  margin: 0 auto 72px;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  &__title{
+    @include mix.flex(row, space-between, center);
+    position: relative;
+    padding: 24px;
+    background: var.$gold;
+    color: #fff;
+    font-size: 2rem;
+    @include mix.arrowAfter;
+  }
+  &__inner{
+    padding: 56px 32px;
+    background: #fff;
+  }
+  &__image{
+    @include mix.flex();
+  }
+}

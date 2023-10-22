@@ -75,6 +75,7 @@ function my_css_init() {
 }
 add_action( 'wp_enqueue_scripts', 'my_css_init' );
 
+add_action( 'wp_enqueue_scripts', 'my_css_init' );
 function my_font_init() {
 	wp_enqueue_style(
     'googleFont',
@@ -100,16 +101,18 @@ include('inc/disable.php');
 
 //--------------------------------------------------------
 // 固定ページbodyにclassを付与
+// .p-[slug]の形で出力
 //--------------------------------------------------------
 function my_body_class($classes)
 {
     if (is_page()) {
         $page = get_post();
-        $classes[] = $page->post_name;
+        $classes[] = 'p-' . $page->post_name; // 新しいクラスを追加
     }
-    return 'p-'.$classes;
+    return $classes; // 修正: $classes 配列をそのまま返す
 }
 add_filter('body_class', 'my_body_class');
+
 //--------------------------------------------------------
 //画像までのパスの簡略化
 // echo gat_theme_img('パス')で画像を呼び出す

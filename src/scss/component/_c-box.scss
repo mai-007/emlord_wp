@@ -1,0 +1,39 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+
+/*3-column*/
+.c-box01{
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 24px) / 3);
+  padding: 40px 24px;
+  background: #fff;
+  &__title{
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    color: var.$gold;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var.$gold;
+    &__number{
+      font-family: var.$en;
+      font-size: 3.5rem;
+    }
+  }
+  &__text{
+    flex-grow: 1;
+    margin-bottom: 32px;
+    &__item{
+      margin-bottom: 1rem;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__image{
+    display: block;
+    object-fit: cover;
+    margin-bottom: 40px;
+  }
+}

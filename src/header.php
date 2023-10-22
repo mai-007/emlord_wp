@@ -26,13 +26,158 @@
       <h2 class="l-headerSub__title"><?php the_field('subpageTitle'); ?></h2>
       <span class="l-headerSub__text"><?php the_field('subpageText'); ?></span>
     </div>
+
   <!-- ▼ bgImage setting  -->
     <!-- coating -->
     <?php if(is_page(11)):?>
       <picture class="l-headerSub__image">
-        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/coating@2x.jpg');?>" sizes="100vw">
-        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/coating.jpg');?>" sizes="100vw">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/coating.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/coating@2x.jpg');?>" sizes="100vw">
   <img src="<?php echo get_theme_img('headerImage/coating.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- aircon -->
+      <?php if(is_page(8)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/aircon.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/aircon@2x.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/aircon.jpg');?>">
+      </picture>
+    <?php endif;?>
+        <!-- oil -->
+        <?php if(is_page(16)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/oil.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/oil@2x.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/oli.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- lease -->
+    <?php if(is_page(28)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/lease.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/lease@2x.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/lease.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- repair -->
+    <?php if(is_page(18)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/repair.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/repair@2x.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/repair.jpg');?>">
+      </picture>
+    <?php endif;?>
+        <!-- repair -->
+        <?php if(is_page(18)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/repair.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/repair@2x.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/repair.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- tire -->
+      <?php if(is_page(21)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/tire.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/tire.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/tire.jpg');?>">
+      </picture>
+    <?php endif;?>
+  <!-- battery -->
+    <?php if(is_page(9)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/battery.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/battery.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/battery.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- brake -->
+    <?php if(is_page(30)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/brake.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/brake.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/brake.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- member -->
+      <?php if(is_page(30)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/member.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/member.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/member.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- member -->
+      <?php if(is_page(15)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/member.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/member.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/member.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- radiator -->
+      <?php if(is_page(27)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/radiator.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/radiator.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/radiator.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- rental -->
+    <?php if(is_page(17)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/rental.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/rental.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/rental.jpg');?>">
+      </picture>
+    <?php endif;?>
+  <!-- company -->
+    <?php if(is_page(12)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/company.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/company.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/company.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- insurance -->
+      <?php if(is_page(14)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/insurance.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/insurance.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/insurance.jpg');?>">
+      </picture>
+    <?php endif;?>
+  <!-- store -->
+    <?php if(is_page(20)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/store.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/store.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/store.jpg');?>">
+      </picture>
+    <?php endif;?>
+  <!-- carwash -->
+      <?php if(is_page(10)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/carwash.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/carwash.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/carwash.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- inspection -->
+      <?php if(is_page(13)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/inspection.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/inspection.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/inspection.jpg');?>">
+      </picture>
+    <?php endif;?>
+    <!-- sale -->
+      <?php if(is_page(19)):?>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/sale.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/sale.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/sale.jpg');?>">
       </picture>
     <?php endif;?>
   </div>

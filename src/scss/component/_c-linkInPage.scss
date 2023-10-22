@@ -16,19 +16,12 @@
       @include mix.expand;
       @include mix.flex(row,center);
       position: relative;
+      @include mix.arrowAfter;
+    }
+    &:hover{
+      background-color: #fff;
       &::after{
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%) rotate(90deg);
-        right: 16px;
-        width: 32px;
-        height: 32px;
-        background: url('../images/common/arrow_right-small-white.svg') no-repeat;
-        background-position: center;
-        background-size: 7px;
-        border-radius: 50%;
-        border: 1px solid #fff;
+        filter: var.$gold-filter;
       }
     }
   }

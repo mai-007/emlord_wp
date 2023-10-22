@@ -1,11 +1,6 @@
 {
   "core": null,
   "phpVersion": null,
-  "plugins": [
-    "https://downloads.wordpress.org/plugin/wp-multibyte-patch.latest-stable9.zip",
-    "https://downloads.wordpress.org/plugin/show-current-template.latest-stable.zip",
-    "https://downloads.wordpress.org/plugin/wp-fastest-cache.latest-stable.zip"
-  ],
   "themes": [
     "./my_theme"
   ],

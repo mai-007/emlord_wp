@@ -6,7 +6,7 @@ export default function dropdownMenu() {
 
     if (dropMenu) {
       navItem.addEventListener('click', (event) => {
-        event.preventDefault(); // リンクのクリックイベントを無効化する
+        //event.preventDefault(); // リンクのクリックイベントを無効化する
         event.stopPropagation(); // イベントの伝播を止める
 
         // クリックした.nav__li内の.dropMenuが表示されている場合は非表示にし、非表示の場合は表示する

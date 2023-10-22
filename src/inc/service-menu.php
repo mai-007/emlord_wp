@@ -23,39 +23,39 @@
       $tabItem01 = [
         [ 'name' => '車検・法定点検',
           'en' => 'inspection',
-          'href' => '#',
+          'href' => 'inspection',
           'image' => 'service/car_inspection.svg'
         ],
         [ 'name' => '洗車',
         'en' => 'wash',
-        'href' => '#',
+        'href' => 'carwash',
         'image' => 'service/car_wash.svg'
         ],
         [ 'name' => 'コーティング',
         'en' => 'coating',
-        'href' => '#',
+        'href' => 'coating',
         'image' => 'service/coating.svg'
         ],
         [ 'name' => 'タイヤ交換',
           'en' => 'tire',
-          'href' => '#',
+          'href' => 'tire',
           'image' => 'service/tire.svg'
         ],
         [ 'name' => 'オイル交換',
           'en' => 'oil',
-          'href' => '#',
+          'href' => 'oil',
           'image' => 'service/oil.svg'
         ],
         [ 'name' => 'バッテリー交換',
           'en' => 'battery',
-          'href' => '#',
+          'href' => 'battery',
           'image' => 'service/battery.svg'
         ],
       ];?>
 
     <?php foreach($tabItem01 as $key => $value):?>
     <div class="c-service__btn">
-      <a href="<?php echo $value['href'];?>">
+      <a href="<?php echo esc_url( home_url( $value['href'] ) ); ?>">
         <div class="c-service__btn__inner">
           <img class="c-service__btn__image"
             src="<?php echo get_theme_img($value['image']);?>" alt="">
@@ -79,28 +79,28 @@
       $tabItem02 = [
         [ 'name' => 'キズ・凹み修理',
           'en' => 'repair',
-          'href' => '#',
+          'href' => 'repair',
           'image' => 'service/repair.svg'
         ],
         [ 'name' => 'ブレーキ関連',
         'en' => 'brake',
-        'href' => '#',
+        'href' => 'brake',
         'image' => 'service/brake.svg'
         ],
         [ 'name' => 'エアコン',
         'en' => 'aircon',
-        'href' => '#',
+        'href' => 'aircon',
         'image' => 'service/aircon.svg'
         ],
         [ 'name' => 'ラジエーター',
           'en' => 'radiator',
-          'href' => '#',
+          'href' => 'radiator',
           'image' => 'service/radiator.svg'
         ],
       ];?>
     <?php foreach($tabItem02 as $key => $value):?>
     <div class="c-service__btn">
-      <a href="<?php echo $value['href'];?>">
+      <a href="<?php echo esc_url( home_url( $value['href'] ) ); ?>">
         <div class="c-service__btn__inner">
           <img class="c-service__btn__image"
             src="<?php echo get_theme_img($value['image']);?>" alt="">
@@ -124,28 +124,28 @@
       $tabItem03 = [
         [ 'name' => '車買取・販売',
           'en' => 'sales',
-          'href' => '#',
+          'href' => 'sale',
           'image' => 'service/purchaseAndSales.svg'
         ],
         [ 'name' => 'レンタカー',
         'en' => 'rental',
-        'href' => '#',
+        'href' => 'rental',
         'image' => 'service/rental.svg'
         ],
         [ 'name' => '自動車保険',
         'en' => 'insurance',
-        'href' => '#',
+        'href' => 'insurance',
         'image' => 'service/insurance.svg'
         ],
         [ 'name' => 'カーリース',
           'en' => 'lease',
-          'href' => '#',
+          'href' => 'lease',
           'image' => 'service/carLease.svg'
         ],
       ];?>
     <?php foreach($tabItem03 as $key => $value):?>
     <div class="c-service__btn">
-      <a href="<?php echo $value['href'];?>">
+      <a href="<?php echo esc_url( home_url( $value['href'] ) ); ?>">
         <div class="c-service__btn__inner">
           <img class="c-service__btn__image"
             src="<?php echo get_theme_img($value['image']);?>" alt="">

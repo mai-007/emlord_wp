@@ -29,10 +29,13 @@
 @use "./component/c-service";
 @use "./component/c-breadcrumb";
 @use "./component/c-linkInPage";
+@use "./component/c-box";
+@use "./component/c-flow";
 
 // page ----------------------------
 @use "./page/p-frontPage";
 @use "./page/p-coating";
+@use "./page/p-business";
 
 // utility ----------------------------
 @use "./utility/utility";

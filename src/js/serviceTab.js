@@ -17,7 +17,8 @@ export default function serviceTab() {
     const tabItems = tabList.querySelectorAll('.c-service__tabs__item');
 
     // クリックされた要素の親要素の兄弟要素の子要素を取得
-    const tabPanelItems = tabList.nextElementSibling.querySelectorAll('.c-service__wrapper');
+    const tabPanelItems = tabList.nextElementSibling.querySelectorAll('.c-service__wrap');
+    console.log('click');
 
     // クリックされたtabの同階層のmenuとpanelのクラスを削除
     tabItems.forEach((tabItem) => {
@@ -38,3 +39,21 @@ export default function serviceTab() {
   }
 
 }
+
+
+// export default function serviceTab() {
+//   const tabMenus = document.querySelectorAll('.c-service__tabs__item');
+//   const tabPanels = document.querySelectorAll('.c-service__panels .c-service__wrap');
+
+//   tabMenus.forEach((tabMenu, index) => {
+//     tabMenu.addEventListener('click', () => {
+//       // クリックされたタブにis-activeクラスを付与し、他のタブからis-activeクラスを削除
+//       tabMenus.forEach(tab => tab.classList.remove('is-active'));
+//       tabMenu.classList.add('is-active');
+
+//       // 対応するパネルにis-showクラスを付与し、他のパネルからis-showクラスを削除
+//       tabPanels.forEach(panel => panel.classList.remove('is-show'));
+//       tabPanels[index].classList.add('is-show');
+//     });
+//   });
+// }
