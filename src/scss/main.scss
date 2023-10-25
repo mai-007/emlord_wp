@@ -10,6 +10,7 @@
 @use "./layout/l-footer";
 @use "./layout/l-section";
 @use "./layout/l-mainView";
+@use "./layout/l-modal";
 
 // component --------------------------
 @use "./component/c-button";
@@ -31,11 +32,15 @@
 @use "./component/c-linkInPage";
 @use "./component/c-box";
 @use "./component/c-flow";
+@use "./component/c-qa";
+@use "./component/c-gradationBox";
+@use "./component/c-table";
 
 // page ----------------------------
 @use "./page/p-frontPage";
 @use "./page/p-coating";
 @use "./page/p-business";
+@use "./page/p-single";
 
 // utility ----------------------------
 @use "./utility/utility";

@@ -119,7 +119,7 @@
       </p>
     </div>
     <button class="c-button01">
-          <a href="#">
+          <a href="https://www.emlord.co.jp/recruit/">
           採用情報ページへ
           <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
           </a>
@@ -163,6 +163,7 @@
         </button>
 </section>
 </main>
+<?php echo get_post_type_archive_link( 'column' ); ?>
 <?php
 get_footer();
 ?>

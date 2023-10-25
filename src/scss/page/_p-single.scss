@@ -1,0 +1,29 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-single{
+  max-width: mix.$content-m;
+  margin: 4.5rem auto 4.5rem;
+  padding: 56px;
+  background: #fff;
+  border-radius: 16px;
+  &__header{
+    margin-bottom: 40px;
+    &__title{
+      margin-bottom: 24px;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    &__date{
+      letter-spacing: 0.01em;
+      display: block;
+    }
+  }
+  &__image{
+    object-fit: cover;
+    margin-bottom: 40px;
+    img{
+      border-radius: 16px;
+    }
+  }
+}

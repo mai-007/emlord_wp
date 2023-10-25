@@ -76,13 +76,13 @@ function my_css_init() {
 add_action( 'wp_enqueue_scripts', 'my_css_init' );
 
 add_action( 'wp_enqueue_scripts', 'my_css_init' );
-function my_font_init() {
-	wp_enqueue_style(
-    'googleFont',
-    'https://fonts.googleapis.com/css2?family=Alex+Brush&family=Kaisei+Opti:wght@400;500&display=swap',
-  );
-}
-add_action( 'wp_enqueue_scripts', 'my_font_init' );
+// function my_font_init() {
+// 	wp_enqueue_style(
+//     'googleFont',
+//     'https://fonts.googleapis.com/css2?family=Alex+Brush&family=Kaisei+Opti:wght@400;500&display=swap',
+//   );
+// }
+// add_action( 'wp_enqueue_scripts', 'my_font_init' );
 
 //--------------------------------------------------------
 //記事に対するsetup
@@ -112,6 +112,26 @@ function my_body_class($classes)
     return $classes; // 修正: $classes 配列をそのまま返す
 }
 add_filter('body_class', 'my_body_class');
+
+
+//--------------------------------------------------------
+// カスタム投稿タイプの追加
+//--------------------------------------------------------
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+register_post_type( 'column', // 投稿タイプ名の定義
+array(
+'labels' => array(
+'name' => __( 'カーライフ豆知識' ), // 表示する投稿タイプ名
+'singular_name' => __( 'カーライフ豆知識' )
+),
+'public' => true,
+'menu_position' =>5,
+'show_in_rest' => true,//Gutenbergを利用する
+'hierarchical' => true
+)
+);
+}
 
 //--------------------------------------------------------
 //画像までのパスの簡略化

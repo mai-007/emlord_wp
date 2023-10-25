@@ -1,0 +1,37 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+
+.c-qa{
+  .c-title{
+    color: #fff;
+  }
+  &__item{
+    margin-bottom: 56px;
+    background: #fff;
+    &__question{
+      position: relative;
+      padding: 24px 32px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-bottom: 3px solid var.$gold;
+     // @include mix.arrowAfterGold;
+      &:before{
+        content: 'Q.';
+        font-family: var.$kaisei;
+        font-size: 2rem;
+        color: var.$gold;
+      }
+    }
+    &__answer{
+      padding: 24px 32px;
+      font-size: 1rem;
+      &:before{
+        content: 'A.';
+        font-family: var.$kaisei;
+        font-size: 2rem;
+        color: var.$gold;
+      }
+    }
+  }
+}

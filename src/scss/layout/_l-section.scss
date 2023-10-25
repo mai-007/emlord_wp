@@ -24,6 +24,10 @@
     @extend .l-section02;
     background: #fff;
   }
+  &--bg04{
+    @extend .l-section02;
+    background: url('../images/common/bg04.gif');
+  }
 }
 
 /* subPage 一番目のsection */

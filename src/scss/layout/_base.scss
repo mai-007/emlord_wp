@@ -1,5 +1,11 @@
 @use "./foundation/variables" as var;
 
+/*smooth-scroll*/
+html {
+  scroll-behavior: smooth;
+}
+
+
 body{
   color: var.$darkBrown;
   font-size: 1rem;

@@ -32,7 +32,6 @@ export default function dropdownMenu() {
     if (!event.target.closest('.c-nav__li')) {
       navItems.forEach((navItems) => {
         const dropMenu = navItems.querySelector('.c-dropMenu');
-        console.log(dropMenu);
         if (dropMenu) {
           dropMenu.classList.remove('is-show');
         }

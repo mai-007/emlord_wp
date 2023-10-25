@@ -9,6 +9,7 @@ Template Name: キズ・凹み(鈑金)
   <div class="l-containerM">
   </div>
 </section>
+<?php include('inc/askedQuestions.php');?>
 <section class="l-section02--bg02">
   <?php include('inc/service-section.php');?>
 </section>

@@ -15,12 +15,15 @@
     color: #fff;
     font-size: 2rem;
     @include mix.arrowAfter;
+    h3{
+      font-family: initial;
+    }
   }
   &__inner{
     padding: 56px 32px;
     background: #fff;
   }
-  &__image{
-    @include mix.flex();
+  &__text{
+    margin-bottom: 56px;
   }
 }

@@ -2,7 +2,6 @@
 @use "./foundation/mixin" as mix;
 
 .c-title{
-  width: fit-content;
   margin: 0 auto 56px;
   &__l{
     font-size: 3rem;
@@ -12,7 +11,7 @@
     &__sub{
       display: flex;
       align-items: center;
-      max-width: 960px;
+      max-width: mix.$content-m;
       margin: 0 auto 56px;
       font-family: var.$en;
       font-size: 1.5rem;
@@ -32,6 +31,10 @@
       &::after{
         margin-left: 1rem;
       }
+    }
+    &__text{
+      max-width: mix.$content-m;
+      margin: 0 auto;
     }
   }
   &__m{
@@ -53,5 +56,18 @@
   &__text{
     font-size: 1.5rem;
     text-align: center;
+  }
+  &__category{
+    font-family: var.$kaisei;
+    color: var.$gold;
+    @include mix.flex(row,flex-start,center);
+    &:before{
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background: url('./../images/common/glitter.svg');
+      margin-right: 4px;
+    }
   }
 }

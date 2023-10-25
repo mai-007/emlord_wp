@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Kaisei+Opti:wght@400;500&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 <body id="<?php echo esc_attr( $post->post_name ); ?>" <?php body_class(); ?>>
@@ -20,7 +23,7 @@
 <?php endif; ?>
 
 <!-- subPage -->
-<?php if(!(is_home() || is_front_page())): ?>
+<?php if(is_page()): ?>
   <div class="l-headerSub">
     <div class="l-headerSub__inner">
       <h2 class="l-headerSub__title"><?php the_field('subpageTitle'); ?></h2>
@@ -182,8 +185,23 @@
     <?php endif;?>
   </div>
   <?php endif; ?>
-
-
+<!-- カーライフ豆知識 -->
+<?php $post_type = get_post_type() ;?>
+  <?php if($post_type == 'column' or (is_post_type_archive( $post_type == 'column'))) :?>
+  <div class="l-headerSub">
+    <div class="l-headerSub__inner">
+      <h2 class="l-headerSub__title">カーライフ豆知識</h2>
+      <span class="l-headerSub__text">
+        Good Car Life
+      </span>
+    </div>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/column.jpg');?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/column.jpg');?>" sizes="100vw">
+  <img src="<?php echo get_theme_img('headerImage/column.jpg');?>">
+      </picture>
+    <?php endif;?>
+  </div>
   <!-- breadcrumb -->
   <?php if(!(is_home() || is_front_page())): ?>
     <?php breadcrumb(); ?>

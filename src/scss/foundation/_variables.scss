@@ -6,14 +6,12 @@
 //color----------------------
 $gold: #a67c49;
 $gray:#e9e5e1;
-$sub: #0f0;
-$accent: #f0f;
-$blue: #00f;
+$gray-30:rgba(233, 229, 225, 0.30);
 $darkBrown: #3a322a;
 $red: #8F1D0C;
 
 //filterでの色指定(svg等)
-$gold-filter: #a67c49;
+$gold-filter: invert(50%) sepia(42%) saturate(519%) hue-rotate(353deg) brightness(93%) contrast(83%);
 
 //font-----------------------
 $kaisei: 'Kaisei Opti', serif;

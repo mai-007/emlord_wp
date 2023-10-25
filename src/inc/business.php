@@ -2,7 +2,7 @@
       $businessItem = [
         [ 'name' => '法人給油カード',
           'en' => 'EneosFC',
-          'href' => '#',
+          'href' => 'https://www.eneos.co.jp/business/card/business.html',
           'image' => 'businessService/businessCard.svg'
         ],
         [ 'name' => '産業エネルギー',

@@ -85,27 +85,93 @@ Template Name: コーティング
         ]
     ];
 
-      foreach ($coatingMerits as $merit) :
-      ?>
+    foreach ($coatingMerits as $key => $merit) : ?>
         <div class="c-box01">
-          <h3 class="c-box01__title">
-            <span class="c-box01__title__number"><?php echo $merit['number']; ?></span>
-            <?php echo $merit['title']; ?>
-          </h3>
-          <div class="c-box01__text">
-            <?php foreach ($merit['description'] as $paragraph) : ?>
-              <p class="c-box01__text__item"><?php echo $paragraph; ?></p>
+            <h3 class="c-box01__title">
+                <span class="c-box01__title__number"><?php echo $merit['number'];?></span>
+                <?php echo $merit['title']; ?>
+            </h3>
+            <div class="c-box01__text">
+                <?php foreach ($merit['description'] as $paragraph) : ?>
+                    <p class="c-box01__text__item"><?php echo $paragraph; ?></p>
                 <?php endforeach; ?>
-          </div>
-          <img
-            src="<?php echo get_theme_img($merit['image']); ?>"          alt=""
-            class="c-box01__image">
-          <button class="c-button02">
-            OPEN
-          <img src="<?php echo get_theme_img('common/externalLinks.svg'); ?>" alt="">
-          </button>
+            </div>
+            <img src="<?php echo get_theme_img($merit['image']); ?>" alt="" class="c-box01__image">
+            <button class="c-button02 modal-trigger" data-target="<?php echo $key + 1; ?>">
+                OPEN
+                <img src="<?php echo get_theme_img('common/externalLinks.svg'); ?>" alt="">
+            </button>
         </div>
-      <?php endforeach; ?>
+    <?php endforeach; ?>
+
+  <!--以下モーダルで表示させるコンテンツ-->
+  <div class="l-modal-overlay"></div>
+
+  <div id="1" class="l-modal c-box" data-content="modal1">
+    <div class="l-modal__close-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <h3 class="c-box01__title">
+      <span class="c-box01__title__number">01.</span>
+      ダメージから守る
+    </h3>
+    <h5 class="c-box01__subtitle">実現不可能とされていたシリカ化合物の多層構造を実現。</h5>
+    <h4 class="c-gradationBox--blue">
+      次世代ガラス被膜
+    </h4>
+    <div class="c-box01__text">
+      <p>一般的なガラスコーティングはガラスではなくレジン系が主流ですが、《クオーツ》では<span class="u-bold">完全ガラス成分</span>のシリカ化合物を使用しています。</p>
+      <p>シリカ化合物は<span class="u-bold">桁違いの硬度</span>で従来品よりも汚れがつきにくく、キズがつきにくい反面、艶を出すのが難しいとされていました。当社では長年の研究開発の結果、業界初の多層化に成功。多層化することにより<span class="u-bold">類稀なる強度と艶の両方を実現</span>することに成功しました。</p>
+      <p class="u-red">※レジン系などの場合１年程度で効果が無くなりますが、シリカ多層構造の場合は最低5年以上の効果が期待できます。</p>
+    </div>
+    <img src="<?php echo get_theme_img('coating/modal01_image01.jpg'); ?>" alt="">
+  </div>
+
+  <div id="2" class="l-modal" data-content="modal1">
+    <div class="l-modal__close-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <h3 class="c-box01__title">
+      <span class="c-box01__title__number">02.</span>
+      圧倒的な輝きに
+    </h3>
+    <h5 class="c-box01__subtitle">徹底した下処理で新車に近い輝きに</h5>
+    <h4 class="c-gradationBox--blue">
+      匠磨き
+    </h4>
+    <div class="c-box01__text">
+      <p>これまで主流のガラスコーティングでは、下地処理にスポンジ等を使った手作業の磨き工程を採用していたため、繊細なキズの除去が難しく、さらに塗装面に過度の負荷を与えていました。</p>
+      <p>当店のガラスコーティングでは、専用機材を用いた本格的な磨き工程「匠磨き」を用いることで、塗装面に余計な負荷を与えず、<span class="u-bold">洗車キズなどの繊細なキズまで除去します。</span></p>
+      <p class="u-bold">経年劣化したボディ表面のキズや異物を除去し、キメの細かい塗装肌を復元します。</p>
+      <p class="u-red">※深刻なウォータースポットなどは完全に除去出来ません。</p>
+    </div>
+    <img src="<?php echo get_theme_img('coating/modal01_image02.jpg'); ?>" alt="">
+  </div>
+
+
+  <div id="3" class="l-modal" data-content="modal1">
+    <div class="l-modal__close-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <h3 class="c-box01__title">
+      <span class="c-box01__title__number">03.</span>
+      お手入れ簡単
+    </h3>
+    <h5 class="c-box01__subtitle">水滴が自重で流れ落ちる「滑水力」で</h5>
+    <h4 class="c-gradationBox--blue">
+    雨・油・埃を定着させない
+    </h4>
+    <div class="c-box01__text">
+      <p>下地のキズ消しと研磨、表面をなめらかに整えるガラストップコートが、<span class="u-bold">雨に含まれる油分や埃を雨ごと押し流し、汚れとして残しません。</span></p>
+      <p>また、ガラス被膜は無機物のため有機物（汚れ）を定着させません。</p>
+      <p class="u-red">また、紫外線吸収剤配合で<span class="u-bold">UVダメージを防ぎます。</span>クリア面が日常の紫外線ダメージをカット・保護するので<span class="u-bold">ただ乗っているだけで劣化するという悩みから解放されます。</span></p>
+    </div>
+    <img src="<?php echo get_theme_img('coating/modal01_image03.jpg'); ?>" alt="">
+  </div>
+
     </div>
   </div>
 </section>
@@ -197,46 +263,47 @@ $flowSteps = [
             <h3><?php echo $step['title']; ?></h3>
         </div>
         <div class="c-flow__inner">
-          <div class="c-flow__text">
-              <?php foreach ($step['text'] as $paragraph): ?>
-                  <p><?php echo $paragraph; ?></p>
-              <?php endforeach; ?>
-          </div>
-          <div class="c-flow__image">
-              <?php foreach($step['images'] as $index => $image): ?>
-                <div class="c-flow__image__wrap">
-                  <span class="c-flow__image__title">
-                    <?php echo $step['image_descriptions'][$index];?>
-                  </span>
-                  <img src="<?php echo get_theme_img('coating/' . $image); ?>" alt="">
-                </div>
+            <div class="c-flow__text">
+                <?php foreach ($step['text'] as $paragraph): ?>
+                    <p><?php echo $paragraph; ?></p>
                 <?php endforeach; ?>
-          </div>
+            </div>
+            <div class="c-box--image">
+                <?php foreach($step['images'] as $index => $image): ?>
+                    <div class="c-box--image__wrap">
+                        <?php if(!empty($step['image_descriptions'][$index])): ?>
+                            <span class="c-box--image__title">
+                                <?php echo $step['image_descriptions'][$index]; ?>
+                            </span>
+                        <?php endif; ?>
+                        <img src="<?php echo get_theme_img('coating/' . $image); ?>" alt="">
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
-  <?php endforeach; ?>
+<?php endforeach; ?>
 </section>
 
-<section class="l-section02 p-coating__section04">
+<section class="l-section02 section04">
     <div class="c-title">
       <h2 class="c-title__l">施工証明書を発行いたします</h2>
         <p class="c-title__l__sub">Credentials</p>
-        <p class="c-title__l__text">万が⼀の保険対象にも対応。施⼯証明書をご提⽰いただく事で<br>
-保険⾦補償事例は多数ございます。</p>
+        <p class="c-title__l__text">万が⼀の保険対象にも対応。施⼯証明書をご提⽰いただく事で、保険⾦補償事例は多数ございます。</p>
     </div>
-    <div class="l-containerM">
+    <div class="l-containerL section04__flex">
       <img src="<?php echo get_theme_img('coating/credentials01.jpg'); ?>" alt="">
       <img src="<?php echo get_theme_img('coating/credentials02.jpg'); ?>" alt="">
     </div>
 </section>
 
-<section id="price" class="l-section02--bg04">
+<section id="price" class="l-section02--bg04 section05">
   <div class="c-title">
     <h2 class="c-title__l">コース・料金のご案内</h2>
       <p class="c-title__l__sub">Courses and Fees</p>
       <p class="c-title__l__text">お客様のニーズに合わせた3つのコースをご用意しております。</p>
   </div>
-  <div class="l-containerM">
+  <div class="l-containerL l-flexRowToColumn">
   <?php
 $coatingPrice = [
     [
@@ -272,8 +339,7 @@ $coatingPrice = [
     ]
 ];
 
-foreach ($coatingPrice as $price) :
-?>
+foreach ($coatingPrice as $key => $price) : ?>
   <div class="c-box01">
     <span class="c-title__category">
       <?php echo $price['category']; ?>
@@ -284,73 +350,253 @@ foreach ($coatingPrice as $price) :
     <div class="c-box01__text">
       <p><?php echo $price['description']; ?></p>
     </div>
-    <ul>
+    <ul class="c-box01__list">
       <?php foreach ($price['lists'] as $list) : ?>
-        <li class="c-box01__list">
+        <li class="c-box01__list__item">
           <?php echo $list; ?>
         </li>
       <?php endforeach; ?>
     </ul>
-    <button class="c-button02">
+    <button class="c-button02 modal-trigger" data-target="<?php echo $key + 4; ?>">
       <img src="<?php echo get_theme_img('common/price.svg'); ?>" alt="">
         OPEN
       <img src="<?php echo get_theme_img('common/externalLinks.svg'); ?>" alt="">
     </button>
   </div>
-  <?php endforeach; ?>
+<?php endforeach; ?>
+
+  </div>
+
+  <!--これより下がモーダルで表示させるコンテンツ-->
+
+  <div id="4" class="l-modal c-box" data-content="modal4">
+    <div class="l-modal__close-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <span class="c-title__category">
+      NEWCAR
+    </span>
+    <h3 class="c-box01__title">
+      新車コーティング
+    </h3>
+    <h5 class="c-box01__subtitle">
+      新車時だからできる<span class="u-red">全部をコーティング</span>
+    </h5>
+    <img src="<?php echo get_theme_img('coating/modal02_image01.jpg'); ?>" alt="">
+    <div class="c-box02">
+      <p class="c-box02__title">実施内容</p>
+      <ul class="c-box02__inner">
+          <?php
+          $newCarCoatingMenus = [
+              'ボディ',
+              'アルミホイールx4',
+              'ヘッドライトx2',
+              'テールレンズx2',
+              'バイザーx4',
+              '樹脂パーツ',
+              'メッキパーツ',
+              'ボンネットインナー',
+              'ドアインナー',
+              'トラックインナー',
+              '給油口インナー',
+              'フロントガラス'
+          ];
+          ?>
+          <?php foreach ($newCarCoatingMenus as $key => $menu) : ?>
+              <li class="c-box--image__wrap--50">
+                  <span class="c-box--image__title">
+                      <?php echo $menu; ?>
+                  </span>
+                  <img src="<?php echo get_theme_img('coating/modal02_image' . str_pad($key + 2, 2, '0', STR_PAD_LEFT) . '.jpg'); ?>" alt="">
+              </li>
+          <?php endforeach; ?>
+      </ul>
+    </div>
+    <dl class="c-table">
+      <?php
+      $newCarCoatingPrices = [
+        [
+          'size' => 'SS',
+          'type' => 'N-ONE/ハスラー/ワゴンR等',
+          'price' => '87,100'
+        ],
+        [
+          'size' => 'S',
+          'type' => 'N-BOX/フィット/ヴィッツ等',
+          'price' => '93,100'
+        ],
+        [
+          'size' => 'M',
+          'type' => 'プリウス/インプレッサ/アテンザ等',
+          'price' => '101,600'
+        ],
+        [
+          'size' => 'L',
+          'type' => 'ヴェゼル/クラウン/フーガ等',
+          'price' => '111,300'
+        ],
+        [
+          'size' => 'LL',
+          'type' => 'ヴォクシー/エルグランド/デリカ等',
+          'price' => '119,700'
+        ],
+        [
+          'size' => 'XL',
+          'type' => 'ランドクルーザー/レクサスXL等',
+          'price' => '128,200'
+        ],
+      ]
+      ;?>
+      <?php foreach($newCarCoatingPrices as $newCarCoatingPrice):?>
+        <div class="c-table__inner">
+          <dt class="c-table__dt">
+          <span class="c-table__dt__top">
+            <?php echo $newCarCoatingPrice['size'];?>
+          </span>
+            <?php echo $newCarCoatingPrice['type'];?>
+          </dt>
+          <dd class="c-table__dd u-red">
+            <?php echo $newCarCoatingPrice['price'];?>
+          </dd>
+        </div>
+      <?php endforeach;?>
+    </dl>
+  </div>
+
+  <div id="5" class="l-modal c-box" data-content="modal5">
+    <div class="l-modal__close-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <span class="c-title__category">
+      PREMIUM
+    </span>
+    <h3 class="c-box01__title">
+      クオーツプレミアム
+    </h3>
+    <h5 class="c-box01__subtitle">
+    コード9H 多層ガラスコーティング
+    </h5>
+    <dl class="c-table">
+      <?php
+      $premiumPrices = [
+        [
+          'size' => 'SS',
+          'type' => 'N-ONE/ハスラー/ワゴンR等',
+          'price' => '87,100'
+        ],
+        [
+          'size' => 'S',
+          'type' => 'N-BOX/フィット/ヴィッツ等',
+          'price' => '93,100'
+        ],
+        [
+          'size' => 'M',
+          'type' => 'プリウス/インプレッサ/アテンザ等',
+          'price' => '101,600'
+        ],
+        [
+          'size' => 'L',
+          'type' => 'ヴェゼル/クラウン/フーガ等',
+          'price' => '111,300'
+        ],
+        [
+          'size' => 'LL',
+          'type' => 'ヴォクシー/エルグランド/デリカ等',
+          'price' => '119,700'
+        ],
+        [
+          'size' => 'XL',
+          'type' => 'ランドクルーザー/レクサスXL等',
+          'price' => '128,200'
+        ],
+      ]
+      ;?>
+      <?php foreach($premiumPrices as $premiumPrice):?>
+        <div class="c-table__inner">
+          <dt class="c-table__dt">
+          <span class="c-table__dt__top">
+            <?php echo $premiumPrice['size'];?>
+          </span>
+            <?php echo $premiumPrice['type'];?>
+          </dt>
+          <dd class="c-table__dd u-red">
+            <?php echo $premiumPrice['price'];?>
+          </dd>
+        </div>
+      <?php endforeach;?>
+    </dl>
+  </div>
+
+
+  <div id="6" class="l-modal c-box" data-content="modal6">
+    <div class="l-modal__close-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <span class="c-title__category">
+      REGULAR
+    </span>
+    <h3 class="c-box01__title">
+      クオーツレギュラー
+    </h3>
+    <h5 class="c-box01__subtitle">
+    コード9H 多層ガラスコーティング
+    </h5>
+    <dl class="c-table">
+      <?php
+      $regularPrices = [
+        [
+          'size' => 'SS',
+          'type' => 'N-ONE/ハスラー/ワゴンR等',
+          'price' => '87,100'
+        ],
+        [
+          'size' => 'S',
+          'type' => 'N-BOX/フィット/ヴィッツ等',
+          'price' => '93,100'
+        ],
+        [
+          'size' => 'M',
+          'type' => 'プリウス/インプレッサ/アテンザ等',
+          'price' => '101,600'
+        ],
+        [
+          'size' => 'L',
+          'type' => 'ヴェゼル/クラウン/フーガ等',
+          'price' => '111,300'
+        ],
+        [
+          'size' => 'LL',
+          'type' => 'ヴォクシー/エルグランド/デリカ等',
+          'price' => '119,700'
+        ],
+        [
+          'size' => 'XL',
+          'type' => 'ランドクルーザー/レクサスXL等',
+          'price' => '128,200'
+        ],
+      ]
+      ;?>
+      <?php foreach($regularPrices as $regularPrice):?>
+        <div class="c-table__inner">
+          <dt class="c-table__dt">
+          <span class="c-table__dt__top">
+            <?php echo $regularPrice['size'];?>
+          </span>
+            <?php echo $regularPrice['type'];?>
+          </dt>
+          <dd class="c-table__dd u-red">
+            <?php echo $regularPrice['price'];?>
+          </dd>
+        </div>
+      <?php endforeach;?>
+    </dl>
   </div>
 </section>
 
-<section id="QA" class="l-section03--bg01">
-  <div class="l-containerM">
-  <div class="c-title">
-    <h2 class="c-title__l">よくある質問</h2>
-      <p class="c-title__l__sub">Asked Questions</p>
-  </div>
-  <?php
-   $coatingQuestions = [
-    [
-      "Q" => "外車でも値段は変わらないの？",
-      "A" => "<span class='u-bold'>はい、変わりません。</span>国産車でも外国車でも高級車でも、車体のサイズやコーティングの回数やオプション項目によって価格が決定します。 ",
-    ],
-    [
-      "Q" => "ホイールがすぐ汚れるのでコーティングしたいのですが出来ますか？",
-      "A" => "<span class='u-bold'>コーティングした車と、してない車とはでは雲泥の差です。</span>当店の次世代多層コーティングは、雨が降れば、ほとんどの汚れが雨と一緒に流れ落ちます。(当コーティングは滑水性で、撥水性のコーティングのようにウォータースポットの心配もございません)一部汚れが残った場合もさっと水をかければすぐに落ちます。",
-    ],
-    [
-      "Q" => "価格はいくらですか？",
-      "A" => "コース別料金表をご確認下さい。",
-    ],
-    [
-      "Q" => "他社のコーティングをしてますが、その上から施工出来ますか？",
-      "A" => "<span class='u-bold'>付着物の除去の上で施行しますので問題ありません。</span>高硬度のガラスコーティングを施工されている場合は、除去せず平滑化した上で、ガラスを塗布します。",
-    ],
-    [
-      "Q" => "市販の自動車用シャンプーは使用しても良いですか？",
-      "A" => "市販の洗浄シャンプー（研磨剤が入っていないもの）でも全く問題ありませんが、<span class='u-bold'>塗膜への付着物の除去など定期的に施工店でメンテナンス洗車されることをオススメしています。</span>",
-    ],
-    [
-      "Q" => "事故を起こした場合、コーティング自体は自動車保険の対象になるの？",
-      "A" => "保険会社からは、対物事故の場合であれば、保険の対象になるとの判断をいただける場合もございます。その際、施行証明書を御提示してください。",
-    ],
-    [
-      "Q" => "次世代クオーツコーティングとは何ですか？",
-      "A" => "コーティング業界で、これまで不可能とされたシリカ多層被膜のガラス溶剤とプロ仕様の匠磨きによって、これまでのガラスコーティングに比べて、<span class='u-bold'>圧倒的な強度と艶を実現する多層ガラスコーティング</span>です。 ",
-    ],
-  ]
-  ;?>
-    <?php foreach($coatingQuestions as $coatingQuestion): ?>
-      <dl class="c-qa">
-        <dt class ="c-qa__question">
-          <?php echo $coatingQuestion['Q'];?>
-        </dt>
-        <dd class ="c-qa__answer">
-          <?php echo $coatingQuestion['A'];?>
-        </dd>
-      </dl>
-    <?php endforeach;?>
-  </div>
-</section>
+<?php include('inc/askedQuestions.php');?>
 <?php include('inc/map.php');?>
 <section class="l-section02--bg02">
   <?php include('inc/service-section.php');?>

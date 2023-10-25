@@ -1,0 +1,62 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+
+.l-modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  opacity: 1;
+  width: 960px;
+  padding: 56px;
+  transition:all 500ms ease;
+  background:#fff;
+  color:var.$darkBrown;
+  z-index: 2000;
+  &__close-btn{
+    span{
+      position:absolute;
+      top:0px;
+      right:100px;
+      border-bottom: 2px #222 solid;
+      width: 40px;
+      height: 1px;
+      display: block;
+      right:0px;
+      top:16px;
+      transform: rotate(45deg);
+      &:first-child{
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &.open-modal{
+    display: block;
+  }
+  .c-box01{
+    width: auto;
+  }
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+  .c-gradationBox--blue{
+    margin-bottom: 56px;
+  }
+}
+
+.l-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* オーバーレイの背景色と透明度を調整 */
+  z-index: 1000; /* モーダルよりも前面に表示するためのZインデックス */
+  & + .l-modal.open-modal{
+    display: block;
+  }
+}

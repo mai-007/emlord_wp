@@ -1,0 +1,28 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-table{
+  @include mix.flex;
+  &__inner{
+    @include mix.flex(column,center,center);
+    margin-right: 1px;
+    width: calc(100% / 6);
+  }
+  &__dt{
+    font-size: .625rem;
+    background: var.$gray;
+    padding: 16px;
+    font-weight: 400;
+    &__top{
+      font-size: 1rem;
+      font-weight: bold;
+      display: block;
+    }
+  }
+  &__dd{
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    background: var.$gray-30;
+  }
+}

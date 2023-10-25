@@ -12,11 +12,10 @@
   .c-title__l{
     font-family: var.$kaisei;
     text-align: center;
-    &:first-of-type{
-      margin-bottom: 56px;
-    }
+    // &:first-of-type{
+    //   margin-bottom: 56px;
+    // }
     &__text{
-      max-width: 95%;
       font-size: 1.5rem;
       margin-bottom: 88px;
       p{
@@ -34,5 +33,14 @@
         margin-bottom: 0;
       }
     }
+  }
+  .section04{
+    &__flex{
+      @include mix.flex(row, space-between, center);
+      margin: 0 auto;
+    }
+  }
+  .section05{
+    text-align: center;
   }
 }
