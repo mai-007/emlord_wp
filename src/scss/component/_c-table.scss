@@ -3,12 +3,30 @@
 
 .c-table{
   @include mix.flex;
+  margin-bottom: 56px;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  &__title{
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
   &__inner{
     @include mix.flex(column,center,center);
     margin-right: 1px;
     width: calc(100% / 6);
   }
-  &__dt{
+  &__des{
+    width: 100%;
+    padding: 16px;
+    color: #fff;
+    background: var.$darkBrown;
+    margin-bottom: 1px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &__type{
     font-size: .625rem;
     background: var.$gray;
     padding: 16px;
@@ -19,7 +37,7 @@
       display: block;
     }
   }
-  &__dd{
+  &__price{
     width: 100%;
     padding: 1rem;
     font-weight: bold;

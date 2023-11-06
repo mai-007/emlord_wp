@@ -450,13 +450,13 @@ foreach ($coatingPrice as $key => $price) : ?>
       ;?>
       <?php foreach($newCarCoatingPrices as $newCarCoatingPrice):?>
         <div class="c-table__inner">
-          <dt class="c-table__dt">
-          <span class="c-table__dt__top">
+          <dt class="c-table__type">
+          <span class="c-table__type__top">
             <?php echo $newCarCoatingPrice['size'];?>
           </span>
             <?php echo $newCarCoatingPrice['type'];?>
           </dt>
-          <dd class="c-table__dd u-red">
+          <dd class="c-table__price u-red">
             <?php echo $newCarCoatingPrice['price'];?>
           </dd>
         </div>
@@ -515,13 +515,13 @@ foreach ($coatingPrice as $key => $price) : ?>
       ;?>
       <?php foreach($premiumPrices as $premiumPrice):?>
         <div class="c-table__inner">
-          <dt class="c-table__dt">
-          <span class="c-table__dt__top">
+          <dt class="c-table__type">
+          <span class="c-table__type__top">
             <?php echo $premiumPrice['size'];?>
           </span>
             <?php echo $premiumPrice['type'];?>
           </dt>
-          <dd class="c-table__dd u-red">
+          <dd class="c-table__price u-red">
             <?php echo $premiumPrice['price'];?>
           </dd>
         </div>
@@ -581,13 +581,13 @@ foreach ($coatingPrice as $key => $price) : ?>
       ;?>
       <?php foreach($regularPrices as $regularPrice):?>
         <div class="c-table__inner">
-          <dt class="c-table__dt">
-          <span class="c-table__dt__top">
+          <dt class="c-table__type">
+          <span class="c-table__type__top">
             <?php echo $regularPrice['size'];?>
           </span>
             <?php echo $regularPrice['type'];?>
           </dt>
-          <dd class="c-table__dd u-red">
+          <dd class="c-table__price u-red">
             <?php echo $regularPrice['price'];?>
           </dd>
         </div>

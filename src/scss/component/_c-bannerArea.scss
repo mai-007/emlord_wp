@@ -1,0 +1,9 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-bannerArea{
+  text-align: center;
+  img{
+    margin-bottom: 88px;
+  }
+}

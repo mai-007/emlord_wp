@@ -1,0 +1,56 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+
+.p-inspection{
+  .section01{
+    color: #fff;
+    .c-title__l__text{
+      text-align: center;
+      margin-bottom: 88px;
+    }
+  }
+  .section02{
+    .c-title__l__text{
+      margin-bottom: 56px;
+    }
+  }
+  .section03{
+    .c-title__l__text{
+      margin-bottom: 56px;
+    }
+    &__image{
+      max-width: mix.$content-m;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .section04{
+    .c-title__m{
+      text-align: center;
+    }
+  }
+  .section06{
+    .c-flow{
+      &__inner{
+        align-items: center;
+      }
+      &__text{
+        font-size: 1.5rem;
+        max-width: 65%;
+        p{
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  .section07{
+    .c-table{
+      display: block;
+      width: 100%;
+    }
+  }
+}

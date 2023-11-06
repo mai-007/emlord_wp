@@ -71,6 +71,7 @@
 .l-flexRowToColumn{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   @include mix.mq(tab){
     flex-direction: column;
   }

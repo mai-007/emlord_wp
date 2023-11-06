@@ -35,12 +35,14 @@
 @use "./component/c-qa";
 @use "./component/c-gradationBox";
 @use "./component/c-table";
+@use "./component/c-bannerArea";
 
 // page ----------------------------
 @use "./page/p-frontPage";
 @use "./page/p-coating";
 @use "./page/p-business";
 @use "./page/p-single";
+@use "./page/p-inspection";
 
 // utility ----------------------------
 @use "./utility/utility";

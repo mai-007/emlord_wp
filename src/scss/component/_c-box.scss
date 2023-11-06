@@ -1,7 +1,33 @@
 @use "./foundation/variables" as var;
 @use "./foundation/mixin" as mix;
 
-
+.c-boxBorder{
+  width: 100%;
+  margin: 0 auto;
+  padding: 56px;
+  background: #fff;
+  border-radius: 16px;
+  border: 3px solid var.$darkBrown;
+  &__header{
+    margin-bottom: 32px;
+    text-align: left;
+    &__title{
+      color: var.$red;
+      font-size: 2.5rem;
+      font-family: var.$kaisei;
+    }
+    &__text{
+      font-size: 1.2rem;
+      font-family: var.$kaisei;
+      border-bottom: 1px solid var.$darkBrown;
+    }
+    &__recommend{
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+}
 /*3-column*/
 .c-box01{
   display: flex;
