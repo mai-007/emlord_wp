@@ -4,6 +4,7 @@
 .c-table{
   @include mix.flex;
   margin-bottom: 56px;
+  border-collapse: separate;
   &:last-of-type{
     margin-bottom: 0;
   }
@@ -20,8 +21,14 @@
     width: 100%;
     padding: 16px;
     color: #fff;
-    background: var.$darkBrown;
+    background: var.$brown02;
     margin-bottom: 1px;
+    word-break: keep-all;
+    vertical-align: middle;
+    &--short{
+      @extend .c-table__des;
+      max-width: 16rem;
+    }
     &:last-of-type{
       margin-bottom: 0;
     }
@@ -31,6 +38,8 @@
     background: var.$gray;
     padding: 16px;
     font-weight: 400;
+    word-break: keep-all;
+    text-align: center;
     &__top{
       font-size: 1rem;
       font-weight: bold;
@@ -42,5 +51,6 @@
     padding: 1rem;
     font-weight: bold;
     background: var.$gray-30;
+    text-align: center;
   }
 }

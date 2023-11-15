@@ -1,0 +1,38 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-carwash{
+  .section01{
+    color: #fff;
+  }
+  .c-title__l{
+    font-family: var.$kaisei;
+    text-align: center;
+    &__text{
+      margin-bottom: 88px;
+      p{
+        margin-bottom: 2rem;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .section03{
+    .c-title{
+      &__l{
+        color: #fff;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .section04{
+    &__flex{
+      @include mix.flex(row, space-between, center);
+      margin: 0 auto;
+    }
+  }
+  .section05{
+    text-align: center;
+  }
+}

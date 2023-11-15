@@ -322,25 +322,25 @@ $Prices = [
             "小型貨物" =>"1t~2t以下",
         ],
         "legalFee" => [
-          "25,740",
-          "35,650",
-          "43,850",
-          "52,050",
-          "21,050",
+          "¥25,740",
+          "¥35,650",
+          "¥43,850",
+          "¥52,050",
+          "¥21,050",
         ],
         "total" => [
-          "49,940~",
-          "59,850~",
-          "68,050~",
-          "76,250~",
-          "45,250~",
+          "¥49,940~",
+          "¥59,850~",
+          "¥68,050~",
+          "¥76,250~",
+          "¥45,250~",
         ],
         "member" => [
-          "44,980~",
-          "54,850~",
-          "63,050~",
-          "71,250~",
-          "40,250~",
+          "¥44,980~",
+          "¥54,850~",
+          "¥63,050~",
+          "¥71,250~",
+          "¥40,250~",
         ],
       ],
       [
@@ -359,25 +359,25 @@ $Prices = [
               "小型貨物" =>"1t~2t以下",
           ],
           "legalFee" => [
-            "25,740",
-            "35,650",
-            "43,850",
-            "52,050",
-            "21,050",
+            "¥25,740",
+            "¥35,650",
+            "¥43,850",
+            "¥52,050",
+            "¥21,050",
           ],
           "total" => [
-            "55,440~",
-            "65,350~",
-            "73,550~",
-            "81,750~",
-            "50,750~",
+            "¥55,440~",
+            "¥65,350~",
+            "¥73,550~",
+            "¥81,750~",
+            "¥50,750~",
           ],
           "member" => [
-            "50,440~",
-            "60,350~",
-            "68,550~",
-            "76,750~",
-            "45,750~",
+            "¥50,440~",
+            "¥60,350~",
+            "¥68,550~",
+            "¥76,750~",
+            "¥45,750~",
           ],
         ],
     ];
@@ -397,7 +397,7 @@ $Prices = [
     <table class="c-table">
       <tbody>
         <tr>
-          <th class="c-table__des">
+          <th class="c-table__des--short">
             車種・重量
           </th>
           <?php foreach ($price['type'] as $key => $type): ?>
@@ -410,7 +410,7 @@ $Prices = [
           <?php endforeach; ?>
         </tr>
         <tr>
-          <th class="c-table__des">
+          <th class="c-table__des--short">
             車検基本料
           </th>
           <td colspan="5" class="c-table__price">
@@ -418,7 +418,7 @@ $Prices = [
           </td>
         </tr>
         <tr>
-          <th class="c-table__des">
+          <th class="c-table__des--short">
             法定費用
           </th>
           <?php foreach ($price['legalFee'] as $fee): ?>
@@ -428,21 +428,21 @@ $Prices = [
           <?php endforeach;?>
         </tr>
         <tr>
-          <th class="c-table__des">
+          <th class="c-table__des--short u-bgGold">
             車検総額
           </th>
           <?php foreach ($price['total'] as $total): ?>
-            <td class="c-table__price">
+            <td class="c-table__price u-bgOrange30">
               <?php echo $total;?>
             </td>
           <?php endforeach;?>
         </tr>
         <tr>
-          <th class="c-table__des">
+          <th class="c-table__des--short u-bgRed">
             スーパー会員価格
           </th>
           <?php foreach ($price['member'] as $member): ?>
-            <td class="c-table__price">
+            <td class="c-table__price u-bgOrange30">
               <?php echo $member;?>
             </td>
           <?php endforeach;?>
@@ -450,6 +450,79 @@ $Prices = [
       </tbody>
     </table>
   <?php endforeach; ?>
+  </div>
+</section>
+
+<section class="l-section02--bg02 section08">
+  <div class="l-containerL">
+    <div class="c-title">
+      <h3 class="c-title__l">
+        車検時に必要な書類
+      </h3>
+      <p class="c-title__l__sub">
+      Documents
+      </p>
+    </div>
+    <?php
+    $inspectionDocument =[
+      [
+        'title'=>'車検証',
+        'image'=>'inspection/document01.jpg',
+        'text'=>'領収書だけ又はコピーは不可',
+      ],
+      [
+        'title'=>'自動車保険証書',
+        'image'=>'inspection/document02.jpg',
+        'text'=>'最新のもの(コピー不可)',
+      ],
+      [
+        'title'=>'自賠責保険証書',
+        'image'=>'inspection/document03.jpg',
+        'text'=>'最新のもの(コピー不可)',
+      ],
+      [
+        'title'=>'自動車税納税証明書',
+        'image'=>'inspection/document04.jpg',
+        'text'=>'代車ご利用時のみ',
+      ],
+      [
+        'title'=>'法定費用',
+        'image'=>'inspection/document05.jpg',
+        'text'=>'原則現金',
+      ],
+    ]
+    ;?>
+    <div class="c-box--image02">
+    <?php foreach($inspectionDocument as $document):?>
+      <div class="c-box--image__wrap">
+        <span class="c-box--image02__title">
+          <?php echo $document['title']; ?>
+        </span>
+        <img src="<?php echo get_theme_img($document['image']); ?>" alt="">
+        <span class="c-box--image02__text">
+          <?php echo $document['text']; ?>
+        </span>
+      </div>
+      <?php endforeach;?>
+    </div>
+</section>
+
+<!--banner-->
+<section class="l-section02 section09">
+  <div class="l-containerM c-bannerArea">
+    <picture class="section05__image">
+      <source
+        media="(max-width: 799px)"
+        srcset="<?php echo get_theme_img('common/banner_follow-sp.png');?> "
+        sizes="100%"
+      >
+      <source
+        media="(min-width: 800px)"
+        srcset="<?php echo get_theme_img('common/banner_follow.png');?> w849",
+        sizes="849px"
+      >
+      <img src="<?php echo get_theme_img('common/banner_follow.png');?>" alt="">
+    </picture>
   </div>
 </section>
 
