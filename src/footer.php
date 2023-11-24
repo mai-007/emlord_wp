@@ -1,174 +1,190 @@
 <?php wp_footer(); ?>
 <footer class="l-footer">
   <div class="l-footer__top">
-    <img class="c-logo"
-      src="<?php echo get_theme_img('common/logo.png');?>" alt="エムロードのロゴマーク">
+    <img class="c-logo" src="<?php echo get_theme_img('common/logo.png'); ?>" alt="エムロードのロゴマーク">
     <div class="c-sns-nav--footer">
       <span>FOLLOW US</span>
-        <?php include('inc/sns.php');?>
+      <?php include('inc/sns.php'); ?>
     </div>
   </div>
-<div class="l-footer__main l-flexRowToColumn">
-  <div class="l-flexColumn l-footer__banner">
-    <img src="<?php echo get_theme_img('common/banner_coating-sp.png') ;?>" alt="" alt="">
-    <img src="<?php echo get_theme_img('common/banner_inspection-sp.png') ;?>" alt="" alt="">
-  </div>
-  <div class="l-flexColumn l-footerList">
-    <nav class="l-footerList__service">
-      <ul class="l-footerList__service__block">
+  <div class="l-footer__main l-flexRowToColumn">
+    <div class="l-flexColumn l-footer__banner">
+      <img src="<?php echo get_theme_img('common/banner_coating-sp.png'); ?>" alt="" alt="">
+      <img src="<?php echo get_theme_img('common/banner_inspection-sp.png'); ?>" alt="" alt="">
+    </div>
+    <div class="l-flexColumn l-footerList">
+      <nav class="l-footerList__service">
+        <ul class="l-footerList__service__block">
           <h6 class="l-footerList__title">
             愛車のメンテナンス
           </h6>
           <?php
-            $footerService01 = [
-              [ 'name' => '車検・法定点検',
-                'href' => 'sale'
-              ],
-              [
+          $footerService01 = [
+            [
+              'name' => '車検・法定点検',
+              'href' => 'sale'
+            ],
+            [
               'name' => '洗車',
               'href' => 'carwash'
-              ],
-              [
-                'name' => 'コーティング',
-                'href' => 'coating'
-              ],
-              [
-                'name' => 'エアコン',
-                'href' => 'aircon'
-              ],
-              [
-                'name' => 'ブレーキ',
-                'href' => 'brake'
-              ],
-              [
-                'name' => 'ラジエーター',
-                'href' => 'radiator'
-              ],
-            ]
-          ;?>
-            <?php foreach($footerService01 as $value):?>
+            ],
+            [
+              'name' => 'コーティング',
+              'href' => 'coating'
+            ],
+            [
+              'name' => 'エアコン',
+              'href' => 'aircon'
+            ],
+            [
+              'name' => 'ブレーキ',
+              'href' => 'brake'
+            ],
+            [
+              'name' => 'ラジエーター',
+              'href' => 'radiator'
+            ],
+          ]; ?>
+          <?php foreach ($footerService01 as $value) : ?>
             <li class="l-footerList__item">
-              <a href="<?php echo $value['href'];?>">
-              <span><?php echo $value['name'];?></span>
-              <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+              <a href="<?php echo $value['href']; ?>">
+                <span><?php echo $value['name']; ?></span>
+                <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
               </a>
             </li>
-            <?php endforeach;?>
-          </ul>
-          <ul class="l-footerList__service__block">
+          <?php endforeach; ?>
+        </ul>
+        <ul class="l-footerList__service__block">
           <h6 class="l-footerList__title">
             修理・交換
           </h6>
           <?php
-            $footerService02 = [
-              [ 'name' => 'キズ・凹み修理',
-                'href' => 'repair'
-              ],
-              [
+          $footerService02 = [
+            [
+              'name' => 'キズ・凹み修理',
+              'href' => 'repair'
+            ],
+            [
               'name' => 'タイヤ交換',
               'href' => 'tire'
-              ],
-              [
-                'name' => 'オイル交換',
-                'href' => 'oil'
-              ],
-              [
-                'name' => 'バッテリー交換',
-                'href' => 'battery'
-              ],
-            ]
-          ;?>
-            <?php foreach($footerService02 as $value):?>
+            ],
+            [
+              'name' => 'オイル交換',
+              'href' => 'oil'
+            ],
+            [
+              'name' => 'バッテリー交換',
+              'href' => 'battery'
+            ],
+          ]; ?>
+          <?php foreach ($footerService02 as $value) : ?>
             <li class="l-footerList__item">
-              <a href="<?php echo $value['href'];?>">
-              <span><?php echo $value['name'];?></span>
-              <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+              <a href="<?php echo $value['href']; ?>">
+                <span><?php echo $value['name']; ?></span>
+                <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
               </a>
             </li>
-            <?php endforeach;?>
-          </ul>
-          <ul class="l-footerList__service__block">
+          <?php endforeach; ?>
+        </ul>
+        <ul class="l-footerList__service__block">
           <h6 class="l-footerList__title">
             車に乗る・保険
           </h6>
           <?php
-            $footerService03 = [
-              [ 'name' => '車買取・販売',
-                'href' => 'sale'
-              ],
-              [
+          $footerService03 = [
+            [
+              'name' => '車買取・販売',
+              'href' => 'sale'
+            ],
+            [
               'name' => 'レンタカー',
               'href' => 'rental'
-              ],
-              [
-                'name' => '自動車保険',
-                'href' => 'insurance'
-              ],
-              [
-                'name' => 'カーリース',
-                'href' => 'lease'
-              ],
-            ]
-          ;?>
-            <?php foreach($footerService03 as $value):?>
+            ],
+            [
+              'name' => '自動車保険',
+              'href' => 'insurance'
+            ],
+            [
+              'name' => 'カーリース',
+              'href' => 'lease'
+            ],
+          ]; ?>
+          <?php foreach ($footerService03 as $value) : ?>
             <li class="l-footerList__item">
-              <a href="<?php echo $value['href'];?>">
-              <span><?php echo $value['name'];?></span>
-              <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+              <a href="<?php echo $value['href']; ?>">
+                <span><?php echo $value['name']; ?></span>
+                <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
               </a>
             </li>
-            <?php endforeach;?>
-          </ul>
-        </nav>
+          <?php endforeach; ?>
+        </ul>
+      </nav>
 
-    <nav class="l-footerList__sitemap">
-      <ul>
-      <?php
-            $footerSitemap = [
-              [ 'name' => '店舗一覧',
-                'href' => '#'
-              ],
-              [
+      <nav class="l-footerList__sitemap">
+        <ul>
+          <?php
+          $footerSitemap = [
+            [
+              'name' => '店舗一覧',
+              'href' => '#'
+            ],
+            [
               'name' => '会社案内',
               'href' => 'company'
-              ],
-              [
-                'name' => 'カーライフ豆知識',
-                'href' => '#'
-              ],
-              [
-                'name' => 'お得なメール会員',
-                'href' => 'member'
-              ],
-              [
-                'name' => '動画・CM一覧',
-                'href' => 'movie'
-              ],
-              [
-                'name' => '採用情報',
-                'href' => '#'
-              ],
-              [
-                'name' => 'お問い合わせ',
-                'href' => '#'
-              ],
-            ]
-          ;?>
-            <?php foreach($footerSitemap as $value):?>
+            ],
+            [
+              'name' => 'カーライフ豆知識',
+              'href' => '#'
+            ],
+            [
+              'name' => 'お得なメール会員',
+              'href' => 'member'
+            ],
+            [
+              'name' => '動画・CM一覧',
+              'href' => 'movie'
+            ],
+            [
+              'name' => '採用情報',
+              'href' => '#'
+            ],
+            [
+              'name' => 'お問い合わせ',
+              'href' => '#'
+            ],
+          ]; ?>
+          <?php foreach ($footerSitemap as $value) : ?>
             <li class="l-footerList__title">
-              <a href="<?php echo $value['href'];?>">
-              <?php echo $value['name'];?>
-              <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
+              <a href="<?php echo $value['href']; ?>">
+                <?php echo $value['name']; ?>
+                <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
               </a>
             </li>
-            <?php endforeach;?>
-      </ul>
-    </nav>
+          <?php endforeach; ?>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
 </footer>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-<script src="<?php echo get_template_directory_uri().'/js/bundle.js';?>"></script>
+<?php if (is_home() || is_front_page()) : ?>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+<?php elseif (is_page(29)) : ?>
+  <script src="https://unpkg.com/modal-video@2.4.8/js/jquery-modal-video.min.js"></script>
+  <script>
+    jQuery(function() {
+      if (jQuery(".js-modal-video").length) {
+        jQuery(".js-modal-video").modalVideo({
+          channel: "youtube",
+          youtube: {
+            controls: 1, // コントロール表示（0は非表示）
+          },
+        });
+      }
+    });
+  </script>
+<?php endif; ?>
+<script src="<?php echo get_template_directory_uri() . '/js/bundle.js'; ?>"></script>
+
 </html>

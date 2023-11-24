@@ -1,0 +1,54 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-movie{
+  .section01{
+    color: #fff;
+    .c-title__l{
+      font-family: var.$kaisei;
+      text-align: center;
+    }
+    &__main{
+      align-items: flex-start;
+    }
+  }
+  .section02{
+    .c-title__l{
+      color: var.$gold;
+      &__text{
+        font-size: 1.5rem;
+        p{
+          margin-bottom: 1.5rem;
+        }
+        img{
+          margin-bottom: 104px;
+        }
+      }
+    }
+  }
+  &__thumbnail{
+    cursor: pointer;
+    display: block;
+    margin-bottom: 56px;
+    letter-spacing: 0.01em;
+    transition: 0.5s;
+    &:hover{
+      color: var.$gold;
+    }
+    &__image{
+      margin-bottom: 8px;
+      img{
+        transition: filter 0.3s ease;
+        filter: brightness(0.5);
+      }
+      &:hover{
+        filter: brightness(1.75);
+      }
+    }
+    &__title{
+      text-decoration: underline;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}

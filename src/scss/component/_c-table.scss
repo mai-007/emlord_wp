@@ -5,6 +5,10 @@
   @include mix.flex;
   margin-bottom: 56px;
   border-collapse: separate;
+  table-layout: fixed;
+  tbody{
+    width: 100%;
+  }
   &:last-of-type{
     margin-bottom: 0;
   }
@@ -25,9 +29,14 @@
     margin-bottom: 1px;
     word-break: keep-all;
     vertical-align: middle;
+    &__description{
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+    }
     &--short{
       @extend .c-table__des;
-      max-width: 16rem;
+      width: 400px;
     }
     &:last-of-type{
       margin-bottom: 0;
@@ -45,12 +54,24 @@
       font-weight: bold;
       display: block;
     }
+    &--blank{
+      background: #fff;
+    }
+    &--6{
+      @extend .c-table__type;
+      width: calc(100% / 6);
+    }
   }
   &__price{
-    width: 100%;
+    width: 128.33px!important;
     padding: 1rem;
     font-weight: bold;
     background: var.$gray-30;
     text-align: center;
+    vertical-align: middle;
+  }
+  &__tr{
+    width: 100%;
+    display: inline-table;
   }
 }

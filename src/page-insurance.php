@@ -8,8 +8,8 @@ Template Name: 保険
   <div class="l-containerM">
   </div>
 </section>
-<?php include('inc/askedQuestions.php');?>
-<section class="l-section02--bg02">
-  <?php include('inc/service-section.php');?>
+<?php include('inc/askedQuestions.php'); ?>
+<section class="l-section02--bg04">
+  <?php include('inc/service-section.php'); ?>
 </section>
 <?php get_footer(); ?>

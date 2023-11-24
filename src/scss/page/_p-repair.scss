@@ -1,0 +1,57 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-repair{
+  .section01{
+    color: #fff;
+    .c-title__l{
+      font-family: var.$kaisei;
+      text-align: center;
+    }
+    .l-flexRowToColumn{
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    .l-section--half{
+      font-size: 1.5rem;
+    }
+    .c-carBankenz{
+      margin-bottom: 80px;
+    }
+  }
+  .section02{
+      &__text{
+        margin-bottom: 24px;
+        text-align: left;
+        font-size: 1.5rem;
+        &:last-of-type{
+          margin-bottom: 56px;
+        }
+      }
+    }
+    .p-repair__service{
+      @include mix.flex(row, space-around, center);
+      font-size: 1.5rem;
+      margin-bottom: 32px;
+      background: #fff;
+      border-radius: 16px;
+      border: 3px double var.$gold;
+      img{
+        width: 270px;
+        height: 270px;
+        margin-right: 56px;
+      }
+      &__text{
+        width: 500px;
+        line-height: 2em;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+  .section03{
+    .c-title__l__text{
+      margin-bottom: 56px;
+      text-align: center;
+  }
+}

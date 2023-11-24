@@ -19,6 +19,10 @@
     margin-bottom: 0;
   }
 }
+.u-text{
+  font-size: 1rem;
+  font-weight: normal;
+}
 .u-textS{
   font-size: 0.875rem;
 }
@@ -54,4 +58,13 @@
 .u-bgRed{
   background: var.$red;
   color: #fff;
+}
+
+//smallAccent-----------------------------
+.u-square{
+  display: inline-block;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  background: var.$darkBrown;
 }

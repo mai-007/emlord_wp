@@ -1,0 +1,56 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-battery{
+  .section01{
+    color: #fff;
+    .c-title__l{
+      font-family: var.$kaisei;
+      text-align: center;
+      &__text{
+        margin-bottom: 56px;
+      }
+    }
+    &__image{
+      display: block;
+      margin-bottom: 56px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      img{
+        display: block;
+        margin-bottom: 16px;
+      }
+      &__link{
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__priceBox{
+    margin-bottom: 56px;
+    }
+  &__priceText{
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  .c-boxBorder{
+    &__header{
+      &__title{
+        color: var.$darkBrown;
+      }
+    }
+  }
+  .c-table{
+    &__des--short{
+      width: 152px;
+      box-sizing: content-box;
+    }
+  }
+}

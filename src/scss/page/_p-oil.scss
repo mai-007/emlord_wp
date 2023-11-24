@@ -1,0 +1,150 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-oil{
+  .section01{
+    color: #fff;
+    .c-title__l{
+      font-family: var.$kaisei;
+      text-align: center;
+    }
+    .c-title__text{
+      margin-bottom: 56px;
+      p{
+        text-align: left;
+        margin-bottom: 24px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .section02{
+    .c-title__text{
+      margin-bottom: 56px;
+      p{
+        margin-bottom: 24px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__catch{
+      border-radius: 16px;
+      border: 3px double var.$gold;
+      background: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 24px;
+      margin-bottom: 56px;
+      &__title{
+        margin-bottom: 32px;
+      }
+      &__text{
+        font-size: 1rem;
+        text-align: left;
+        font-weight: normal;
+      }
+    }
+    &__sticker{
+      @include mix.flex;
+      margin-bottom: 56px;
+      background: #fff;
+      padding: 16px;
+      img{
+        max-width: calc((100% - 48px) / 4);
+      }
+    }
+    &__image{
+      margin-bottom: 56px;
+    }
+    &__oil{
+      &__item{
+        background: #fff;
+        padding: 16px;
+        border: 3px double var.$gold;
+        img{
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  .section03{
+    .c-box03{
+      font-size: initial;
+      padding: 56px;
+      margin-bottom: 88px;
+      .section03__text{
+        font-size: 1.5rem;
+        padding: 56px 0;
+        text-align: center;
+        text-decoration: underline;
+      }
+      .c-box{
+        margin-bottom: 56px;
+        &--half{
+          width: calc((100% - 56px) / 2);
+        }
+      }
+      .c-option__title{
+        background: #fff;
+        color: var.$darkBrown;
+        border: 3px double var.$gold;
+      }
+    }
+    .c-table{
+      th:first-of-type{
+        width: 160px;
+        @include mix.flex(column,center,center);
+      }
+      .c-table__des--short{
+        height: 84px;
+      }
+      &__type{
+      &.viscosity{
+        width: calc(100% / 6);
+      }
+      &.type{
+        width: 110.68px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        background: var.$deepBlue;
+      }
+      &.colspan{
+        width: 450px;
+      }
+        &--blank{
+          width: 160px;
+        }
+      }
+      &__price{
+        min-width: 111px;
+      }
+    }
+    &__subContents{
+      border-top: 3px dotted var.$darkBrown;
+      padding: 56px 0;
+      &__text{
+        p{
+          margin-bottom: 32px;
+        }
+      }
+      &__image{
+        img{
+          margin-bottom: 16px;
+        }
+      }
+      table{
+        td{
+          background: #fff;
+        }
+      }
+    }
+    &__image{
+      display: block;
+      text-align: center;
+    }
+  }
+}

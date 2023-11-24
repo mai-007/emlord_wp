@@ -68,6 +68,11 @@
 
 
 /* flex-------------------------------- */
+.l-flexBetween{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .l-flexRowToColumn{
   display: flex;
   justify-content: space-between;

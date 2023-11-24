@@ -1,0 +1,14 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-image{
+  max-width: 50%;
+  &--maxWidth33{
+    max-width: calc((100% - 24px) / 3);
+  }
+  &--radiusBorder{
+    border-radius: 16px;
+    border: 3px solid var.$darkBrown;
+    margin-bottom: 1.5rem;
+  }
+}

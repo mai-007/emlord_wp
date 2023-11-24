@@ -36,6 +36,9 @@
 @use "./component/c-gradationBox";
 @use "./component/c-table";
 @use "./component/c-bannerArea";
+@use "./component/c-image";
+@use "./component/c-option";
+@use "./component/c-carBankenz";
 
 // page ----------------------------
 @use "./page/p-frontPage";
@@ -44,6 +47,16 @@
 @use "./page/p-single";
 @use "./page/p-inspection";
 @use "./page/p-carWash";
+@use "./page/p-aircon";
+@use "./page/p-tire";
+@use "./page/p-battery";
+@use "./page/p-repair";
+@use "./page/p-oil";
+@use "./page/p-movie";
+@use "./page/p-solar";
+@use "./page/p-energy";
+@use "./page/p-radiator";
+@use "./page/p-member";
 
 // utility ----------------------------
 @use "./utility/utility";

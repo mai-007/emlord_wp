@@ -1,0 +1,57 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-member{
+  .section01{
+    color: #fff;
+    .c-box03{
+      @include mix.flex;
+      &__circle{
+        @include mix.flex(row,center,center);
+        width: 50%;
+        height: auto;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var.$gold;
+        margin-right: 56px;
+        img{
+          display: block;
+          width: 128px;
+          padding: 16px;
+        }
+      }
+    }
+  }
+  .c-title__l{
+    font-family: var.$kaisei;
+    text-align: center;
+    &__text{
+      margin-bottom: 88px;
+      p{
+        margin-bottom: 2rem;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .section02{
+    .c-box{
+      text-align: center;
+    }
+    select{
+      width: 30rem;
+      height: 4rem;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-align: left;
+      font-weight: bold;
+      border:  1px solid var.$darkBrown;
+      background: #fff;
+      background-image: url('../images/common/arrow_right-small.svg');
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-origin: content-box;
+    }
+  }
+}

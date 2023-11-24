@@ -1,7 +1,7 @@
 @use "./foundation/variables" as var;
 @use "./foundation/mixin" as mix;
 
-.p-carwash{
+.p-energy{
   .section01{
     color: #fff;
   }
@@ -16,19 +16,6 @@
           margin-bottom: 0;
         }
       }
-    }
-  }
-  .section02{
-    .c-boxBorder{
-      &__header{
-        &__title{
-          color: var.$darkBrown;
-        }
-      }
-    }
-    &__card{
-      margin: 56px 0;
-      max-width: 364px;
     }
   }
 }

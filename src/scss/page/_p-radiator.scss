@@ -1,0 +1,61 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-radiator{
+  .section01{
+    color: #fff;
+  }
+  .c-title__l{
+    font-family: var.$kaisei;
+    text-align: center;
+    &__text{
+      margin-bottom: 88px;
+      text-align: center;
+      p{
+        margin-bottom: 2rem;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .c-boxBorder{
+    &__header{
+      &__title{
+        margin-bottom: 24px;
+      }
+      &__subTitle{
+        display: inline-block;
+        margin-right: 16px;
+      }
+      &__recommendText{
+        margin-bottom: 56px;
+      }
+    }
+  }
+  .c-table{
+    &__tr{
+      &:nth-of-type(2){
+      .c-table__des--short{
+          background: var.$deepBlue;
+        }
+      }
+    }
+    &__type{
+      width: 160.328px;
+      font-size: 1rem;
+      font-weight: bold;
+      &--blank{
+        width: 351.016px;
+      }
+    }
+    &__price{
+      box-sizing: unset;
+    }
+    .c-table__des--short{
+      box-sizing: unset;
+      width: auto;
+      background: var.$gold;
+    }
+  }
+}

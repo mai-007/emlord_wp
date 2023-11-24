@@ -1,0 +1,29 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-carBankenz{
+  background: var.$lightRed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 56px;
+  border-radius: 8px;
+  &__title{
+    width: 320px;
+    margin-bottom: 40px;
+  }
+  &__time{
+    margin-bottom: 24px;
+  }
+  &__tel{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    &__image{
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
