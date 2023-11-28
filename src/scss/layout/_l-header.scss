@@ -39,7 +39,7 @@ body{
 
 .l-headerSub{
   position: relative;
-  aspect-ratio: 1440/320;
+  aspect-ratio: 1920/290;
   overflow: hidden;
   &__inner{
     position: absolute;
@@ -51,11 +51,11 @@ body{
     color: #fff;
   }
   &__title{
-    font-size: 2.5rem;
+    font-size: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
     font-family: var.$kaisei;
   }
   &__text{
-    font-size: 1.5rem;
+    font-size: clamp(0.875rem, 0.75rem + 0.63vw, 1.5rem);
     font-family: var.$en;
     letter-spacing: 0.1em;
   }

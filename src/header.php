@@ -189,6 +189,38 @@
           <img src="<?php echo get_theme_img('headerImage/sale.jpg'); ?>">
         </picture>
       <?php endif; ?>
+      <!-- movie -->
+      <?php if (is_page(29)) : ?>
+        <picture class="l-headerSub__image">
+          <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/sd_youtube.jpg'); ?>" sizes="100vw">
+          <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/sd_youtube@2x.jpg'); ?>" sizes="100vw">
+          <img src="<?php echo get_theme_img('headerImage/sd_youtube@2x.jpg'); ?>">
+        </picture>
+      <?php endif; ?>
+      <!-- radiator -->
+      <?php if (is_page(27)) : ?>
+        <picture class="l-headerSub__image">
+          <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/radiator.jpg'); ?>" sizes="100vw">
+          <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/radiator@2x.jpg'); ?>" sizes="100vw">
+          <img src="<?php echo get_theme_img('headerImage/radiator@2x.jpg'); ?>">
+        </picture>
+      <?php endif; ?>
+      <!-- solar -->
+      <?php if (is_page(42)) : ?>
+        <picture class="l-headerSub__image">
+          <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/solar.jpg'); ?>" sizes="100vw">
+          <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/solar@2x.jpg'); ?>" sizes="100vw">
+          <img src="<?php echo get_theme_img('headerImage/solar@2x.jpg'); ?>">
+        </picture>
+      <?php endif; ?>
+      <!-- energy -->
+      <?php if (is_page(43)) : ?>
+        <picture class="l-headerSub__image">
+          <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/energy.jpg'); ?>" sizes="100vw">
+          <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/energy@2x.jpg'); ?>" sizes="100vw">
+          <img src="<?php echo get_theme_img('headerImage/energy@2x.jpg'); ?>">
+        </picture>
+      <?php endif; ?>
     </div>
   <?php endif; ?>
   <!-- カーライフ豆知識 -->

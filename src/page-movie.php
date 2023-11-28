@@ -8,7 +8,7 @@ Template Name: CM/動画一覧
   <div class="l-containerM">
     <div class="c-title">
       <h2 class="c-title__l">
-        TV CM
+        テレビCM
       </h2>
       <p class="c-title__l__sub">Commercial</p>
     </div>
