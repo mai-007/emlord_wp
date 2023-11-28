@@ -1,0 +1,75 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-sale{
+  .section01{
+    color: #fff;
+  }
+  .c-title__l{
+    font-family: var.$kaisei;
+    text-align: center;
+    &__text{
+      margin-bottom: 56px;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+  &__banner{
+    img{
+      width: 456px;
+      filter: brightness(0.8);
+      &:hover{
+        filter: brightness(1);
+      }
+    }
+  }
+  &__content{
+    margin-bottom: 56px;
+    img{
+      width: calc((100% - 40px) / 2);
+    }
+    &__general{
+      width: calc((100% - 40px) / 2);;
+      &__title{
+        @include mix.flex(row, center, center);
+        height: 50px;
+        margin-bottom: 32px;
+        font-size: 2rem;
+        background: var.$gray;
+      }
+      &__text{
+        font-size: 1.5rem;
+      }
+    }
+    &__emlord{
+      width: calc((100% - 40px) / 2);
+      &__title{
+        @include mix.flex(row, center, center);
+        height: 50px;
+        margin-bottom: 32px;
+        font-size: 2rem;
+        color: #fff;
+        background: var.$red;
+      }
+      &__text{
+        font-size: 2rem;
+        font-weight: bold;
+        color: var.$red;
+      }
+    }
+    &:first-of-type{
+
+      &::after{
+        content: "";
+        height: 0;
+        width: 100%;
+        margin-top: 56px;
+        border-style: solid;
+        border-bottom: 0;
+        border-left: 480px solid transparent;
+        border-right: 480px solid transparent;
+        border-top: 100px solid #e9e5e1;
+      }
+    }
+  }
+}

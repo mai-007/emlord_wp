@@ -58,6 +58,27 @@
   &:hover{
     background: var.$gold;
   }
+  &--gold{
+    @extend .c-button01;
+    background: var.$gold;
+    a{
+      border: 1px dashed #fff;
+      border-radius: 2rem;
+      &:hover{
+        color: var.$gold;
+        border: 1px dashed var.$gold;
+      }
+    }
+    img{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 2rem;
+    }
+    &:hover{
+      background: #fff;
+    }
+  }
 }
 
 .c-button02{

@@ -38,5 +38,13 @@
   }
   .section05{
     text-align: center;
+    .c-table{
+      &__type{
+        word-break: unset;
+      }
+      &__price{
+        width: 100%!important;
+      }
+    }
   }
 }

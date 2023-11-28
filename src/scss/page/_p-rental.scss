@@ -1,0 +1,165 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-rental{
+  .section01{
+    color: #fff;
+    .c-title__l{
+      font-family: var.$kaisei;
+      text-align: center;
+      &__text{
+        margin-bottom: 88px;
+        p{
+          margin-bottom: 2rem;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .section02{
+    .service{
+      &__title{
+        width: 100%;
+        padding: 16px;
+        background: var.$yellow;
+        img{
+          display: block;
+          width: 50%;
+          margin: 0 auto;
+        }
+      }
+      &__contents{
+        margin-bottom: 56px;
+        &__image{
+          @include mix.flex(row, space-between, stretch);
+          &__inner{
+            background: #fff;
+            margin-right: 1px;
+            &:last-of-type{
+              margin-right: 0;
+            }
+            .serviceImage{
+              display: block;
+              text-align: center;
+              &__type{
+                padding: 16px 24px;
+                background: var.$deepBlue;
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: bold;
+                span{
+                  display: block;
+                  font-weight: normal;
+                }
+              }
+            }
+          }
+        }
+      .u-text{
+        display: block;
+        width: 100%;
+        text-align: right;
+      }
+      }
+      &__price{
+        @include mix.flex(row, space-around, center);
+        position: relative;
+        padding: 16px 56px;
+        background: var.$yellow;
+        color: var.$lightRed;
+        &__inner{
+          text-align: center;
+        }
+        &__title{
+          padding-bottom: 16px;
+          font-size: 3rem;
+          font-weight: bold;
+          border-bottom: 1px solid var.$red;
+          &__time{
+            display: block;
+            padding-top: 16px;
+            color: var.$darkBrown;
+          }
+        }
+        &__price{
+            font-size: 8rem;
+            font-weight: bold;
+          }
+          &__unit{
+            font-size: 3rem;
+            font-weight: bold;
+          }
+        }
+      }
+      .c-option{
+        width: 100%;
+        &:last-of-type{
+          margin-bottom: 88px;
+        }
+        &__title{
+          margin-bottom: 0;
+          color: #fff;
+          background: var.$gold;
+        }
+        &__main{
+          margin-bottom: 56px;
+          padding: 32px;
+          background: #fff;
+        }
+      }
+    }
+    .section03{
+      .serviceDocuments{
+        &__title{
+          margin-bottom: 32px;
+          font-size: 2rem;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+      .c-table02{
+        &__th{
+          color: var.$darkBrown;
+          background: var.$gray;
+        }
+        &__td{
+          background: var.$gray-30;
+          a{
+            color: var.$deepBlue;
+            text-decoration: underline;
+          }
+          span{
+            font-weight: bold;
+          }
+          ul{
+            margin-bottom: 24px;
+            padding-left: 16px;
+            li{
+              font-size: 0.875rem;
+              list-style: inside;
+            }
+          }
+        }
+      }
+    }
+    .section04{
+      .c-flow{
+        a{
+          color: var.$deepBlue;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+        &__text{
+          font-size: 1.5rem;
+          p{
+            margin-bottom: 16px;
+            &:last-of-type{
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }

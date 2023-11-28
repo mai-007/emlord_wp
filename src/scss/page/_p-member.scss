@@ -38,10 +38,16 @@
   .section02{
     .c-box{
       text-align: center;
+      &__text{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
     }
     select{
       width: 30rem;
       height: 4rem;
+      margin-bottom: 40px;
       padding: 8px 16px;
       border-radius: 8px;
       text-align: left;

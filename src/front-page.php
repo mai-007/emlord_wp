@@ -79,7 +79,7 @@
     この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
       </p>
       <button class="c-button01">
-          <a href="#">
+          <a href="company">
           会社案内
           <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
           </a>
@@ -156,7 +156,7 @@
     <img src="<?php echo get_theme_img('frontpage/sd_youtube.jpg');?>" alt="">
   </picture>
   <button class="c-button01">
-          <a href="#">
+          <a href="movie">
           動画・CM一覧へ
           <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg');?>" alt="">
           </a>

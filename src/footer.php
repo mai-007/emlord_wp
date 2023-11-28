@@ -9,8 +9,12 @@
   </div>
   <div class="l-footer__main l-flexRowToColumn">
     <div class="l-flexColumn l-footer__banner">
-      <img src="<?php echo get_theme_img('common/banner_coating-sp.png'); ?>" alt="" alt="">
-      <img src="<?php echo get_theme_img('common/banner_inspection-sp.png'); ?>" alt="" alt="">
+      <a href="coating">
+        <img src="<?php echo get_theme_img('common/banner_coating-sp.png'); ?>" alt="" alt="">
+      </a>
+      <a href="#">
+        <img src="<?php echo get_theme_img('common/banner_inspection-sp.png'); ?>" alt="" alt="">
+      </a>
     </div>
     <div class="l-flexColumn l-footerList">
       <nav class="l-footerList__service">

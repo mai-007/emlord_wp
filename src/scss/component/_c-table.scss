@@ -75,3 +75,26 @@
     display: inline-table;
   }
 }
+
+.c-table02{
+  border-collapse: separate;
+  &__tbody{
+    width: 100%;
+  }
+  &__tr{
+    height: 56px;
+  }
+  &__th{
+    width: 27.60416667%;
+    padding: 16px;
+    background: var.$darkBrown;
+    color: #fff;
+  }
+  &__td{
+    width: auto;
+    padding: 16px;
+    background: #fff;
+    color: var.$darkBrown;
+    text-align: left;
+  }
+}

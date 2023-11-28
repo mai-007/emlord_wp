@@ -1,0 +1,67 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.p-insurance{
+  .section01{
+    color: #fff;
+  }
+  .c-title__l{
+    font-family: var.$kaisei;
+    text-align: center;
+    &__textL{
+      margin-bottom: 88px;
+      p{
+        margin-bottom: 2rem;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__flexBox{
+    @include mix.flex(row, space-between, flex-start);
+    margin-bottom: 56px;
+    &__text{
+      margin-right: 56px;
+      font-size: 1.5rem;
+      p{
+        margin-bottom: 1rem;
+      }
+    }
+    &__image{
+      max-width: 400px;
+      border-radius: 16px;
+    }
+  }
+  &__handling{
+    &__title{
+      @include mix.flex();
+      width: 100%;
+      margin-bottom: 40px;
+      padding: 0 16px;
+      font-size: 2rem;
+      color: var.$red;
+      &::before,&::after{
+        content: '';
+        display: block;
+        border-top: 1px solid var.$red;
+        border-bottom: 0.5px solid var.$red;
+        height: 4px;
+        flex-grow: 1;
+      }
+    }
+    &__inner{
+      @include mix.flex(row, space-between, center);
+      flex-wrap: wrap;
+    }
+  }
+  .section02{
+    .p-insurance__handling__inner{
+      padding: 0 80px;
+      justify-content: space-around;
+      img{
+        margin-bottom: 56px;
+      }
+    }
+  }
+}

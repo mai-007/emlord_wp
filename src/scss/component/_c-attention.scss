@@ -1,0 +1,28 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-attention{
+  padding: 40px;
+  color: #fff;
+  background: var.$darkBrown;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  &__title{
+    margin-bottom: 32px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  &__text{
+    margin-bottom: 1rem;
+  }
+  &__callout{
+    width: fit-content;
+    margin: 32px auto 0;
+    padding: 16px 24px;
+    letter-spacing: 0.1em;
+    color:var.$darkBrown;
+    background: #fff;
+    border-radius: 8px;
+  }
+}

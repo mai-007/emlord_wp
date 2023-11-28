@@ -33,7 +33,7 @@ Template Name: タイヤ
     <!--LinkInPage -->
     <div class="c-linkInPage">
       <button class="c-linkInPage__btn">
-        <a href="#coatingFrow">特典</a>
+        <a href="#benefit">特典</a>
       </button>
       <button class="c-linkInPage__btn">
         <a href="#price">料　金</a>

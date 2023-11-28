@@ -39,6 +39,7 @@
 @use "./component/c-image";
 @use "./component/c-option";
 @use "./component/c-carBankenz";
+@use "./component/c-attention";
 
 // page ----------------------------
 @use "./page/p-frontPage";
@@ -57,6 +58,10 @@
 @use "./page/p-energy";
 @use "./page/p-radiator";
 @use "./page/p-member";
+@use "./page/p-sale";
+@use "./page/p-insurance";
+@use "./page/p-company";
+@use "./page/p-rental";
 
 // utility ----------------------------
 @use "./utility/utility";
