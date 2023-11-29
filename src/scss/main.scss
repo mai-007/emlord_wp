@@ -40,6 +40,8 @@
 @use "./component/c-option";
 @use "./component/c-carBankenz";
 @use "./component/c-attention";
+@use "./component/c-postNavigation";
+@use "./component/c-pager";
 
 // page ----------------------------
 @use "./page/p-frontPage";
@@ -62,6 +64,8 @@
 @use "./page/p-insurance";
 @use "./page/p-company";
 @use "./page/p-rental";
+@use "./page/p-brake";
+@use "./page/p-archive";
 
 // utility ----------------------------
 @use "./utility/utility";

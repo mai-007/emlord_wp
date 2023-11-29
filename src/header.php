@@ -225,7 +225,7 @@
   <?php endif; ?>
   <!-- カーライフ豆知識 -->
   <?php $post_type = get_post_type(); ?>
-  <?php if ($post_type == 'column' or (is_post_type_archive($post_type == 'column'))) : ?>
+  <?php if ($post_type == 'column' || is_post_type_archive('column')) : ?>
     <div class="l-headerSub">
       <div class="l-headerSub__inner">
         <h2 class="l-headerSub__title">カーライフ豆知識</h2>
@@ -238,10 +238,11 @@
         <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/column.jpg'); ?>" sizes="100vw">
         <img src="<?php echo get_theme_img('headerImage/column.jpg'); ?>">
       </picture>
-    <?php endif; ?>
     </div>
-    <!-- breadcrumb -->
-    <?php if (!(is_home() || is_front_page())) : ?>
-      <?php breadcrumb(); ?>
-    <?php endif; ?>
-    <?php wp_body_open(); ?>
+  <?php endif; ?>
+  </div>
+  <!-- breadcrumb -->
+  <?php if (!(is_home() || is_front_page())) : ?>
+    <?php breadcrumb(); ?>
+  <?php endif; ?>
+  <?php wp_body_open(); ?>

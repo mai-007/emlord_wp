@@ -1,0 +1,29 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+
+.c-pager{
+  @include mix.flex;
+  &__li{
+    @include mix.flex;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 16px;
+    font-size: 0.825rem;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid var.$darkBrown;
+    a{
+      @include mix.flex;
+      width: 100%;
+      height: 100%;
+    }
+    &.current{
+      color: #fff;
+      background: var.$darkBrown;
+    }
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+}

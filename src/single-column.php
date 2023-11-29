@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-<?php echo get_post_type_archive_link( 'column' ); ?>
-  <?php while ( have_posts() ) : the_post(); ?>
+  <?php while (have_posts()) : the_post(); ?>
     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <article class="p-single">
         <div class="p-single__header">
@@ -18,7 +17,7 @@
             <?php the_post_thumbnail('thumbnail'); ?>
           <?php else : ?>
             <img src="<?php echo get_theme_img('common/carLife_noimage.jpg'); ?>" alt="" />
-            <?php endif ; ?>
+          <?php endif; ?>
         </div>
         <div class="p-single__contents">
           <?php the_content(); ?>
@@ -28,8 +27,8 @@
 
     <?php the_post_navigation(); ?>
 
-    <?php if ( comments_open() || get_comments_number() ) : ?>
-        <?php comments_template(); ?>
+    <?php if (comments_open() || get_comments_number()) : ?>
+      <?php comments_template(); ?>
     <?php endif; ?>
 
   <?php endwhile; ?>

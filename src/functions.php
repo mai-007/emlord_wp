@@ -112,27 +112,6 @@ add_filter('body_class', 'my_body_class');
 
 
 //--------------------------------------------------------
-// カスタム投稿タイプの追加
-//--------------------------------------------------------
-add_action('init', 'create_post_type');
-function create_post_type()
-{
-  register_post_type(
-    'column', // 投稿タイプ名の定義
-    array(
-      'labels' => array(
-        'name' => __('カーライフ豆知識'), // 表示する投稿タイプ名
-        'singular_name' => __('カーライフ豆知識')
-      ),
-      'public' => true,
-      'menu_position' => 5,
-      'show_in_rest' => true, //Gutenbergを利用する
-      'hierarchical' => true
-    )
-  );
-}
-
-//--------------------------------------------------------
 //画像までのパスの簡略化
 // echo gat_theme_img('パス')で画像を呼び出す
 //--------------------------------------------------------
@@ -142,6 +121,12 @@ function get_theme_img($img_name)
   $content = esc_url(get_template_directory_uri()) . '/images/' . $img_name;
   return $content;
 }
+
+
+//--------------------------------------------------------
+//pager
+//--------------------------------------------------------
+include('inc/pager.php');
 
 //--------------------------------------------------------
 //bread_crumb

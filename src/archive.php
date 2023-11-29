@@ -1,26 +1,27 @@
 <?php get_header(); ?>
 
 <main>
-  <?php if ( have_posts() ) : ?>
-    <header class="page-header">
-      <?php
-      the_archive_title( '<h1 class="page-title">', '</h1>' );
-      the_archive_description( '<div class="archive-description">', '</div>' );
-      ?>
-    </header>
+  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <!-- ループさせるコンテンツをここにいれる -->
+      <dl class="test-item">
+        <dt class="test-date"><?php the_time('Y-m-d'); ?></dt>
+        <dd class="test-title">
+          <a href="<?php the_permalink(); ?>">
+            <?php the_title(); ?>
+          </a>
+        </dd>
+      </dl>
+  <?php endwhile; ?>
 
-    <?php while ( have_posts() ) : the_post();?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <?php
+    // ページャーの表示
+    the_posts_pagination(array(
+      'prev_text' => __('前へ'),
+      'next_text' => __('次へ'),
+    ));
+  ?>
 
-        <?php the_title(); ?>
-        <?php the_content();?>
-
-      </article>
-      <?php the_posts_navigation(); ?>
-    <?php endwhile; ?>
   <?php endif; ?>
 </main>
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

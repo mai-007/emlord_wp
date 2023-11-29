@@ -21,7 +21,7 @@
     margin-right: 16px;
     &::after{
       content: '';
-      background: url('//localhost:3000/wp-content/themes/my_theme/images/common/arrow_right.svg') no-repeat;
+      background: url('../images/common/arrow_right.svg') no-repeat;
       background-size: contain;
       vertical-align: middle;
       display: inline-block;

@@ -1,0 +1,38 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.archive{
+  main{
+    padding: 56px 0 200px;
+  }
+  &__pageCount{
+    margin-bottom: 56px;
+  }
+  &__list{
+    max-width: 45rem;
+    margin: 0 auto 72px;
+  }
+  &__item{
+    position: relative;
+    @include mix.flex(row, flex-start, center);
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid var.$darkBrown;
+    border-bottom: none;
+    &:last-of-type{
+      border-bottom: 1px solid var.$darkBrown;
+    }
+    &__time{
+      margin-right: 1rem;
+    }
+    &__title{
+      font-weight: bold;
+    }
+    &__icon{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 2rem;
+    }
+  }
+}
