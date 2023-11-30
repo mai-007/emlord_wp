@@ -47,8 +47,10 @@ Template Name: メール会員
       </select>
 
       <div class="c-boxBorder">
-        <img src="" alt="">
+        <div>
+        <img src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="">
         <p class="c-boxBorder__textM">QRコードをスキャンして空メール送信</p>
+        </div>
       </div>
 
       <div class="c-boxBorder">

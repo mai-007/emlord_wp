@@ -44,6 +44,15 @@
         font-weight: bold;
       }
     }
+    .c-boxBorder
+    div{
+      @include mix.flex(row, space-around center);
+      width: fit-content;
+      margin: 0 auto;
+      img{
+        margin-right: 56px;
+      }
+    }
     select{
       width: 30rem;
       height: 4rem;

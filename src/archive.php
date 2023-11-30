@@ -11,15 +11,15 @@
           </a>
         </dd>
       </dl>
-  <?php endwhile; ?>
+    <?php endwhile; ?>
 
-  <?php
+    <?php
     // ページャーの表示
     the_posts_pagination(array(
       'prev_text' => __('前へ'),
       'next_text' => __('次へ'),
     ));
-  ?>
+    ?>
 
   <?php endif; ?>
 </main>

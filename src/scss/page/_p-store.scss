@@ -1,0 +1,106 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+/*single/archive共通*/
+.store{
+  padding: 56px 200px;
+  .c-boxBorder{
+    display: block;
+    padding: 32px;
+    .c-button01--gold{
+      a{
+        font-family:  "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;;
+        font-size: 1.75rem;
+        font-weight: bold;
+        letter-spacing: 0.3em;
+      }
+    }
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 56px;
+    margin-bottom: 32px;
+  }
+  &__summary{
+    &__title{
+      @include mix.flex(row, flex-start, center);
+      margin-bottom: 32px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.01em;
+      word-break: keep-all;
+      img{
+        margin-right: 16px;
+      }
+    }
+    &__list{
+      &__item{
+        @include mix.flex(row, flex-start, center);
+        padding: 0 16px 16px 0;
+        border-bottom: var.$gray;
+        &:before{
+          content: '';
+          width: 6px;
+          height: 2px;
+          margin-right: 16px;
+          background: var.$gold;
+        }
+        span{
+          margin-right: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__service{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 24px;
+    &__inner{
+      max-width: 54px;
+      word-break: break-all;
+      transition: 0.5s;
+      span{
+        display: block;
+        text-align: center;
+        font-size: 0.625rem;
+        font-weight: bold;
+      }
+    }
+    &__icon{
+      @include mix.flex;
+      width: 45px;
+      height: 45px;
+      margin: 0 auto 4px;
+      border: 1px solid var.$gray;
+      border-radius: 4px;
+      img{
+        display: block;
+        text-align: center;
+      }
+      &:hover{
+        border: 1px solid var.$gold;
+      }
+    }
+  }
+}
+/*archive*/
+.post-type-archive-store{
+  .c-linkInPage{
+    margin-bottom: 56px;
+      button{
+        a{
+          font-size: 1.25rem;
+          letter-spacing: 0.01em;
+        }
+      }
+    }
+    .c-boxBorder{
+      .c-button01--gold{
+        margin-bottom: 32px;
+      }
+    }
+  }

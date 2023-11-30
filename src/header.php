@@ -36,7 +36,7 @@
         <span class="l-headerSub__text"><?php the_field('subpageText'); ?></span>
       </div>
 
-      <!-- ▼ bgImage setting  -->
+  <!-- ▼ bgImage setting  -->
       <!-- coating -->
       <?php if (is_page(11)) : ?>
         <picture class="l-headerSub__image">
@@ -240,8 +240,36 @@
       </picture>
     </div>
   <?php endif; ?>
+  <!-- 店舗詳細ページ -->
+  <?php $post_type = get_post_type(); ?>
+  <?php if ($post_type == 'store' || is_archive()) : ?>
+    <div class="l-headerSub">
+      <div class="l-headerSub__inner">
+        <h2 class="l-headerSub__title">店舗一覧</h2>
+      </div>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/company.jpg'); ?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/company@2x.jpg'); ?>" sizes="100vw">
+        <img src="<?php echo get_theme_img('headerImage/company@2x.jpg'); ?>">
+      </picture>
+    </div>
+  <?php elseif ($post_type == 'store' || is_single()): ?>
+    <div class="l-headerSub">
+      <div class="l-headerSub__inner">
+        <h2 class="l-headerSub__title"><?php the_title(); ?></h2>
+      </div>
+      <picture class="l-headerSub__image">
+        <source media="(max-width:799px)" srcset="<?php echo get_theme_img('headerImage/company.jpg'); ?>" sizes="100vw">
+        <source media="(min-width:800px)" srcset="<?php echo get_theme_img('headerImage/company@2x.jpg'); ?>" sizes="100vw">
+        <img src="<?php echo get_theme_img('headerImage/company@2x.jpg'); ?>">
+      </picture>
+    </div>
+  <?php endif; ?>
   </div>
   <!-- breadcrumb -->
+  </div>
+  <!-- breadcrumb -->
+
   <?php if (!(is_home() || is_front_page())) : ?>
     <?php breadcrumb(); ?>
   <?php endif; ?>

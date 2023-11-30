@@ -2,70 +2,70 @@
 $stores = [
   [
     'name' => '小峰SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '上南部SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '建軍SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '光の森SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '本渡SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '菊南SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '新町SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '平田SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '大矢野SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => 'DDエネオスセブンTATSUDA',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '嘉島SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '熊本インターSS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '本渡大田町SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '松橋SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '日赤通りSS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '松橋SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
   [
     'name' => '尾ノ上SS',
-    'href' => '#'
+    'href' => '/store/teststore'
   ],
 ];

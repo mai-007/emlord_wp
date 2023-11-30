@@ -26,11 +26,6 @@
     </div>
 
     <?php the_post_navigation(); ?>
-
-    <?php if (comments_open() || get_comments_number()) : ?>
-      <?php comments_template(); ?>
-    <?php endif; ?>
-
   <?php endwhile; ?>
 
 </main>
