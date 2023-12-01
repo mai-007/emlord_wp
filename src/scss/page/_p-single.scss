@@ -8,15 +8,35 @@
   background: #fff;
   border-radius: 16px;
   &__header{
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     &__title{
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       font-size: 2.5rem;
       font-weight: bold;
+      border-bottom: 3px double var.$gold;
+    }
+    &__tag{
+      display: inline-block;
+      margin-bottom: 16px;
+      a{
+        padding: 8px 16px;
+        border-radius: 4px;
+        color: #fff;
+        background: var.$darkBrown;
+        &:hover{
+          background: var.$gold;
+        }
+      }
     }
     &__date{
+      display: inline-flex;
+      vertical-align: middle;
+      width: fit-content;
+      margin-right: 16px;
       letter-spacing: 0.01em;
-      display: block;
+      img{
+        margin-right: 4px;
+      }
     }
   }
   &__image{

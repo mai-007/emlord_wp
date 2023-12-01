@@ -7,7 +7,7 @@ import modal from './modal';
 
 hamburger();
 slider();
-splide();
+//splide();
 serviceTab();
 dropdownMenu();
 modal();

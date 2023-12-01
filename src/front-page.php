@@ -13,23 +13,55 @@
         <h3 class="c-title__m">カーライフ豆知識</h3>
         <p class="c-title__m__sub">good car life</p>
       </div>
-      <div class="c-news__card">
-        <a href="<?php echo esc_url(home_url('/column/%e7%8c%9b%e6%9a%91%e3%81%a7%e3%82%82%e7%b4%a0%e6%97%a9%e3%81%8f%e8%bb%8a%e5%86%85%e3%81%ae%e6%b8%a9%e5%ba%a6%e3%82%92%e4%b8%8b%e3%81%92%e3%82%8b%e8%a3%8f%e6%8a%80/')); ?>">
-          <figure class="c-news__card__image">
-            <img src="<?php echo get_theme_img('trivia/trivia_03.jpg'); ?>" alt="">
-          </figure>
-          <div class="c-news__card__inner">
-            <h4 class="c-news__card__title">猛暑でも素早く車内の温度を下げる裏技</h4>
-            <time class="c-news__card__date" datetime="2023.10.13">2323.10.13</time>
-            <div class="c-news__card__controller">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <img class="c-news__card__change" src="<?php echo get_theme_img('common/btn01.svg'); ?>" alt="次へ">
-          </div>
-        </a>
+      <?php
+        $my_posts = array(
+        'post_type' => 'column', // 投稿タイプを設定
+        'posts_per_page' => '4', // 表示する記事数を設定
+        ); 
+        $wp_query = new WP_Query($my_posts);
+        if($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
+        $obj = get_post_type_object($post->post_type); //投稿タイプ情報を取得
+      ?>
+      <div id="slider1" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="c-news__card splide__slide">
+              <a href="<?php the_permalink(); ?>">
+                <figure class="c-news__card__image">
+                  <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail('thumbnail'); ?>
+                  <?php else : ?>
+                  <img src="<?php echo get_theme_img('common/carLife_noimage.jpg'); ?>" alt="" />
+                  <?php endif; ?>
+                </figure>
+                <div class="c-news__card__inner">
+                  <h4 class="c-news__card__title">
+                    <?php
+                if(mb_strlen($post->post_title)>20) {
+                  $title= mb_substr($post->post_title,0,20) ;
+                    echo $title . '...';
+                  } else {
+                    echo $post->post_title;
+                  }
+                ?>
+                  </h4>
+                  <time class="c-news__card__date" datetime="<?php echo get_the_date(); ?>">
+                    <?php echo get_the_date(); ?>
+                  </time>
+                  <div class="c-news__card__controller">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <img class="c-news__card__change" src="<?php echo get_theme_img('common/btn01.svg'); ?>" alt="次へ">
+                </div>
+              </a>
+            </li>
+            <?php endwhile; ?>
+            <?php endif; ?>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -41,7 +73,7 @@
     </section>
   </section>
 
-  <section id="splide" class="l-section02--bg01 splide slider1">
+  <section id="slider2" class="l-section02--bg01 splide slider1">
     <div id="js-slide" class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide">
@@ -83,7 +115,8 @@
       <button class="c-button01">
         <a href="company">
           会社案内
-          <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+          <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>"
+            alt="">
         </a>
       </button>
     </div>
@@ -125,7 +158,8 @@
       <button class="c-button01">
         <a href="https://www.emlord.co.jp/recruit/">
           採用情報ページへ
-          <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+          <img class="c-button01__image" src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>"
+            alt="">
         </a>
       </button>
     </div>
@@ -159,7 +193,6 @@
     </button>
   </section>
 </main>
-<?php echo get_post_type_archive_link('column'); ?>
 <?php
 get_footer();
 ?>

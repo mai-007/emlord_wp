@@ -1,3 +1,5 @@
+import Splide from '@splidejs/splide';
+
 export default function splide() {
 
   const hasSplide = document.getElementById('splide');

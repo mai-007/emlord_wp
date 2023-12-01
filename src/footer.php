@@ -50,12 +50,12 @@
             ],
           ]; ?>
           <?php foreach ($footerService01 as $value) : ?>
-            <li class="l-footerList__item">
-              <a href="<?php echo $value['href']; ?>">
-                <span><?php echo $value['name']; ?></span>
-                <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
-              </a>
-            </li>
+          <li class="l-footerList__item">
+            <a href="<?php echo $value['href']; ?>">
+              <span><?php echo $value['name']; ?></span>
+              <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+            </a>
+          </li>
           <?php endforeach; ?>
         </ul>
         <ul class="l-footerList__service__block">
@@ -82,12 +82,12 @@
             ],
           ]; ?>
           <?php foreach ($footerService02 as $value) : ?>
-            <li class="l-footerList__item">
-              <a href="<?php echo $value['href']; ?>">
-                <span><?php echo $value['name']; ?></span>
-                <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
-              </a>
-            </li>
+          <li class="l-footerList__item">
+            <a href="<?php echo $value['href']; ?>">
+              <span><?php echo $value['name']; ?></span>
+              <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+            </a>
+          </li>
           <?php endforeach; ?>
         </ul>
         <ul class="l-footerList__service__block">
@@ -114,12 +114,12 @@
             ],
           ]; ?>
           <?php foreach ($footerService03 as $value) : ?>
-            <li class="l-footerList__item">
-              <a href="<?php echo $value['href']; ?>">
-                <span><?php echo $value['name']; ?></span>
-                <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
-              </a>
-            </li>
+          <li class="l-footerList__item">
+            <a href="<?php echo $value['href']; ?>">
+              <span><?php echo $value['name']; ?></span>
+              <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+            </a>
+          </li>
           <?php endforeach; ?>
         </ul>
       </nav>
@@ -158,12 +158,12 @@
             ],
           ]; ?>
           <?php foreach ($footerSitemap as $value) : ?>
-            <li class="l-footerList__title">
-              <a href="<?php echo $value['href']; ?>">
-                <?php echo $value['name']; ?>
-                <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
-              </a>
-            </li>
+          <li class="l-footerList__title">
+            <a href="<?php echo $value['href']; ?>">
+              <?php echo $value['name']; ?>
+              <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+            </a>
+          </li>
           <?php endforeach; ?>
         </ul>
       </nav>
@@ -172,22 +172,24 @@
 </footer>
 </body>
 <?php if (is_home() || is_front_page()) : ?>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+<script>
+new Splide('#slider1').mount();
+new Splide('#slider2').mount();
+</script>
 <?php elseif (is_page(29)) : ?>
-  <script src="https://unpkg.com/modal-video@2.4.8/js/jquery-modal-video.min.js"></script>
-  <script>
-    jQuery(function() {
-      if (jQuery(".js-modal-video").length) {
-        jQuery(".js-modal-video").modalVideo({
-          channel: "youtube",
-          youtube: {
-            controls: 1, // コントロール表示（0は非表示）
-          },
-        });
-      }
+<script src="https://unpkg.com/modal-video@2.4.8/js/jquery-modal-video.min.js"></script>
+<script>
+jQuery(function() {
+  if (jQuery(".js-modal-video").length) {
+    jQuery(".js-modal-video").modalVideo({
+      channel: "youtube",
+      youtube: {
+        controls: 1, // コントロール表示（0は非表示）
+      },
     });
-  </script>
+  }
+});
+</script>
 <?php endif; ?>
 <script src="<?php echo get_template_directory_uri() . '/js/bundle.js'; ?>"></script>
 
