@@ -95,6 +95,41 @@ Template Name: 車買取・販売
       <p class="c-title__l__text">国家資格の整備士によるメンテナンスで、状態の良い車をお値打ちにご提供させていただきます。</p>
       </p>
     </div>
+</section>
+<section class="l-section02 section04">
+  <div class="l-containerM">
+    <div class="c-title">
+      <h2 class="c-title__l">
+        買取・販売専門店
+      </h2>
+      <p class="c-title__l__sub">
+        One-stop Store
+      </p>
+    </div>
+    <div class="c-carBankenz">
+      <div class="c-carBankenz__inner">
+        <div class="l-section--half">
+          <h3 class="c-title__m">
+            <img src="<?php echo get_theme_img('common/carLink.jpg'); ?>" alt="カーリンクのアイコン">カーリンク熊本南店
+          </h3>
+          <address class="c-carBankenz__address">
+            熊本県熊本市南区近見6丁目12-100
+          </address>
+          <p class="c-carBankenz__time">
+            08：00～19：00（平日・祭日）日曜定休
+          </p>
+          <a class="c-carBankenz__tel" href="tel:096-320-8233">
+            <img class="c-carBankenz__tel__image" src="<?php echo get_theme_img('common/phone02-brown.svg'); ?>" alt="">
+            096-320-8233
+          </a>
+        </div>
+        <img class="c-image--radiusBorder l-section--half" src="<?php echo get_theme_img('sale/sale_image04.jpg'); ?>" alt="">
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13742280.33729037!2d112.23359564999997!3d32.76443670000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f4c6a98840dd%3A0xd14d9c8cbadd4a7b!2z5qCq5byP5Lya56S-44Ko44Og44Ot44O844OJ44Kr44O844Oq44Oz44Kv54aK5pys5Y2X!5e0!3m2!1sja!2sjp!4v1701331774972!5m2!1sja!2sjp" width="100%" height="278" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+  </div>
+  </div>
   </div>
 </section>
 <?php include('inc/askedQuestions.php'); ?>

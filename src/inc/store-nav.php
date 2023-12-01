@@ -1,5 +1,9 @@
 <div class="c-dropMenu__wrap">
-  <h3 class="c-title__m c-dropMenu__title">サービスステーション一覧</h3>
+  <h3 class="c-title__m c-dropMenu__title">
+    <a class="u-underline" href="<?php echo esc_url(home_url('/store')); ?>">
+    サービスステーション一覧
+    </a>
+  </h3>
   <ul>
     <?php include('stores.php'); ?>
     <?php foreach ($stores as $store => $value) : ?>

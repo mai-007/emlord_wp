@@ -17,7 +17,7 @@ Template Name: キズ・凹み(鈑金)
       </p>
     </div>
 
-    <div class="l-flexRowToColumn section01__main">
+    <div class="section01__main l-flexRowToColumn">
       <div class="l-section--half">
         <img src="<?php echo get_theme_img('repair/repair_image01.jpg'); ?>" alt="">
       </div>

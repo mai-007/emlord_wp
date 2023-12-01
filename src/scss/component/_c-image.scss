@@ -10,5 +10,9 @@
     border-radius: 16px;
     border: 3px solid var.$darkBrown;
     margin-bottom: 1.5rem;
+    &--white{
+      @extend .c-image--radiusBorder;
+      border: 3px solid #fff;
+    }
   }
 }

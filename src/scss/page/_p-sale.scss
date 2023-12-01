@@ -58,7 +58,6 @@
       }
     }
     &:first-of-type{
-
       &::after{
         content: "";
         height: 0;
@@ -71,5 +70,29 @@
         border-top: 100px solid #e9e5e1;
       }
     }
+  }
+  .section04{
+    .c-carBankenz{
+      color: var.$darkBrown;
+      display: block;
+      background: none;
+      .c-title__m{
+        font-size: 2.3rem;
+        margin-bottom: 16px;
+        img{
+          width: 50px;
+          height: auto;
+          margin-right: 8px;
+          vertical-align: middle;
+        }
+      }
+      &__inner{
+        @include mix.flex(row, space-between, center);
+        margin-bottom: 40px;
+        }
+        iframe{
+          margin-bottom: 56px;
+        }
+      }
   }
 }

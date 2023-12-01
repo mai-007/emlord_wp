@@ -1,13 +1,21 @@
 @use "./foundation/variables" as var;
 @use "./foundation/mixin" as mix;
 
-/*single/archive共通*/
+/*--------------------------
+  1.common
+    -single/archive共通
+
+    2.archive
+---------------------------*/
+
+// 1.common-------------------
+
 .store{
-  padding: 56px 200px;
+  padding: 56px 0 200px;
   .c-boxBorder{
     display: block;
     padding: 32px;
-    .c-button01--gold{
+    .c-button01--icon--gold{
       a{
         font-family:  "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;;
         font-size: 1.75rem;
@@ -38,8 +46,14 @@
     &__list{
       &__item{
         @include mix.flex(row, flex-start, center);
-        padding: 0 16px 16px 0;
-        border-bottom: var.$gray;
+        padding: 16px 16px 16px 0;
+        border-bottom: 1px solid var.$gray;
+        &:first-of-type{
+          padding: 0 16px 16px 0;
+        }
+        &:last-of-type{
+          padding: 16px 16px 16px 0;
+        }
         &:before{
           content: '';
           width: 6px;
@@ -83,12 +97,21 @@
       }
       &:hover{
         border: 1px solid var.$gold;
+        img{
+          filter: var.$gold-filter;
+        }
       }
     }
   }
 }
-/*archive*/
+
+
+// 2.archive-------------------
+
 .post-type-archive-store{
+  main{
+    padding-bottom: 0;
+  }
   .c-linkInPage{
     margin-bottom: 56px;
       button{
@@ -99,8 +122,69 @@
       }
     }
     .c-boxBorder{
-      .c-button01--gold{
+      .c-button01--icon--gold,.c-button01{
+        width: 100%;
         margin-bottom: 32px;
+        a{
+          font-size: 1.75rem;
+        }
+      }
+      .store{
+        &__inner{
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        &__service{
+          @include mix.flex(row, flex-start, flex-start);
+          flex-wrap: wrap;
+          padding: 0 8px;
+        }
+      }
+    }
+    .station{
+      @include mix.flex(row, space-between, flex-start);
+      flex-wrap: wrap;
+      &__item{
+        width: calc((100% - 56px) / 2);
+      }
+    }
+    .section02{
+      background: var.$red;
+      color: #fff;
+      .c-carBankenz{
+        display: block;
+        background: none;
+        &__inner{
+          @include mix.flex(row, space-between, center);
+          margin-bottom: 40px;
+        }
+        iframe{
+          margin-bottom: 56px;
+        }
+      }
+    }
+    .section03{
+      color: #fff;
+      .c-carBankenz{
+        display: block;
+        background: none;
+        .c-title__m{
+          font-size: 2.3rem;
+          margin-bottom: 16px;
+          img{
+            width: 50px;
+            height: auto;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        }
+        &__inner{
+          @include mix.flex(row, space-between, center);
+          margin-bottom: 40px;
+        }
+        iframe{
+          margin-bottom: 56px;
+        }
       }
     }
   }

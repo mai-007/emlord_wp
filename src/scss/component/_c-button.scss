@@ -9,8 +9,7 @@
   border: var.$border;
   transition: .5s;
   &:hover{
-    background: var.$gold;
-    border: none;
+    border: 1px solid var.$gold;
   }
   &__image{
     width: 7.5px;
@@ -36,6 +35,20 @@
   }
 }
 
+%icon-ab-left{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+}
+
+%icon-right{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+}
+
 .c-button01{
   @extend %button;
   width: 40rem;
@@ -50,10 +63,7 @@
     }
   }
   img{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 2rem;
+    @extend %icon-ab-left;
   }
   &:hover{
     background: var.$gold;
@@ -70,13 +80,53 @@
       }
     }
     img{
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 2rem;
+      @extend %icon-ab-left;
     }
     &:hover{
       background: #fff;
+    }
+  }
+  &--icon{
+    @extend .c-button01;
+    a{
+      @include mix.flex();
+      border: 1px dashed #fff;
+      border-radius: 2rem;
+      &:hover{
+        color: #fff;
+      }
+    }
+    img{
+      position: unset;
+      transform: none;
+      margin-right: 16px;
+    }
+    &:hover{
+      background: var.$gold;
+    }
+  }
+  &--icon--gold{
+    @extend .c-button01;
+    background: var.$gold;
+    a{
+      @include mix.flex();
+      border: 1px dashed #fff;
+      border-radius: 2rem;
+      &:hover{
+        color: var.$gold;
+        border: 1px dashed var.$gold;
+      }
+    }
+    img{
+      position: unset;
+      transform: none;
+      margin-right: 16px;
+    }
+    &:hover{
+      background: #fff;
+      img{
+        filter: var.$gold-filter;
+      }
     }
   }
 }

@@ -70,6 +70,12 @@
     }
     &:hover{
       filter: var.$dropShadowHover;
+      img{
+        filter: var.$gold-filter;
+      }
+      .c-circleArrow{
+        border: 1px solid var.$gold;
+      }
     }
     &__image{
       width: 72px;

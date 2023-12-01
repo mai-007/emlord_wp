@@ -25,5 +25,8 @@
       width: 40px;
       height: 40px;
     }
+    &__inner{
+      @include mix.flex(row, space-between, center);
+    }
   }
 }

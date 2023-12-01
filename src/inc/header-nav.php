@@ -43,7 +43,7 @@
                 <?php include('store-nav.php'); ?>
               </div>
             <?php elseif ($key == 5) : ?>
-              <div class="c-dropMenu__wrap">
+              <div class="c-dropMenu__wrap p-business">
                 <?php include('business.php'); ?>
               </div>
             <?php else : ?>
