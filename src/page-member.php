@@ -39,18 +39,23 @@ Template Name: メール会員
     </div>
     <div class="c-box">
       <p class="c-box__text">最寄りのサービスステーションをお選びください</p>
-      <select name="stores" id="stores">
+      <select name="stores" id="stores" class="section02__select">
         <?php include('inc/stores.php'); ?>
         <?php foreach ($stores as $store) : ?>
-          <option value="<?php echo $store['name']; ?>"><?php echo $store['name']; ?></option>
+        <option value="<?php echo $store['name']; ?>"><?php echo $store['name']; ?></option>
         <?php endforeach; ?>
       </select>
 
-      <div class="c-boxBorder">
-        <div>
-        <img src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="">
-        <p class="c-boxBorder__textM">QRコードをスキャンして空メール送信</p>
+      <div class="c-boxBorder section02__flow1">
+        <div class="section02__flow1__inner">
+          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
+          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
+          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
+          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
+          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
+          <p class="c-boxBorder__textM">QRコードをスキャンして空メール送信</p>
         </div>
+
       </div>
 
       <div class="c-boxBorder">

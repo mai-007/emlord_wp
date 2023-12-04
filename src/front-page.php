@@ -18,10 +18,10 @@
         'post_type' => 'column', // 投稿タイプを設定
         'posts_per_page' => '4', // 表示する記事数を設定
         ); 
-        $wp_query = new WP_Query($my_posts);
-        if($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-        $obj = get_post_type_object($post->post_type); //投稿タイプ情報を取得
-      ?>
+        $the_query = new WP_query($my_posts);
+        if ($the_query->have_posts()):
+        ?>
+      <?php while($the_query->have_posts()): $the_query->the_post(); ?>
       <div id="slider1" class="splide">
         <div class="splide__track">
           <ul class="splide__list">
@@ -58,17 +58,18 @@
                 </div>
               </a>
             </li>
-            <?php endwhile; ?>
-            <?php endif; ?>
           </ul>
         </div>
+        <?php endwhile;?>
+        <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
     </section>
 
     <section class="c-instagram l-section--half">
       <div class="c-title--half">
         <h3 class="c-title__m">インスタグラム</h3>
-        <?php echo do_shortcode('[instagram-feed feed=2]'); ?>
+        <!-- <?php echo do_shortcode('[instagram-feed feed=2]'); ?> -->
       </div>
     </section>
   </section>

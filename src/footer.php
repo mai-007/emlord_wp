@@ -171,14 +171,9 @@
   </div>
 </footer>
 </body>
-<?php if (is_home() || is_front_page()) : ?>
-<script>
-new Splide('#slider1').mount();
-new Splide('#slider2').mount();
-</script>
-<?php elseif (is_page(29)) : ?>
-<script src="https://unpkg.com/modal-video@2.4.8/js/jquery-modal-video.min.js"></script>
-<script>
+<script src="<?php echo get_template_directory_uri() . '/js/bundle.js'; ?>"></script>
+<?php if (is_page(29)) : ?>
+<script src="https://unpkg.com/modal-video@2.4.8/js/jquery-modal-video.min.js">
 jQuery(function() {
   if (jQuery(".js-modal-video").length) {
     jQuery(".js-modal-video").modalVideo({
@@ -191,6 +186,5 @@ jQuery(function() {
 });
 </script>
 <?php endif; ?>
-<script src="<?php echo get_template_directory_uri() . '/js/bundle.js'; ?>"></script>
 
 </html>

@@ -1,6 +1,6 @@
 import hamburger from './hamburger';
 import slider from './slider';
-import splide from './splide';
+//import splide from './splide';
 import serviceTab from './serviceTab';
 import dropdownMenu from './dropdownMenu';
 import modal from './modal';
