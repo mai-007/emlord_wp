@@ -9,19 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Kaisei+Opti:wght@400;500&display=swap"
     rel="stylesheet">
-  <?php if (is_page(29)) : ?>
-  <link rel="stylesheet" href="https://unpkg.com/modal-video@2.4.8/css/modal-video.min.css" />
-  <?php endif; ?>
   <?php wp_head(); ?>
 </head>
 
-<body id="<?php echo esc_attr(get_queried_object()->post_name); ?>" <?php body_class(); ?>>
+<?php
+// ページの種類によって異なる値を取得
+$post_name = is_front_page() || is_home() ? 'front-page' : get_post_field('post_name', get_queried_object_id());
+?>
+
+<body id="<?php echo esc_attr($post_name); ?>" <?php body_class(); ?>>
   <header id="header" class="l-header">
     <?php include('inc/header-nav.php'); ?>
   </header>
 
   <!-- frontPage -->
-  <?php if (is_home() || is_front_page()) : ?>
+  <?php if (is_front_page() || is_home()) : ?>
   <section id="js-vegas" class="l-mainView">
   </section>
   <?php endif; ?>
@@ -77,7 +79,6 @@
   <?php endif; ?>
 
   <!-- カーライフ豆知識 -->
-  <?php $post_type = get_post_type(); ?>
   <?php if ($post_type == 'column' || is_post_type_archive('column')) : ?>
   <div class="l-headerSub">
     <div class="l-headerSub__inner">

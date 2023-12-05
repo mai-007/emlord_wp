@@ -18,10 +18,14 @@
         'post_type' => 'column', // 投稿タイプを設定
         'posts_per_page' => '4', // 表示する記事数を設定
         ); 
+        $counter = 0;
         $the_query = new WP_query($my_posts);
         if ($the_query->have_posts()):
         ?>
       <?php while($the_query->have_posts()): $the_query->the_post(); ?>
+      <?php if($counter >= 4){
+        break;
+      };?>
       <div id="slider1" class="splide">
         <div class="splide__track">
           <ul class="splide__list">
@@ -60,6 +64,7 @@
             </li>
           </ul>
         </div>
+        <?php $counter++;?>
         <?php endwhile;?>
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
