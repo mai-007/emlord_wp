@@ -12,12 +12,8 @@
   <?php wp_head(); ?>
 </head>
 
-<?php
-// ページの種類によって異なる値を取得
-$post_name = is_front_page() || is_home() ? 'front-page' : get_post_field('post_name', get_queried_object_id());
-?>
-
-<body id="<?php echo esc_attr($post_name); ?>" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
   <header id="header" class="l-header">
     <?php include('inc/header-nav.php'); ?>
   </header>
@@ -61,13 +57,13 @@ $post_name = is_front_page() || is_home() ? 'front-page' : get_post_field('post_
       43 => 'energy'
     );
     ?>
-    <?php if (is_page(array_keys($bg_pages))) : ?>
     <?php
     $page_id = get_the_ID();
     $bg_image = $bg_pages[$page_id];
     $image_src = get_theme_img("headerImage/{$bg_image}.jpg");
     $image_srcset = get_theme_img("headerImage/{$bg_image}@2x.jpg");
     ?>
+    <?php if (is_page(array_keys($bg_pages))) : ?>
     <picture class="l-headerSub__image">
       <source media="(max-width:799px)" srcset="<?php echo $image_src; ?>" sizes="100vw">
       <source media="(min-width:800px)" srcset="<?php echo $image_srcset; ?>" sizes="100vw">
@@ -122,7 +118,6 @@ $post_name = is_front_page() || is_home() ? 'front-page' : get_post_field('post_
   <?php if (!(is_home() || is_front_page())) : ?>
   <?php breadcrumb(); ?>
   <?php endif; ?>
-  <?php wp_body_open(); ?>
 </body>
 
 </html>

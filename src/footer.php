@@ -172,8 +172,16 @@
 </footer>
 </body>
 <script src="<?php echo get_template_directory_uri() . '/js/bundle.js'; ?>"></script>
+<?php if (is_front_page() || is_home()) : ?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var splide = new Splide('.splide');
+  splide.mount();
+});
+</script>
+<?php endif; ?>
 <?php if (is_page(29)) : ?>
-<script src="https://unpkg.com/modal-video@2.4.8/js/jquery-modal-video.min.js">
+<script>
 jQuery(function() {
   if (jQuery(".js-modal-video").length) {
     jQuery(".js-modal-video").modalVideo({

@@ -86,22 +86,22 @@ Template Name: コーティング
       ];
 
       foreach ($coatingMerits as $key => $merit) : ?>
-        <div class="c-box01">
-          <h3 class="c-box01__title">
-            <span class="c-box01__title__number"><?php echo $merit['number']; ?></span>
-            <?php echo $merit['title']; ?>
-          </h3>
-          <div class="c-box01__text">
-            <?php foreach ($merit['description'] as $paragraph) : ?>
-              <p class="c-box01__text__item"><?php echo $paragraph; ?></p>
-            <?php endforeach; ?>
-          </div>
-          <img src="<?php echo get_theme_img($merit['image']); ?>" alt="" class="c-box01__image">
-          <button class="c-button02 modal-trigger" data-target="<?php echo $key + 1; ?>">
-            OPEN
-            <img src="<?php echo get_theme_img('common/externalLinks.svg'); ?>" alt="">
-          </button>
+      <div class="c-box01">
+        <h3 class="c-box01__title">
+          <span class="c-box01__title__number"><?php echo $merit['number']; ?></span>
+          <?php echo $merit['title']; ?>
+        </h3>
+        <div class="c-box01__text">
+          <?php foreach ($merit['description'] as $paragraph) : ?>
+          <p class="c-box01__text__item"><?php echo $paragraph; ?></p>
+          <?php endforeach; ?>
         </div>
+        <img src="<?php echo get_theme_img($merit['image']); ?>" alt="" class="c-box01__image">
+        <button class="c-button02 modal-trigger" data-target="<?php echo $key + 1; ?>">
+          OPEN
+          <img src="<?php echo get_theme_img('common/externalLinks.svg'); ?>" alt="">
+        </button>
+      </div>
       <?php endforeach; ?>
 
       <!--以下モーダルで表示させるコンテンツ-->
@@ -122,7 +122,9 @@ Template Name: コーティング
         </h4>
         <div class="c-box01__text">
           <p>一般的なガラスコーティングはガラスではなくレジン系が主流ですが、《クオーツ》では<span class="u-bold">完全ガラス成分</span>のシリカ化合物を使用しています。</p>
-          <p>シリカ化合物は<span class="u-bold">桁違いの硬度</span>で従来品よりも汚れがつきにくく、キズがつきにくい反面、艶を出すのが難しいとされていました。当社では長年の研究開発の結果、業界初の多層化に成功。多層化することにより<span class="u-bold">類稀なる強度と艶の両方を実現</span>することに成功しました。</p>
+          <p>シリカ化合物は<span
+              class="u-bold">桁違いの硬度</span>で従来品よりも汚れがつきにくく、キズがつきにくい反面、艶を出すのが難しいとされていました。当社では長年の研究開発の結果、業界初の多層化に成功。多層化することにより<span
+              class="u-bold">類稀なる強度と艶の両方を実現</span>することに成功しました。</p>
           <p class="u-red">※レジン系などの場合１年程度で効果が無くなりますが、シリカ多層構造の場合は最低5年以上の効果が期待できます。</p>
         </div>
         <img src="<?php echo get_theme_img('coating/modal01_image01.jpg'); ?>" alt="">
@@ -143,7 +145,8 @@ Template Name: コーティング
         </h4>
         <div class="c-box01__text">
           <p>これまで主流のガラスコーティングでは、下地処理にスポンジ等を使った手作業の磨き工程を採用していたため、繊細なキズの除去が難しく、さらに塗装面に過度の負荷を与えていました。</p>
-          <p>当店のガラスコーティングでは、専用機材を用いた本格的な磨き工程「匠磨き」を用いることで、塗装面に余計な負荷を与えず、<span class="u-bold">洗車キズなどの繊細なキズまで除去します。</span></p>
+          <p>当店のガラスコーティングでは、専用機材を用いた本格的な磨き工程「匠磨き」を用いることで、塗装面に余計な負荷を与えず、<span class="u-bold">洗車キズなどの繊細なキズまで除去します。</span>
+          </p>
           <p class="u-bold">経年劣化したボディ表面のキズや異物を除去し、キメの細かい塗装肌を復元します。</p>
           <p class="u-red">※深刻なウォータースポットなどは完全に除去出来ません。</p>
         </div>
@@ -167,7 +170,8 @@ Template Name: コーティング
         <div class="c-box01__text">
           <p>下地のキズ消しと研磨、表面をなめらかに整えるガラストップコートが、<span class="u-bold">雨に含まれる油分や埃を雨ごと押し流し、汚れとして残しません。</span></p>
           <p>また、ガラス被膜は無機物のため有機物（汚れ）を定着させません。</p>
-          <p class="u-red">また、紫外線吸収剤配合で<span class="u-bold">UVダメージを防ぎます。</span>クリア面が日常の紫外線ダメージをカット・保護するので<span class="u-bold">ただ乗っているだけで劣化するという悩みから解放されます。</span></p>
+          <p class="u-red">また、紫外線吸収剤配合で<span class="u-bold">UVダメージを防ぎます。</span>クリア面が日常の紫外線ダメージをカット・保護するので<span
+              class="u-bold">ただ乗っているだけで劣化するという悩みから解放されます。</span></p>
         </div>
         <img src="<?php echo get_theme_img('coating/modal01_image03.jpg'); ?>" alt="">
       </div>
@@ -257,30 +261,30 @@ Template Name: コーティング
     ],
   ];; ?>
   <?php foreach ($flowSteps as $step) : ?>
-    <div class="c-flow">
-      <div class="c-flow__title">
-        <h3><?php echo $step['title']; ?></h3>
+  <div class="c-flow">
+    <div class="c-flow__title">
+      <h3><?php echo $step['title']; ?></h3>
+    </div>
+    <div class="c-flow__inner">
+      <div class="c-flow__text">
+        <?php foreach ($step['text'] as $paragraph) : ?>
+        <p><?php echo $paragraph; ?></p>
+        <?php endforeach; ?>
       </div>
-      <div class="c-flow__inner">
-        <div class="c-flow__text">
-          <?php foreach ($step['text'] as $paragraph) : ?>
-            <p><?php echo $paragraph; ?></p>
-          <?php endforeach; ?>
+      <div class="c-box--image">
+        <?php foreach ($step['images'] as $index => $image) : ?>
+        <div class="c-box--image__wrap">
+          <?php if (!empty($step['image_descriptions'][$index])) : ?>
+          <span class="c-box--image__title">
+            <?php echo $step['image_descriptions'][$index]; ?>
+          </span>
+          <?php endif; ?>
+          <img src="<?php echo get_theme_img('coating/' . $image); ?>" alt="">
         </div>
-        <div class="c-box--image">
-          <?php foreach ($step['images'] as $index => $image) : ?>
-            <div class="c-box--image__wrap">
-              <?php if (!empty($step['image_descriptions'][$index])) : ?>
-                <span class="c-box--image__title">
-                  <?php echo $step['image_descriptions'][$index]; ?>
-                </span>
-              <?php endif; ?>
-              <img src="<?php echo get_theme_img('coating/' . $image); ?>" alt="">
-            </div>
-          <?php endforeach; ?>
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
+  </div>
   <?php endforeach; ?>
 </section>
 
@@ -339,29 +343,29 @@ Template Name: コーティング
     ];
 
     foreach ($coatingPrice as $key => $price) : ?>
-      <div class="c-box01">
-        <span class="c-title__category">
-          <?php echo $price['category']; ?>
-        </span>
-        <h3 class="c-box01__title">
-          <?php echo $price['title']; ?>
-        </h3>
-        <div class="c-box01__text">
-          <p><?php echo $price['description']; ?></p>
-        </div>
-        <ul class="c-box01__list">
-          <?php foreach ($price['lists'] as $list) : ?>
-            <li class="c-box01__list__item">
-              <?php echo $list; ?>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-        <button class="c-button02 modal-trigger" data-target="<?php echo $key + 4; ?>">
-          <img src="<?php echo get_theme_img('common/price.svg'); ?>" alt="">
-          OPEN
-          <img src="<?php echo get_theme_img('common/externalLinks.svg'); ?>" alt="">
-        </button>
+    <div class="c-box01">
+      <span class="c-title__category">
+        <?php echo $price['category']; ?>
+      </span>
+      <h3 class="c-box01__title">
+        <?php echo $price['title']; ?>
+      </h3>
+      <div class="c-box01__text">
+        <p><?php echo $price['description']; ?></p>
       </div>
+      <ul class="c-box01__list">
+        <?php foreach ($price['lists'] as $list) : ?>
+        <li class="c-box01__list__item">
+          <?php echo $list; ?>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+      <button class="c-button02 modal-trigger" data-target="<?php echo $key + 4; ?>">
+        <img src="<?php echo get_theme_img('common/price.svg'); ?>" alt="">
+        OPEN
+        <img src="<?php echo get_theme_img('common/externalLinks.svg'); ?>" alt="">
+      </button>
+    </div>
     <?php endforeach; ?>
 
   </div>
@@ -403,12 +407,14 @@ Template Name: コーティング
         ];
         ?>
         <?php foreach ($newCarCoatingMenus as $key => $menu) : ?>
-          <li class="c-box--image__wrap--50">
-            <span class="c-box--image__title">
-              <?php echo $menu; ?>
-            </span>
-            <img src="<?php echo get_theme_img('coating/modal02_image' . str_pad($key + 2, 2, '0', STR_PAD_LEFT) . '.jpg'); ?>" alt="">
-          </li>
+        <li class="c-box--image__wrap--50">
+          <span class="c-box--image__title">
+            <?php echo $menu; ?>
+          </span>
+          <img
+            src="<?php echo get_theme_img('coating/modal02_image' . str_pad($key + 2, 2, '0', STR_PAD_LEFT) . '.jpg'); ?>"
+            alt="">
+        </li>
         <?php endforeach; ?>
       </ul>
     </div>
@@ -447,17 +453,17 @@ Template Name: コーティング
         ],
       ]; ?>
       <?php foreach ($newCarCoatingPrices as $newCarCoatingPrice) : ?>
-        <div class="c-table__inner">
-          <dt class="c-table__type">
-            <span class="c-table__type__top">
-              <?php echo $newCarCoatingPrice['size']; ?>
-            </span>
-            <?php echo $newCarCoatingPrice['type']; ?>
-          </dt>
-          <dd class="c-table__price u-red">
-            <?php echo $newCarCoatingPrice['price']; ?>
-          </dd>
-        </div>
+      <div class="c-table__inner">
+        <dt class="c-table__type">
+          <span class="c-table__type__top">
+            <?php echo $newCarCoatingPrice['size']; ?>
+          </span>
+          <?php echo $newCarCoatingPrice['type']; ?>
+        </dt>
+        <dd class="c-table__price u-red">
+          <?php echo $newCarCoatingPrice['price']; ?>
+        </dd>
+      </div>
       <?php endforeach; ?>
     </dl>
   </div>
@@ -511,17 +517,17 @@ Template Name: コーティング
         ],
       ]; ?>
       <?php foreach ($premiumPrices as $premiumPrice) : ?>
-        <div class="c-table__inner">
-          <dt class="c-table__type">
-            <span class="c-table__type__top">
-              <?php echo $premiumPrice['size']; ?>
-            </span>
-            <?php echo $premiumPrice['type']; ?>
-          </dt>
-          <dd class="c-table__price u-red">
-            <?php echo $premiumPrice['price']; ?>
-          </dd>
-        </div>
+      <div class="c-table__inner">
+        <dt class="c-table__type">
+          <span class="c-table__type__top">
+            <?php echo $premiumPrice['size']; ?>
+          </span>
+          <?php echo $premiumPrice['type']; ?>
+        </dt>
+        <dd class="c-table__price u-red">
+          <?php echo $premiumPrice['price']; ?>
+        </dd>
+      </div>
       <?php endforeach; ?>
     </dl>
   </div>
@@ -576,17 +582,17 @@ Template Name: コーティング
         ],
       ]; ?>
       <?php foreach ($regularPrices as $regularPrice) : ?>
-        <div class="c-table__inner">
-          <dt class="c-table__type">
-            <span class="c-table__type__top">
-              <?php echo $regularPrice['size']; ?>
-            </span>
-            <?php echo $regularPrice['type']; ?>
-          </dt>
-          <dd class="c-table__price u-red">
-            <?php echo $regularPrice['price']; ?>
-          </dd>
-        </div>
+      <div class="c-table__inner">
+        <dt class="c-table__type">
+          <span class="c-table__type__top">
+            <?php echo $regularPrice['size']; ?>
+          </span>
+          <?php echo $regularPrice['type']; ?>
+        </dt>
+        <dd class="c-table__price u-red">
+          <?php echo $regularPrice['price']; ?>
+        </dd>
+      </div>
       <?php endforeach; ?>
     </dl>
   </div>

@@ -24,7 +24,7 @@ Template Name: 車検
       <button class="c-linkInPage__btn">
         <a href="#frow">車検の流れ</a>
       </button>
-      <button class="c-linkInPage__btn">
+      <button class="c-linkInPage__btn">docker
         <a href="#price">料金表</a>
       </button>
       <button class="c-linkInPage__btn">
@@ -80,18 +80,18 @@ Template Name: 車検
       ];
 
       foreach ($inspectionMerits as $key => $merit) : ?>
-        <div class="c-box01">
-          <h3 class="c-box01__title">
-            <span class="c-box01__title__number"><?php echo $merit['number']; ?></span>
-            <?php echo $merit['title']; ?>
-          </h3>
-          <div class="c-box01__text">
-            <?php foreach ($merit['description'] as $paragraph) : ?>
-              <p class="c-box01__text__item"><?php echo $paragraph; ?></p>
-            <?php endforeach; ?>
-          </div>
-          <img src="<?php echo get_theme_img($merit['image']); ?>" alt="" class="c-box01__image">
+      <div class="c-box01">
+        <h3 class="c-box01__title">
+          <span class="c-box01__title__number"><?php echo $merit['number']; ?></span>
+          <?php echo $merit['title']; ?>
+        </h3>
+        <div class="c-box01__text">
+          <?php foreach ($merit['description'] as $paragraph) : ?>
+          <p class="c-box01__text__item"><?php echo $paragraph; ?></p>
+          <?php endforeach; ?>
         </div>
+        <img src="<?php echo get_theme_img($merit['image']); ?>" alt="" class="c-box01__image">
+      </div>
       <?php endforeach; ?>
     </div>
   </div>
@@ -144,7 +144,7 @@ Template Name: 車検
       ];
 
       foreach ($inspectionBenefits as $benefit) : ?>
-        <img src="<?php echo get_theme_img($benefit['image']); ?>" alt="<?php echo $benefit['alt']; ?>">
+      <img src="<?php echo get_theme_img($benefit['image']); ?>" alt="<?php echo $benefit['alt']; ?>">
       <?php endforeach; ?>
     </div>
   </div>
@@ -175,13 +175,17 @@ Template Name: 車検
 <section class="l-section02--bg01 section05">
   <div class="l-containerM c-bannerArea">
     <picture class="section05__image">
-      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_inspection-sp.png'); ?> " sizes="100%">
-      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_inspection.png'); ?> w849" , sizes="849px">
+      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_inspection-sp.png'); ?> "
+        sizes="100%">
+      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_inspection.png'); ?> w849" ,
+        sizes="849px">
       <img src="<?php echo get_theme_img('common/banner_inspection.png'); ?>" alt="">
     </picture>
     <picture class="section05__image">
-      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_point-sp.png'); ?>" sizes="100%">
-      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_point.png'); ?> w849" , sizes="849px">
+      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_point-sp.png'); ?>"
+        sizes="100%">
+      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_point.png'); ?> w849" ,
+        sizes="849px">
       <img src="<?php echo get_theme_img('common/banner_point.png'); ?>" alt="">
     </picture>
   </div>
@@ -259,20 +263,20 @@ Template Name: 車検
     ],
   ];; ?>
   <?php foreach ($inspectionFlow as $flow) : ?>
-    <div class="c-flow">
-      <div class="c-flow__title">
-        <h3><?php echo $flow['title']; ?></h3>
-      </div>
-      <div class="c-flow__inner l-flexRowToColumn">
-        <div class="c-flow__text">
-          <?php foreach ($flow['text'] as $paragraph) : ?>
-            <p><?php echo $paragraph; ?></p>
-          <?php endforeach; ?>
-        </div>
-        <img src="<?php echo get_theme_img($flow['image'][0]); ?>" alt="">
-      </div>
+  <div class="c-flow">
+    <div class="c-flow__title">
+      <h3><?php echo $flow['title']; ?></h3>
     </div>
+    <div class="c-flow__inner l-flexRowToColumn">
+      <div class="c-flow__text">
+        <?php foreach ($flow['text'] as $paragraph) : ?>
+        <p><?php echo $paragraph; ?></p>
+        <?php endforeach; ?>
+      </div>
+      <img src="<?php echo get_theme_img($flow['image'][0]); ?>" alt="">
     </div>
+  </div>
+  </div>
   <?php endforeach; ?>
 </section>
 
@@ -365,73 +369,73 @@ Template Name: 車検
       ],
     ];; ?>
     <?php foreach ($Prices as $price) : ?>
-      <div class="c-boxBorder__header">
-        <dl>
-          <dt class="c-boxBorder__header__title">
-            <?php echo $price['title']; ?>
-          </dt>
-          <dd class="c-boxBorder__header__feature">
-            <?php echo implode("<br>", $price['text']); ?>
-          </dd>
-        </dl>
-        <p class="c-boxBorder__header__recommendText">
-          【こんな方におすすめ】<?php echo implode("<br>", $price['recommend']); ?></p>
-      </div>
-      <table class="c-table">
-        <tbody>
-          <tr>
-            <th class="c-table__des--short">
-              車種・重量
-            </th>
-            <?php foreach ($price['type'] as $key => $type) : ?>
-              <th class="c-table__type">
-                <span class="c-table__type__top">
-                  <?php echo $key; ?>
-                </span>
-                <?php echo $type; ?>
-              </th>
-            <?php endforeach; ?>
-          </tr>
-          <tr>
-            <th class="c-table__des--short">
-              車検基本料
-            </th>
-            <td colspan="5" class="c-table__price">
-              ¥24,200
-            </td>
-          </tr>
-          <tr>
-            <th class="c-table__des--short">
-              法定費用
-            </th>
-            <?php foreach ($price['legalFee'] as $fee) : ?>
-              <td class="c-table__price">
-                <?php echo $fee; ?>
-              </td>
-            <?php endforeach; ?>
-          </tr>
-          <tr>
-            <th class="c-table__des--short u-bgGold">
-              車検総額
-            </th>
-            <?php foreach ($price['total'] as $total) : ?>
-              <td class="c-table__price u-bgOrange30">
-                <?php echo $total; ?>
-              </td>
-            <?php endforeach; ?>
-          </tr>
-          <tr>
-            <th class="c-table__des--short u-bgRed">
-              スーパー会員価格
-            </th>
-            <?php foreach ($price['member'] as $member) : ?>
-              <td class="c-table__price u-bgOrange30">
-                <?php echo $member; ?>
-              </td>
-            <?php endforeach; ?>
-          </tr>
-        </tbody>
-      </table>
+    <div class="c-boxBorder__header">
+      <dl>
+        <dt class="c-boxBorder__header__title">
+          <?php echo $price['title']; ?>
+        </dt>
+        <dd class="c-boxBorder__header__feature">
+          <?php echo implode("<br>", $price['text']); ?>
+        </dd>
+      </dl>
+      <p class="c-boxBorder__header__recommendText">
+        【こんな方におすすめ】<?php echo implode("<br>", $price['recommend']); ?></p>
+    </div>
+    <table class="c-table">
+      <tbody>
+        <tr>
+          <th class="c-table__des--short">
+            車種・重量
+          </th>
+          <?php foreach ($price['type'] as $key => $type) : ?>
+          <th class="c-table__type">
+            <span class="c-table__type__top">
+              <?php echo $key; ?>
+            </span>
+            <?php echo $type; ?>
+          </th>
+          <?php endforeach; ?>
+        </tr>
+        <tr>
+          <th class="c-table__des--short">
+            車検基本料
+          </th>
+          <td colspan="5" class="c-table__price">
+            ¥24,200
+          </td>
+        </tr>
+        <tr>
+          <th class="c-table__des--short">
+            法定費用
+          </th>
+          <?php foreach ($price['legalFee'] as $fee) : ?>
+          <td class="c-table__price">
+            <?php echo $fee; ?>
+          </td>
+          <?php endforeach; ?>
+        </tr>
+        <tr>
+          <th class="c-table__des--short u-bgGold">
+            車検総額
+          </th>
+          <?php foreach ($price['total'] as $total) : ?>
+          <td class="c-table__price u-bgOrange30">
+            <?php echo $total; ?>
+          </td>
+          <?php endforeach; ?>
+        </tr>
+        <tr>
+          <th class="c-table__des--short u-bgRed">
+            スーパー会員価格
+          </th>
+          <?php foreach ($price['member'] as $member) : ?>
+          <td class="c-table__price u-bgOrange30">
+            <?php echo $member; ?>
+          </td>
+          <?php endforeach; ?>
+        </tr>
+      </tbody>
+    </table>
     <?php endforeach; ?>
   </div>
 </section>
@@ -476,15 +480,15 @@ Template Name: 車検
     ]; ?>
     <div class="c-box--image02">
       <?php foreach ($inspectionDocument as $document) : ?>
-        <div class="c-box--image__wrap">
-          <span class="c-box--image02__title">
-            <?php echo $document['title']; ?>
-          </span>
-          <img src="<?php echo get_theme_img($document['image']); ?>" alt="">
-          <span class="c-box--image02__text">
-            <?php echo $document['text']; ?>
-          </span>
-        </div>
+      <div class="c-box--image__wrap">
+        <span class="c-box--image02__title">
+          <?php echo $document['title']; ?>
+        </span>
+        <img src="<?php echo get_theme_img($document['image']); ?>" alt="">
+        <span class="c-box--image02__text">
+          <?php echo $document['text']; ?>
+        </span>
+      </div>
       <?php endforeach; ?>
     </div>
 </section>
@@ -493,8 +497,10 @@ Template Name: 車検
 <section class="l-section02 section09">
   <div class="l-containerM c-bannerArea">
     <picture class="section05__image">
-      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_follow-sp.png'); ?> " sizes="100%">
-      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_follow.png'); ?> w849" , sizes="849px">
+      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_follow-sp.png'); ?> "
+        sizes="100%">
+      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_follow.png'); ?> w849" ,
+        sizes="849px">
       <img src="<?php echo get_theme_img('common/banner_follow.png'); ?>" alt="">
     </picture>
   </div>
