@@ -15,7 +15,11 @@ Template Name: メール会員
     </div>
     <div class="c-box03">
       <div class="c-box03__circle">
-        <img src="<?php echo get_theme_img('member/phone.png'); ?>" alt="">
+        <picture class="emlord">
+          <source media="(max-width:799px)" srcset="<?php echo get_theme_img('member/phone-sp.jpeg'); ?>" sizes="100vw">
+          <source media="(min-width:800px)" srcset="<?php echo get_theme_img('member/phone.png'); ?>" sizes="100vw">
+          <img src="<?php echo get_theme_img('member/phone-sp.jpeg'); ?>" alt="">
+        </picture>
       </div>
       <div>
         <p>
@@ -37,45 +41,51 @@ Template Name: メール会員
         How to Register
       </p>
     </div>
+
+    Copy code
     <div class="c-box">
-      <p class="c-box__text">最寄りのサービスステーションをお選びください</p>
-      <select name="stores" id="stores" class="section02__select">
+      <p class="c-box__text">
+        <span class="c-box01__title__number">1.</span>最寄りのサービスステーションをお選びください
+      </p>
+      <!-- 登録したい店舗をselectで選択してもらう -->
+      <select name="stores" id="stores" class="section02__select" onchange="changeEmailRecipient()">
         <?php include('inc/stores.php'); ?>
         <?php foreach ($stores as $store) : ?>
-        <option value="<?php echo $store['name']; ?>"><?php echo $store['name']; ?></option>
+        <option value="<?php echo $store['name']; ?>" data-email="<?php echo $store['email']; ?>"
+          data-qr="<?php echo $store['qr']; ?>">
+          <?php echo $store['name']; ?>
+        </option>
         <?php endforeach; ?>
       </select>
 
+      <!-- selectで選択した店舗への登録メールアドレスをQRコードで出力する -->
       <div class="c-boxBorder section02__flow1">
-        <div class="section02__flow1__inner">
+        <div class="section02__flow1__inner" id="qrImagesContainer">
           <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
-          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
-          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
-          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
-          <img class="qr_00" src="<?php echo get_theme_img('qr/qr_top.gif'); ?>" alt="エムロード 本社メール会員">
-          <p class="c-boxBorder__textM">QRコードをスキャンして空メール送信</p>
         </div>
-
-      </div>
-
-      <div class="c-boxBorder">
-        <p class="c-boxBorder__textM">またはあなたのアドレスを入力してもOK
+        <p class="c-boxBorder__textM">
+          <span class="c-box01__title__number">
+            2.
+          </span>QRコードをスキャンして空メール送信
         </p>
-        <div>
-          <form action="">
-            <input type="mail">
-            <button type="submit" value="送信"></button>
-          </form>
-        </div>
       </div>
+    </div>
 
-      <div class="c-attention">
-        <h5 class="c-attention__title">ご確認ください</h5>
-        <p class="c-attention__text">空メール送信後に、登録完了メールが届きます。</p>
-        <p class="c-attention__text">メールが届かない場合は、お使いのメールアドレスで迷惑メール設定をされている可能性があります。</p>
-        <p class="c-attention__text">下記ドメインを受信できる設定にしてください。</p>
-        <p class="c-attention__callout">ドメイン：mailma.emlord.co.jp</p>
-      </div>
+    <!-- selectで選択した店舗の登録メールアドレスへ入力したメールアドレスからメールを送信する-->
+    <div class="c-boxBorder section02__flow2">
+      <p class="c-boxBorder__textM u-align-center">またはあなたのアドレスを入力してもOK
+      </p>
+      <form method="post" id="myForm" action="process_form.php">
+        <input type="email" id="email" name="email" required>
+        <button type="submit">送 信</button>
+      </form>
+    </div>
+    <div class="c-attention">
+      <h5 class="c-attention__title u-align-center">ご確認ください</h5>
+      <p class="c-attention__text">空メール送信後に、登録完了メールが届きます。</p>
+      <p class="c-attention__text">メールが届かない場合は、お使いのメールアドレスで迷惑メール設定をされている可能性があります。</p>
+      <p class="c-attention__text">下記ドメインを受信できる設定にしてください。</p>
+      <p class="c-attention__callout">ドメイン：mailma.emlord.co.jp</p>
     </div>
   </div>
 </section>

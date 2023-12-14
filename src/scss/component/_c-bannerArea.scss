@@ -5,5 +5,8 @@
   text-align: center;
   img{
     margin-bottom: 88px;
+    @include mix.mq(tab) {
+      margin-bottom: 24px;
+    }
   }
 }

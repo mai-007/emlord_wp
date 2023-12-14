@@ -3,11 +3,20 @@
 
 
 .p-inspection{
+  p{
+    @include mix.mq(tab) {
+      font-size: 1.2rem;
+      text-align: left;
+    }
+  }
   .section01{
     color: #fff;
     .c-title__l__text{
       text-align: center;
       margin-bottom: 88px;
+      @include mix.mq(tab) {
+        margin-bottom: 56px;
+      }
     }
   }
   .section02{
@@ -26,6 +35,11 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      @include mix.mq(tab) {
+        img{
+          max-width: 50%;
+        }
+      }
     }
   }
   .section04{
@@ -41,8 +55,18 @@
       &__text{
         font-size: 1.5rem;
         max-width: 65%;
+        @include mix.mq(tab) {
+          max-width: 100%;
+          margin-bottom: 24px;
+        }
         p{
           margin-bottom: 1rem;
+        }
+      }
+      img{
+        @include mix.mq(tab) {
+          max-width: 50%;
+          margin-bottom: 32px;
         }
       }
     }
@@ -51,6 +75,38 @@
     .c-table{
       display: block;
       width: 100%;
+    }
+    .c-boxBorder__header__feature{
+      @include mix.mq(tab) {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .c-boxBorder__header__recommendText{
+      @include mix.mq(tab) {
+        font-size: 1rem;
+      }
+    }
+  }
+  .section08{
+    @include mix.mq(tab) {
+      .l-containerL{
+        width: 100%;
+      }
+      .c-box--image02{
+        flex-wrap: wrap;
+        &__title{
+          height: auto;
+        }
+        &__text{
+          padding-bottom: 0;
+        }
+      }
+      .c-box--image__wrap{
+        width: calc(50% - 12px);
+        height: 216px;
+        margin-block: 16px;
+      }
     }
   }
 }

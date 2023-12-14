@@ -15,7 +15,8 @@ Template Name: 会社案内
       </p>
     </div>
     <picture class="emlord">
-      <source media="(max-width:799px)" srcset="<?php echo get_theme_img('company/image01--sp.png'); ?>" sizes="100vw">
+      <source media="(max-width:799px)" srcset="<?php echo get_theme_img('company/image01--sp
+.png'); ?>" sizes="100vw">
       <source media="(min-width:800px)" srcset="<?php echo get_theme_img('company/image01.png'); ?>" sizes="100vw">
       <img src="<?php echo get_theme_img('company/image01.png'); ?>">
     </picture>
@@ -68,7 +69,8 @@ Template Name: 会社案内
         </tr>
         <tr class="c-table02__th">
           <th class="c-table02__th">営業内容</th>
-          <td class="c-table02__td">ENEOSサービスステーション、石油製品販売、車検・整備、保険、中古車販売・買取、鈑金・塗装、レンタカー、オートリース、 ホームエネルギー（太陽光発電、燃料電池、エコフィール）、環境商材（光触媒、遮熱塗料）</td>
+          <td class="c-table02__td">ENEOSサービスステーション、石油製品販売、車検・整備、保険、中古車販売・買取、鈑金・塗装、レンタカー、オートリース、
+            ホームエネルギー（太陽光発電、燃料電池、エコフィール）、環境商材（光触媒、遮熱塗料）</td>
         </tr>
         <tr class="c-table02__th">
           <th class="c-table02__th">本社</th>
@@ -251,19 +253,19 @@ Template Name: 会社案内
         ],
       ]; ?>
       <?php foreach ($histories as $history) : ?>
-        <dl>
-          <dt class="history__time">
-            <span class="history__time__ad">
-              <?php echo $history["ad"]; ?>
-            </span>
-            <span class="history__time__j">
-              <?php echo $history["j-year"]; ?>
-            </span>
-          </dt>
-          <dt class="history__event">
-            <?php echo $history["text"]; ?>
-          </dt>
-        </dl>
+      <dl>
+        <dt class="history__time">
+          <span class="history__time__ad">
+            <?php echo $history["ad"]; ?>
+          </span>
+          <span class="history__time__j">
+            <?php echo $history["j-year"]; ?>
+          </span>
+        </dt>
+        <dt class="history__event">
+          <?php echo $history["text"]; ?>
+        </dt>
+      </dl>
       <?php endforeach; ?>
     </div>
   </div>

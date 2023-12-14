@@ -6,11 +6,19 @@
     max-width: mix.$content-m;
     @include mix.flex(row, space-around, center);
     margin: 0 auto 200px;
+    @include mix.mq(tab) {
+      max-width: 95%;
+      display: block;
+      margin-bottom: 88px;
+    }
     div{
       position: relative;
       width: calc((100% - 56px) / 2) ;
       background: #fff;
       border-radius: 16px;
+      @include mix.mq(tab) {
+        width: 100%;
+      }
       a{
         display: block;
         width: 100%;

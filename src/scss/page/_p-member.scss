@@ -6,6 +6,9 @@
     color: #fff;
     .c-box03{
       @include mix.flex;
+      @include mix.mq(tab) {
+        flex-direction: column;
+      }
       &__circle{
         @include mix.flex(row,center,center);
         width: 50%;
@@ -14,10 +17,18 @@
         border-radius: 50%;
         background: var.$gold;
         margin-right: 56px;
+        @include mix.mq(tab) {
+          width: 100%;
+          margin-right: 0;
+          background: none;
+        }
         img{
           display: block;
           width: 128px;
           padding: 16px;
+          @include mix.mq(tab) {
+            width: 100%;
+          }
         }
       }
     }
@@ -36,21 +47,35 @@
     }
   }
   .section02{
+    .l-containerM{
+      @include mix.mq(tab) {
+        width: 100%;
+      }
+    }
+    .c-box01__title__number{
+      margin-right: 16px;
+      @include mix.mq(tab) {
+        font-size: 2rem;
+        text-align: left;
+      }
+    }
+    .c-boxBorder__textM{
+      line-height: 1.5em;
+      text-align: left;
+    }
     .c-box{
       text-align: center;
       &__text{
         font-size: 1.5rem;
         margin-bottom: 1rem;
         font-weight: bold;
-      }
-    }
-    .c-boxBorder
-    div{
-      @include mix.flex(row, space-around center);
-      width: fit-content;
-      margin: 0 auto;
-      img{
-        margin-right: 56px;
+        @include mix.mq(tab) {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.8em;
+        text-align: left;
+        }
       }
     }
     select{
@@ -61,12 +86,58 @@
       border-radius: 8px;
       text-align: left;
       font-weight: bold;
-      border:  1px solid var.$darkBrown;
+      border:  3px solid var.$darkBrown;
       background: #fff;
       background-image: url('../images/common/arrow_right-small.svg');
       background-repeat: no-repeat;
       background-position: right center;
       background-origin: content-box;
+      @include mix.mq(tab) {
+        width: 100%;
+      }
+    }
+    &__flow1{
+      @include mix.flex();
+      @include mix.mq(tab) {
+        flex-direction: column-reverse;
+      }
+      img{
+        margin-right: 56px;
+        @include mix.mq(tab) {
+          margin: 24px auto 0;
+        }
+      }
+    }
+    &__flow2{
+      p{
+        margin-bottom: 40px;
+      }
+      form{
+        width: 70%;
+        margin: 0 auto;
+        @include mix.mq(tab) {
+          width: 100%;
+        }
+        input{
+          width: 100%;
+          height: 56px;
+          margin: 0 auto 32px;
+          padding: 8px 16px;
+          border: 2px solid var.$darkBrown;
+          border-radius: 8px;
+        }
+        button{
+          display: block;
+          @include mix.flex();
+          width: 80%;
+          height: 56px;
+          margin: 0 auto;
+          color: #FFF;
+          background: var.$darkBrown;
+          border-radius: 8px;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

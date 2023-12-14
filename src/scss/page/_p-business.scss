@@ -1,4 +1,18 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
 .p-business{
+  &__content{
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+    @include mix.mq(pc-s) {
+      flex-wrap: wrap;
+    }
+    @include mix.mq(tab) {
+      flex-direction: column;
+    }
+  }
   .c-service__btn{
     margin-right: 24px;
     &:last-of-type{

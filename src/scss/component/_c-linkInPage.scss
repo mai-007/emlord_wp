@@ -12,6 +12,12 @@
     letter-spacing: 0.1em;
     background: var.$gold;
     border-radius: 4px;
+    @include mix.mq(tab) {
+      width: calc((100% - 16px) / 3);
+      font-size: .75rem;
+      letter-spacing: 0;
+      height: 3rem;
+    }
     a{
       @include mix.expand;
       @include mix.flex(row,center);

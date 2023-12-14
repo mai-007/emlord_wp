@@ -45,6 +45,9 @@
       width: 160.328px;
       font-size: 1rem;
       font-weight: bold;
+      @include mix.mq(tab) {
+        font-size: .75rem;
+      }
       &--blank{
         width: 351.016px;
       }

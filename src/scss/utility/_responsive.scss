@@ -11,8 +11,7 @@
 }
 
 .u-pc{
-  display: none;
-  @include mix.mq(pc){
-    display: block;
+  @include mix.mq(tab){
+    display: none;
   }
 }

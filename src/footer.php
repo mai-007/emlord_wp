@@ -1,4 +1,8 @@
 <?php wp_footer(); ?>
+
+<!-- 配列の取得 -->
+<?php include('inc/sitemap.php');?>
+
 <footer class="l-footer">
   <div class="l-footer__top">
     <img class="c-logo" src="<?php echo get_theme_img('common/logo.png'); ?>" alt="エムロードのロゴマーク">
@@ -22,34 +26,7 @@
           <h6 class="l-footerList__title">
             愛車のメンテナンス
           </h6>
-          <?php
-          $footerService01 = [
-            [
-              'name' => '車検・法定点検',
-              'href' => 'sale'
-            ],
-            [
-              'name' => '洗車',
-              'href' => 'carwash'
-            ],
-            [
-              'name' => 'コーティング',
-              'href' => 'coating'
-            ],
-            [
-              'name' => 'エアコン',
-              'href' => 'aircon'
-            ],
-            [
-              'name' => 'ブレーキ',
-              'href' => 'brake'
-            ],
-            [
-              'name' => 'ラジエーター',
-              'href' => 'radiator'
-            ],
-          ]; ?>
-          <?php foreach ($footerService01 as $value) : ?>
+          <?php foreach ($maintenance as $value) : ?>
           <li class="l-footerList__item">
             <a href="<?php echo $value['href']; ?>">
               <span><?php echo $value['name']; ?></span>
@@ -62,26 +39,7 @@
           <h6 class="l-footerList__title">
             修理・交換
           </h6>
-          <?php
-          $footerService02 = [
-            [
-              'name' => 'キズ・凹み修理',
-              'href' => 'repair'
-            ],
-            [
-              'name' => 'タイヤ交換',
-              'href' => 'tire'
-            ],
-            [
-              'name' => 'オイル交換',
-              'href' => 'oil'
-            ],
-            [
-              'name' => 'バッテリー交換',
-              'href' => 'battery'
-            ],
-          ]; ?>
-          <?php foreach ($footerService02 as $value) : ?>
+          <?php foreach ($replacement as $value) : ?>
           <li class="l-footerList__item">
             <a href="<?php echo $value['href']; ?>">
               <span><?php echo $value['name']; ?></span>
@@ -94,26 +52,7 @@
           <h6 class="l-footerList__title">
             車に乗る・保険
           </h6>
-          <?php
-          $footerService03 = [
-            [
-              'name' => '車買取・販売',
-              'href' => 'sale'
-            ],
-            [
-              'name' => 'レンタカー',
-              'href' => 'rental'
-            ],
-            [
-              'name' => '自動車保険',
-              'href' => 'insurance'
-            ],
-            [
-              'name' => 'カーリース',
-              'href' => 'lease'
-            ],
-          ]; ?>
-          <?php foreach ($footerService03 as $value) : ?>
+          <?php foreach ($takeCar as $value) : ?>
           <li class="l-footerList__item">
             <a href="<?php echo $value['href']; ?>">
               <span><?php echo $value['name']; ?></span>
@@ -126,38 +65,7 @@
 
       <nav class="l-footerList__sitemap">
         <ul>
-          <?php
-          $footerSitemap = [
-            [
-              'name' => '店舗一覧',
-              'href' => '#'
-            ],
-            [
-              'name' => '会社案内',
-              'href' => 'company'
-            ],
-            [
-              'name' => 'カーライフ豆知識',
-              'href' => 'archive-column'
-            ],
-            [
-              'name' => 'お得なメール会員',
-              'href' => 'member'
-            ],
-            [
-              'name' => '動画・CM一覧',
-              'href' => 'movie'
-            ],
-            [
-              'name' => '採用情報',
-              'href' => '#'
-            ],
-            [
-              'name' => 'お問い合わせ',
-              'href' => '#'
-            ],
-          ]; ?>
-          <?php foreach ($footerSitemap as $value) : ?>
+          <?php foreach ($sitemap as $value) : ?>
           <li class="l-footerList__title">
             <a href="<?php echo $value['href']; ?>">
               <?php echo $value['name']; ?>
@@ -172,14 +80,44 @@
 </footer>
 </body>
 <script src="<?php echo get_template_directory_uri() . '/js/bundle.js'; ?>"></script>
+
+<!-- front-page -->
 <?php if (is_front_page() || is_home()) : ?>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var splide = new Splide('.splide');
-  splide.mount();
-});
+//スライドの処理
+//main-view
+new Splide("#slider1", {
+  autoplay: true,
+  type: "fade",
+  rewind: true,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  interval: 5000,
+  speed: 2000,
+}).mount();
+
+//information
+new Splide("#slider2", {
+  type: 'loop',
+}).mount();
+
+//car-life豆知識
+new Splide("#slider3", {
+  direction: "ttb", // スライダーの方向を指定
+  heightRatio: 0.75, // スライドの高さをスライダーの幅に対する割合で指定
+  wheel: true, // マウスホイールによるスライダーの移動を有効にする
+  waitForTransition: true, // スライダーが移動中にも操作を受け付ける
+  type: 'loop',
+}).mount();
+
+//front中部スライダー
+new Splide("#slider4", {
+  type: 'loop',
+}).mount();
 </script>
 <?php endif; ?>
+
+<!-- page-movie -->
 <?php if (is_page(29)) : ?>
 <script>
 jQuery(function() {
@@ -194,5 +132,73 @@ jQuery(function() {
 });
 </script>
 <?php endif; ?>
+
+<!-- page-member -->
+<?php if(is_page(15)):?>
+<script>
+// selectで選択した値に応じてQRのimageを変更
+function changeImage() {
+  // select要素から選択された値を取得
+  var selectedStore = document.getElementById("stores").value;
+
+  // 選択された店舗に応じて画像を切り替える
+  var qrImagesContainer = document.getElementById("qrImagesContainer");
+  qrImagesContainer.innerHTML = ''; // 一旦中身をクリア
+
+  // 新しい画像を挿入
+  var newImage = document.createElement("img");
+  newImage.className = "qr_00";
+  newImage.src = "<?php echo get_theme_img('qr/'); ?>" + document.querySelector('#stores option:checked').getAttribute(
+    'data-qr');
+  newImage.alt = "エムロード" + selectedStore + "メール会員";
+  qrImagesContainer.appendChild(newImage);
+}
+
+// selectにて選択した値によってメール送信先の変更
+function changeEmailRecipient() {
+  var selectedValue = document.getElementById("stores").value;
+
+  var emailInput = document.querySelector('input[type="mail"]');
+  switch (selectedValue) {
+    case "小峰SS":
+      emailInput.value = "27@mailma.emlord.co.jp";
+      break;
+    case "上南部SS":
+      emailInput.value = "05@mailma.emlord.co.jp";
+      break;
+    case "建軍SS":
+      emailInput.value = "10@mailma.emlord.co.jp";
+      break;
+    case "光の森SS":
+      emailInput.value = "03@mailma.emlord.co.jp";
+      break;
+    case "本渡SS":
+      emailInput.value = "15@mailma.emlord.co.jp";
+      break;
+    case "菊南SS":
+      emailInput.value = "06@mailma.emlord.co.jp";
+      break;
+    case "新町SS":
+      emailInput.value = "18@mailma.emlord.co.jp";
+      break;
+    case "平田SS":
+      emailInput.value = "19@mailma.emlord.co.jp";
+      break;
+    case "大矢野SS":
+      emailInput.value = "12@mailma.emlord.co.jp";
+      break;
+    case "DDエネオスセブンTATSUDA":
+      emailInput.value = "08@mailma.emlord.co.jp";
+      break;
+    case "嘉島SS":
+      emailInput.value = "23@mailma.emlord.co.jp";
+      break;
+    case "熊本インターSS":
+      emailInput.value = "26@mailma.emlord.co.jp";
+      break;
+  }
+}
+</script>
+<?php endif;?>
 
 </html>

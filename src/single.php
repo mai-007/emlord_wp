@@ -1,5 +1,10 @@
 <?php get_header(); ?>
-
+<?php 
+$post = get_post(get_the_id());
+$author = get_userdata($post -> post_author);
+$author_id = $author -> first_name
+;
+  ?>
 <main>
   <?php while (have_posts()) : the_post(); ?>
   <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -13,8 +18,8 @@
           <?php echo get_the_date(); ?>
         </span>
         <span class="p-single__header__tag">
-          <a href="#">
-            <?php the_author_meta('nickname'); ?>
+          <a href="<?php echo esc_url(home_url('/store')).'/'.$author_id ;?>">
+            <?php the_author();?>
           </a>
         </span>
       </div>

@@ -2,17 +2,35 @@
 @use "./foundation/mixin" as mix;
 
 .p-coating{
+  .l-containerL{
+    @include mix.mq(tab) {
+      width: 100%;
+    }
+  }
+  .c-title__l__text{
+    @include mix.mq(tab) {
+      font-size: 1.2rem;
+      margin-bottom: 56px;
+    }
+  }
   .section01{
     color: #fff;
     .movie{
       display: block;
       margin: 0 auto 56px;
     }
+    .c-title__l{
+      font-family: var.$kaisei;
+      text-align: center;
+      @include mix.mq(tab) {
+        text-align: left;
+        margin-bottom: 32px;
+        br{
+          display: none;
+        }
+      }
   }
-  .c-title__l{
-    font-family: var.$kaisei;
-    text-align: center;
-    &__text{
+  .c-title__l__text{
       margin-bottom: 88px;
       p{
         margin-bottom: 2rem;
@@ -34,6 +52,12 @@
     &__flex{
       @include mix.flex(row, space-between, center);
       margin: 0 auto;
+      @include mix.mq(tab) {
+        flex-direction: column;
+        img{
+          margin-bottom: 16px;
+        }
+      }
     }
   }
   .section05{
@@ -41,6 +65,10 @@
     .c-table{
       &__type{
         word-break: unset;
+        @include mix.mq(tab) {
+          width: 100%;
+          height: 88px;
+        }
       }
       &__price{
         width: 100%!important;

@@ -9,6 +9,9 @@
       text-align: center;
       &__text{
         margin-bottom: 56px;
+        @include mix.mq(tab) {
+          font-size: 1.2rem;
+        }
       }
     }
     &__image{
@@ -26,6 +29,16 @@
         font-size: 1.5rem;
         text-align: center;
         text-decoration: underline;
+        @include mix.mq(tab) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .section02{
+    @include mix.mq(tab) {
+      .l-containerM{
+        width: 100%;
       }
     }
   }
@@ -36,6 +49,9 @@
     margin-bottom: 16px;
     font-size: 1.25rem;
     font-weight: bold;
+    @include mix.mq(tab){
+      font-size: 0.875rem;
+    }
     &:last-of-type{
       margin-bottom: 0;
     }
@@ -51,6 +67,9 @@
     &__des--short{
       width: 152px;
       box-sizing: content-box;
+      @include mix.mq(tab) {
+        width: auto;
+      }
     }
   }
 }

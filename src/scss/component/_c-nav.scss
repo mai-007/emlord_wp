@@ -5,6 +5,12 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  @include mix.mq(pc){
+    padding: 0 0.5rem;
+  }
+  @include mix.mq(pc-s){
+    display: none;
+  }
   &__li{
     position: relative;
     width: 9.5rem;
@@ -16,6 +22,9 @@
     border-left:1px dotted rgba(58, 50, 42, 0.3);
     &:first-of-type{
       border: none;
+    }
+    @include mix.mq(pc){
+      width: auto;
     }
   }
   &__item{

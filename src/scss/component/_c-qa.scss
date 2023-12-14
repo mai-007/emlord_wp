@@ -15,22 +15,34 @@
       font-size: 1.5rem;
       font-weight: bold;
       border-bottom: 3px solid var.$gold;
-     // @include mix.arrowAfterGold;
+      @include mix.mq(tab) {
+        font-size: 1.2rem;
+        padding: 16px;
+      }
       &:before{
         content: 'Q.';
         font-family: var.$kaisei;
         font-size: 2rem;
         color: var.$gold;
+        @include mix.mq(tab) {
+          font-size: 1.5rem;
+        }
       }
     }
     &__answer{
       padding: 24px 32px;
       font-size: 1rem;
+      @include mix.mq(tab) {
+        padding: 16px;
+      }
       &:before{
         content: 'A.';
         font-family: var.$kaisei;
         font-size: 2rem;
         color: var.$gold;
+        @include mix.mq(tab) {
+          font-size: 1.5rem;
+        }
       }
     }
   }

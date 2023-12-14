@@ -62,10 +62,10 @@ add_action('widgets_init', 'my_theme_widgets_init');
 function add_files() {
   if (is_home() || is_front_page()) {
     wp_enqueue_style('vegasCss', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css');
-    wp_enqueue_style('splideCss', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js');
+    wp_enqueue_style('splideCss', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css');
     
     wp_enqueue_script('vegasJs', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js', array('jquery'), '3.4.1', true);
-    wp_enqueue_script('splide', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js', array('jquery'), '3.4.1', true);
+    wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array('jquery'), '3.4.1', true);
   } elseif (is_page(29)) {
     wp_enqueue_style('modalVideoCss', 'https://unpkg.com/modal-video@2.4.8/css/modal-video.min.css');
     wp_enqueue_script('modalVideoJs', 'https://unpkg.com/modal-video@2.4.8/js/jquery-modal-video.min.js', array('jquery'), '3.4.1', true);

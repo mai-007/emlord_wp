@@ -6,8 +6,16 @@
   margin-bottom: 56px;
   border-collapse: separate;
   table-layout: fixed;
+  @include mix.mq(tab) {
+    overflow-x: scroll;
+    width: 100%;
+    justify-content: flex-start;
+  }
   tbody{
     width: 100%;
+    @include mix.mq(tab) {
+      width: auto;
+    }
   }
   &:last-of-type{
     margin-bottom: 0;
@@ -20,6 +28,9 @@
     @include mix.flex(column,center,center);
     margin-right: 1px;
     width: calc(100% / 6);
+    @include mix.mq(tab) {
+      width: 100%;
+    }
   }
   &__des{
     width: 100%;
@@ -49,6 +60,9 @@
     font-weight: 400;
     word-break: keep-all;
     text-align: center;
+    @include mix.mq(tab) {
+      padding: .5rem;
+    }
     &__top{
       font-size: 1rem;
       font-weight: bold;
@@ -73,6 +87,9 @@
   &__tr{
     width: 100%;
     display: inline-table;
+    @include mix.mq(tab) {
+      display: table-header-group;
+    }
   }
 }
 

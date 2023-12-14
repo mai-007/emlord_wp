@@ -1,5 +1,5 @@
 @use "./foundation/variables" as val;
-
+@use "./foundation/mixin" as mix;
 
 .c-information{
   position: absolute;
@@ -12,19 +12,33 @@
   background: #fff;
   border-radius: 0.5rem;
   border: 1px solid val.$darkBrown;
+  @include mix.mq(tab){
+    width: 100%;
+    padding: 1rem;
+  }
+  a{
+    @include mix.mq(tab){
+      display: block;
+    } 
+  }
   &__item{
     display: flex;
     align-items: center;
+    &__date{
+      @include mix.mq(tab){
+        width: 100%;
+        font-size: 0.75rem;
+      }
+    }
   }
   &__controller{
-    position: relative;
-    img:first-of-type{
-      margin-right: 8px;
-      &::after{
-        content: '|';
-        display: block;
-        position: absolute;
-      }
+    position: absolute;
+    right: 16px;
+    width: 72px;
+    height: 56px;
+    @include mix.mq(tab){
+      width: 40px;
+      height: 32px;
     }
   }
 }

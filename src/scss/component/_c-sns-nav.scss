@@ -30,5 +30,10 @@
     @extend .c-sns-nav;
     position: unset;
     width: 22rem;
+    @include mix.mq(tab) {
+      position: unset;
+      width: 60%;
+      align-items: center;
+    }
   }
 }

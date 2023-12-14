@@ -1,0 +1,61 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
+.c-spNav{
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 999999;
+  animation: spMenu-slideUp 0.75s;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 56px;
+  color: #fff;
+  transition: 1s;
+  background: var.$darkBrown;
+  @include mix.mq(tab) {
+    padding: 32px 24px;
+  }
+  &.active {
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+    right: 0;
+    animation: spMenu-slideDown 0.75s;
+  }
+  &__ul{
+    width: fit-content;
+    margin-bottom: 32px;
+    font-size: clamp(1rem, 0.765rem + 1.18vw, 1.5rem);
+    &__item{
+      margin-bottom: 16px;
+      border-bottom: 1px solid #fff;
+      a{
+        @include mix.flex(row, space-between, center);
+        img{
+          width: 6px;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes spMenu-slideDown{
+  0%{
+    transform: translateX(100vw);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes spMenu-slideUp{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100vw);
+  }
+}

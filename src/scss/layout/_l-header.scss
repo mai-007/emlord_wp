@@ -23,17 +23,38 @@ body{
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0,0,0,.05);
-  @include mix.mq(pc){
-    width: 95%;
+  @include mix.mq(pc-s){
+    border-radius: 0;
+    height: 65px;
+    left: 0;
+    top: 0;
+    transform: translate(0);
+    width: 100vw;
+    padding: 16px 0 16px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
+  .c-sns-nav{
+      display: none;
+    @include mix.mq(pc-s){
+      display: flex;
+      left: 50%;
+      top: 25px;
+      transform: translateX(-50px);
+    }
   }
+}
 
 .l-nav{
   max-width: 1520px;
   @include mix.mq(pc){
     width: 60%;
   }
+  @include mix.mq(pc-s){
+    width: fit-content;
   }
+}
 
   /* 下層ページ */
 

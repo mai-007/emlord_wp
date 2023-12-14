@@ -10,6 +10,10 @@
     text-align: center;
     &__textL{
       margin-bottom: 88px;
+      @include mix.mq(tab) {
+        font-size: 1.2rem;
+        margin-bottom: 56px;
+      }
       p{
         margin-bottom: 2rem;
         &:last-of-type{
@@ -21,9 +25,16 @@
   &__flexBox{
     @include mix.flex(row, space-between, flex-start);
     margin-bottom: 56px;
+    @include mix.mq(tab) {
+      flex-direction: column-reverse;
+    }
     &__text{
       margin-right: 56px;
       font-size: 1.5rem;
+      @include mix.mq(tab) {
+        font-size: 1rem;
+        margin-right: 0;
+      }
       p{
         margin-bottom: 1rem;
       }
@@ -31,6 +42,10 @@
     &__image{
       max-width: 400px;
       border-radius: 16px;
+      @include mix.mq(tab) {
+        width: 100%;
+        margin-bottom: 24px;
+      }
     }
   }
   &__handling{
@@ -41,6 +56,9 @@
       padding: 0 16px;
       font-size: 2rem;
       color: var.$red;
+      @include mix.mq(tab) {
+        font-size: 1.5rem;
+      }
       &::before,&::after{
         content: '';
         display: block;
@@ -53,14 +71,48 @@
     &__inner{
       @include mix.flex(row, space-between, center);
       flex-wrap: wrap;
+      @include mix.mq(tab) {
+        flex-direction: column;
+        justify-content: center;
+        img{
+          margin-bottom: 16px;
+        }
+      }
     }
   }
   .section02{
     .p-insurance__handling__inner{
       padding: 0 80px;
       justify-content: space-around;
+      @include mix.mq(tab) {
+        padding: 0 56px;
+      }
       img{
         margin-bottom: 56px;
+      }
+    }
+      @include mix.mq(tab) {
+        .l-containerM{
+          width: 100%;
+        }
+        .c-title__l__textL{
+          text-align: left;
+          br{
+            display: none;
+          }
+      }
+    }
+  }
+  .section03{
+    @include mix.mq(tab) {
+      .c-button01{
+        width: 100%;
+        &:first-of-type{
+          margin-bottom: 24px;
+        }
+        img{
+          width: 1rem;
+        }
       }
     }
   }

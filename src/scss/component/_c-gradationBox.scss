@@ -9,6 +9,10 @@
   color: #fff;
   @include mix.flex;
   font-family: var.$kaisei;
+  @include mix.mq(tab) {
+    width: 100%;
+    font-size: 1.5rem;
+  }
   &--blue{
     @extend .c-gradationBox;
     background: linear-gradient(181deg, #3F4B8C 1.28%, rgba(63, 75, 140, 0.58) 68.85%, rgba(63, 75, 140, 0.00) 112.94%);

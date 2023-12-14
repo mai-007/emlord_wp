@@ -55,6 +55,10 @@
   padding: 6px;
   background: var.$darkBrown;
   transition: 0.5s;
+  @include mix.mq(tab) {
+    width: 90%;
+    font-size: 1rem;
+  }
   a{
     border: 1px dashed #fff;
     border-radius: 2rem;

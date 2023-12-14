@@ -4,4 +4,7 @@
 .c-logo{
   width: 5.5rem;
   height: auto;
+  @include mix.mq(pc-s){
+    width: 60px;
+  }
 }

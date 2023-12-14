@@ -24,7 +24,7 @@ Template Name: 車検
       <button class="c-linkInPage__btn">
         <a href="#frow">車検の流れ</a>
       </button>
-      <button class="c-linkInPage__btn">docker
+      <button class="c-linkInPage__btn">
         <a href="#price">料金表</a>
       </button>
       <button class="c-linkInPage__btn">

@@ -3,15 +3,22 @@
     <img src="<?php echo get_theme_img('common/logo.png'); ?>" alt="エムロードのロゴマーク">
   </a>
 </h1>
+<div class="c-sns-nav">
+  <?php include('sns.php'); ?>
+</div>
 <nav id="nav" class="l-nav">
-  <button id="js-hamburger" class="c-hamburger u-sp">
+
+  <!-- hamburger -->
+  <button id="js-hamburger" class="c-hamburger">
     <div id="js-hamburger-wrap" class="c-hamburger__wrap">
       <span class="c-hamburger__bar js-hamburger__bar"></span>
       <span class="c-hamburger__bar js-hamburger__bar"></span>
       <span class="c-hamburger__bar js-hamburger__bar"></span>
-    </div><!-- /.hamburger__wrap -->
+    </div>
   </button>
-  <ul id="js-nav" class="c-nav">
+  <!-- END of hamburger -->
+
+  <ul class="c-nav">
     <?php
     $navlist = [
       ['name' => 'サービス一覧', 'href' => '#', 'image' => 'common/icon_service.svg'],
@@ -27,33 +34,109 @@
       if (filter_var($value['href'], FILTER_VALIDATE_URL)) {
         $is_external = true;
       }
-
     ?>
-      <li class="c-nav__li" data-tab="<?php echo $key; ?>">
-        <a class="c-nav__item" href="<?php echo esc_url($is_external ? $value['href'] : home_url($value['href'])); ?>" <?php if ($is_external) { ?>target="_blank" rel="noopener noreferrer" <?php } ?>>
-          <span class="c-nav__item__image">
-            <img src="<?php echo get_theme_img($value['image']); ?>" alt="">
-          </span>
-          <span class="c-nav__item__text"><?php echo $value['name']; ?></span>
-        </a>
-        <?php if (!$is_external) { ?>
-          <div class="c-dropMenu" data-panel="<?php echo $key; ?>">
-            <?php if ($key == 1) : ?>
-              <div class="c-dropMenu__wrap">
-                <?php include('store-nav.php'); ?>
-              </div>
-            <?php elseif ($key == 5) : ?>
-              <div class="c-dropMenu__wrap p-business">
-                <?php include('business.php'); ?>
-              </div>
-            <?php else : ?>
-              <?php include('service-menu.php'); ?>
-            <?php endif; ?>
-          </div>
-        <?php } ?>
-      </li>
+    <li class="c-nav__li" data-tab="<?php echo $key; ?>">
+      <a class="c-nav__item" href="<?php echo esc_url($is_external ? $value['href'] : home_url($value['href'])); ?>"
+        <?php if ($is_external) { ?>target="_blank" rel="noopener noreferrer" <?php } ?>>
+        <span class="c-nav__item__image">
+          <img src="<?php echo get_theme_img($value['image']); ?>" alt="">
+        </span>
+        <span class="c-nav__item__text"><?php echo $value['name']; ?></span>
+      </a>
+      <?php if (!$is_external) { ?>
+      <div class="c-dropMenu" data-panel="<?php echo $key; ?>">
+        <?php if ($key == 1) : ?>
+        <div class="c-dropMenu__wrap">
+          <?php include('store-nav.php'); ?>
+        </div>
+        <?php elseif ($key == 5) : ?>
+        <div class="c-dropMenu__wrap p-business">
+          <?php include('business.php'); ?>
+        </div>
+        <?php else : ?>
+        <?php include('service-menu.php'); ?>
+        <?php endif; ?>
+      </div>
+      <?php } ?>
+    </li>
     <?php } ?>
   </ul>
+
+
+  <!-- spMenu -->
+  <div id="js-nav" class="c-spNav">
+    <!-- 配列の取得 -->
+    <?php include('sitemap.php');?>
+    <ul class="c-spNav__ul">
+      <?php foreach ($sitemap as $value) : ?>
+      <?php if(filter_var($value['href'], FILTER_VALIDATE_URL)):?>
+      <li class="c-spNav__ul__item">
+        <a href="<?php echo esc_url($value['href']); ?>">
+          <?php echo $value['name']; ?>
+          <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+        </a>
+      </li>
+      <?php else:?>
+      <li class="c-spNav__ul__item">
+        <a href="<?php echo esc_url(trailingslashit(home_url('/')) . $value['href']); ?>">
+          <?php echo $value['name']; ?>
+          <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+        </a>
+      </li>
+      <?php endif;?>
+      <?php endforeach;?>
+    </ul>
+    <ul class="c-spNav__ul">
+      <?php foreach ($maintenance as $value) : ?>
+      <?php if(filter_var($value['href'], FILTER_VALIDATE_URL)):?>
+      <li class="c-spNav__ul__item">
+        <a href="<?php echo esc_url($value['href']); ?>">
+          <?php echo $value['name']; ?>
+          <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+        </a>
+      </li>
+      <?php else:?>
+      <li class="c-spNav__ul__item">
+        <a href="<?php echo esc_url(trailingslashit(home_url('/')) . $value['href']); ?>">
+          <?php echo $value['name']; ?>
+          <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+        </a>
+      </li>
+      <?php endif;?>
+      <?php endforeach;?>
+    </ul>
+    <ul class="c-spNav__ul">
+      <?php foreach ($replacement as $value) : ?>
+      <?php if(filter_var($value['href'], FILTER_VALIDATE_URL)):?>
+      <li class="c-spNav__ul__item">
+        <a href="<?php echo esc_url($value['href']); ?>">
+          <?php echo $value['name']; ?>
+          <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+        </a>
+      </li>
+      <?php else:?>
+      <li class="c-spNav__ul__item">
+        <a href="<?php echo esc_url(trailingslashit(home_url('/')) . $value['href']); ?>">
+          <?php echo $value['name']; ?>
+          <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+        </a>
+      </li>
+      <?php endif;?>
+      <?php endforeach;?>
+    </ul>
+    <ul class="c-spNav__ul">
+      <?php foreach ($takeCar as $value) : ?>
+      <li class="c-spNav__ul__item">
+        <a href="<?php echo $value['href']; ?>">
+          <?php echo $value['name']; ?>
+          <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
+        </a>
+      </li>
+      <?php endforeach;?>
+    </ul>
+  </div>
+  <!-- END of spMenu -->
+
 </nav>
 <div class="c-mailMember">
   <span class="c-hightLight-01">

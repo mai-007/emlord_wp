@@ -7,11 +7,18 @@
   background: var.$darkBrown;
   border-radius: 16px;
   font-size: 1.5rem;
+  @include mix.mq(tab) {
+    font-size: 1rem;
+    padding: 16px;
+  }
   &__title{
     margin-bottom: 32px;
     font-size: 2rem;
     font-weight: bold;
     text-decoration: underline;
+    @include mix.mq(tab) {
+      font-size: 1.2rem;
+    }
   }
   &__text{
     margin-bottom: 1rem;

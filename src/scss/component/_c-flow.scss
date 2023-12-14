@@ -15,6 +15,10 @@
     color: #fff;
     font-size: 2rem;
     @include mix.arrowAfter;
+    @include mix.mq(tab) {
+      padding: 16px;
+      font-size: 1.5rem;
+    }
     h3{
       font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     }
@@ -22,6 +26,9 @@
   &__inner{
     padding: 56px 32px;
     background: #fff;
+    @include mix.mq(tab) {
+      padding: 16px;
+    }
   }
   &__text{
     margin-bottom: 56px;

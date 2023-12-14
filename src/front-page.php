@@ -4,31 +4,26 @@
   <section class="l-section01 l-flexRowToColumn">
     <?php include('inc/information.php'); ?>
 
-    <div class="c-sns-nav">
+    <div class="c-sns-nav u-pc">
       <?php include('inc/sns.php'); ?>
     </div>
-
     <section class="c-news l-section--half">
-      <div class="c-title--half">
-        <h3 class="c-title__m">カーライフ豆知識</h3>
+      <div class="c-title--half" aria-labelledby="carousel-heading">
+        <h3 id="carousel-heading" class="c-title__m">カーライフ豆知識</h3>
         <p class="c-title__m__sub">good car life</p>
       </div>
-      <?php
+      <div id="slider3" class="splide splide02">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <?php
         $my_posts = array(
         'post_type' => 'column', // 投稿タイプを設定
         'posts_per_page' => '4', // 表示する記事数を設定
         ); 
-        $counter = 0;
         $the_query = new WP_query($my_posts);
         if ($the_query->have_posts()):
         ?>
-      <?php while($the_query->have_posts()): $the_query->the_post(); ?>
-      <?php if($counter >= 4){
-        break;
-      };?>
-      <div id="slider1" class="splide">
-        <div class="splide__track">
-          <ul class="splide__list">
+            <?php while($the_query->have_posts()): $the_query->the_post(); ?>
             <li class="c-news__card splide__slide">
               <a href="<?php the_permalink(); ?>">
                 <figure class="c-news__card__image">
@@ -52,22 +47,18 @@
                   <time class="c-news__card__date" datetime="<?php echo get_the_date(); ?>">
                     <?php echo get_the_date(); ?>
                   </time>
-                  <div class="c-news__card__controller">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <img class="c-news__card__change" src="<?php echo get_theme_img('common/btn01.svg'); ?>" alt="次へ">
                 </div>
               </a>
             </li>
+            <?php endwhile;?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
           </ul>
         </div>
-        <?php $counter++;?>
-        <?php endwhile;?>
-        <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
+        <div class="splide__arrows c-news__card__change">
+          <button class="splide__arrow splide__arrow--prev button prev"></button>
+          <button class="splide__arrow splide__arrow--next button next"></button>
+        </div>
       </div>
     </section>
 
@@ -79,20 +70,28 @@
     </section>
   </section>
 
-  <section id="slider2" class="l-section02--bg01 splide slider1">
+  <section id="slider4" class="l-section02--bg01 splide splide03">
     <div id="js-slide" class="splide__track">
-      <ul class="splide__list">
+      <ul class="splide__list u-align-center">
         <li class="splide__slide">
-          <img src="<?php echo get_theme_img('slide_02/sd_coating.jpg'); ?>" alt="">
+          <a href="<?php echo esc_url( home_url('coating') ); ?>">
+            <img src="<?php echo get_theme_img('slide_02/sd_coating.jpg'); ?>" alt="">
+          </a>
         </li>
         <li class="splide__slide">
-          <img src="<?php echo get_theme_img('slide_02/sd_oil2.jpg'); ?>" alt="">
+          <a href="<?php echo esc_url( home_url('oil') ); ?>">
+            <img src="<?php echo get_theme_img('slide_02/sd_oil2.jpg'); ?>" alt="">
+          </a>
         </li>
         <li class="splide__slide">
-          <img src="<?php echo get_theme_img('slide_02/sd_sensha.jpg'); ?>" alt="">
+          <a href="<?php echo esc_url( home_url('carwash') ); ?>">
+            <img src="<?php echo get_theme_img('slide_02/sd_sensha.jpg'); ?>" alt="">
+          </a>
         </li>
         <li class="splide__slide">
-          <img src="<?php echo get_theme_img('slide_02/sd_recruit.gif'); ?>" alt="">
+          <a href="<?php echo esc_url( home_url('recruit') ); ?>">
+            <img src="<?php echo get_theme_img('slide_02/sd_recruit.gif'); ?>" alt="">
+          </a>
         </li>
       </ul>
     </div>
@@ -186,7 +185,7 @@
         エムロードの本気とユーモアを是非ご覧ください</p>
     </div>
     <picture class="p-media__image">
-      <source media="(max-width: 799px)" srcset="#" sizes="100%">
+      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('frontpage/sd_youtube.jpg'); ?>" sizes="100%">
       <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('frontpage/sd_youtube.jpg'); ?> w849,
   <?php echo get_theme_img('frontpage/sd_youtube@2x.jpg'); ?> w1695," sizes="849px">
       <img src="<?php echo get_theme_img('frontpage/sd_youtube.jpg'); ?>" alt="">

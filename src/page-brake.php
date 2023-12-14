@@ -25,10 +25,10 @@ Template Name: ブレーキ
         "ブレーキから「キーキー」という音がする"
       ]; ?>
       <?php foreach ($radiatorChecks as $value) : ?>
-        <li class="c-title__l__list__item">
-          <img src="<?php echo get_theme_img('common/check-white.svg'); ?>" alt="">
-          <?php echo $value; ?>
-        </li>
+      <li class="c-title__l__list__item">
+        <img src="<?php echo get_theme_img('common/check-white.svg'); ?>" alt="">
+        <?php echo $value; ?>
+      </li>
       <?php endforeach; ?>
     </ul>
     <p class="c-box03">
@@ -118,7 +118,6 @@ Template Name: ブレーキ
       </p>
     </div>
 </section>
-<?php include('inc/askedQuestions.php'); ?>
 <section class="l-section02--bg04">
   <?php include('inc/service-section.php'); ?>
 </section>

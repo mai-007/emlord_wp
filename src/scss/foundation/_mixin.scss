@@ -12,8 +12,8 @@ $content-sp: 95%;
 
 /* MediaQuery */
 $breakpoint:(
-  'pc': 'screen and (max-width:1379px)',
-  '1000': 'screen and (max-width:1000px)',
+  'pc': 'screen and (max-width:1280px)',
+  'pc-s': 'screen and (max-width:1000px)',
   'tab': 'screen and (max-width:799px)',
   'sp': 'screen and (max-width:599px)',
 )!default;
@@ -54,6 +54,12 @@ $breakpoint:(
     background-size: 7px;
     border-radius: 50%;
     border: 1px solid #fff;
+    @include mq(tab) {
+      right: 8px;
+      width: 16px;
+      height: 16px;
+      background-size: 4px;
+    }
   }
 }
 

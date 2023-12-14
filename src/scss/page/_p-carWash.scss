@@ -12,6 +12,9 @@
       margin-bottom: 88px;
       p{
         margin-bottom: 2rem;
+        @include mix.mq(tab){
+          font-size: 1.2rem;
+        }
         &:last-of-type{
           margin-bottom: 0;
         }
@@ -21,6 +24,11 @@
   .section02{
     .c-boxBorder{
       &__header{
+        span{
+          @include mix.mq(tab){
+            flex-direction: column;
+          }
+        }
         &__title{
           color: var.$darkBrown;
         }
@@ -29,6 +37,10 @@
     &__card{
       margin: 56px 0;
       max-width: 364px;
+      @include mix.mq(tab){
+        margin: 24px 0;
+        max-width: none;
+      }
     }
   }
 }

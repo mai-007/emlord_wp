@@ -20,7 +20,33 @@
 
   <!-- frontPage -->
   <?php if (is_front_page() || is_home()) : ?>
-  <section id="js-vegas" class="l-mainView">
+  <section id="slider1" class="splide l-mainView">
+    <div class="splide__track">
+      <div class="splide__list">
+        <picture class="splide__slide">
+          <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('slide/sp-mainview_01.jpg'); ?>">
+          <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('slide/mainview_01.jpg'); ?>">
+          <img src="<?php echo get_theme_img('slide/mainview_01.jpg'); ?>" alt="">
+        </picture>
+        <picture class="splide__slide">
+          <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('slide/sp-mainview_02.jpg'); ?>">
+          <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('slide/mainview_02.jpg'); ?>">
+          <img src="<?php echo get_theme_img('slide/mainview_02.jpg'); ?>" alt="">
+        </picture>
+        <picture class="splide__slide">
+          <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('slide/sp-mainview_03.jpg'); ?>">
+          <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('slide/mainview_03.jpg'); ?>">
+          <img src="<?php echo get_theme_img('slide/mainview_03.jpg'); ?>" alt="">
+        </picture>
+        <picture class="splide__slide">
+          <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('slide/sp-mainview_04.jpg'); ?>">
+          <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('slide/mainview_04.jpg'); ?>">
+          <img src="<?php echo get_theme_img('slide/mainview_04.jpg'); ?>" alt="">
+        </picture>
+      </div>
+    </div>
+  </section>
+  <!-- <section id="js-vegas" class="l-mainView"> -->
   </section>
   <?php endif; ?>
 

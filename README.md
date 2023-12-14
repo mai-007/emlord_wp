@@ -14,7 +14,6 @@
 7. `npm run build` でテーマをビルドします。
 
 
-
 # できること
 - ローカルでWordPressのテーマ開発
 
@@ -73,3 +72,16 @@ webpack.config.js : webpackの設定ファイル
 # 画像のパス
 function.phpでパス簡略化を設定。
 例.echo get_theme_img('/images/common/logo.png')
+
+# データファイルについて
+- 店舗一覧情報
+inc/stores.php
+- リンク
+inc/sitemap.php
+
+
+# メール送信について
+- 送信先
+footer.php
+- 送信動作
+

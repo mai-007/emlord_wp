@@ -7,6 +7,12 @@
   padding: 56px;
   background: #fff;
   border-radius: 16px;
+  @include mix.mq(tab) {
+    margin: 2rem auto 3rem;
+    max-width: 95%;
+    padding: 16px;
+  }
+  
   &__header{
     margin-bottom: 32px;
     &__title{
@@ -14,6 +20,9 @@
       font-size: 2.5rem;
       font-weight: bold;
       border-bottom: 3px double var.$gold;
+      @include mix.mq(tab) {
+        font-size: 1.5rem;
+      }
     }
     &__tag{
       display: inline-block;

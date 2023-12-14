@@ -40,6 +40,12 @@
       margin-bottom: 56px;
       &__title{
         margin-bottom: 32px;
+        @include mix.mq(tab) {
+          text-align: left;
+          br{
+            display: none;
+          }
+        }
       }
       &__text{
         font-size: 1rem;
@@ -52,6 +58,11 @@
       margin-bottom: 56px;
       background: #fff;
       padding: 16px;
+      @include mix.mq(tab) {
+        padding: 8px;
+        margin-bottom: 32px;
+        justify-content: space-between;
+      }
       img{
         max-width: calc((100% - 48px) / 4);
       }
@@ -64,6 +75,9 @@
         background: #fff;
         padding: 16px;
         border: 3px double var.$gold;
+        @include mix.mq(tab) {
+          margin-bottom: 24px;
+        }
         img{
           margin-bottom: 16px;
         }
@@ -71,10 +85,18 @@
     }
   }
   .section03{
+    .l-containerM{
+      @include mix.mq(tab) {
+        width: 100%;
+      }
+    }
     .c-box03{
       font-size: initial;
       padding: 56px;
       margin-bottom: 88px;
+      @include mix.mq(tab) {
+        padding: 32px 16px;
+      }
       .section03__text{
         font-size: 1.5rem;
         padding: 56px 0;
@@ -85,6 +107,10 @@
         margin-bottom: 56px;
         &--half{
           width: calc((100% - 56px) / 2);
+          @include mix.mq(tab) {
+            width: 100%;
+            margin-bottom: 56px;
+          }
         }
       }
       .c-option__title{

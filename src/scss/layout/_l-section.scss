@@ -7,11 +7,17 @@
   max-width: mix.$content-l;
   margin: 0 auto;
   padding: 7.5rem 0 10rem;
+  @include mix.mq(pc) {
+    max-width: 95%;
+  }
 }
 
 /* section内paddingのみ */
 .l-section02{
   padding: 7.5rem 0 10rem;
+  @include mix.mq(tab) {
+    padding: 2rem 0 5.5rem;
+  }
   &--bg01{
     @extend .l-section02;
     background: var.$darkBrown;
@@ -28,6 +34,9 @@
     @extend .l-section02;
     background: url('../images/common/bg04.gif');
   }
+  @include mix.mq(tab) {
+    padding: 3.5rem 16px 5.5rem;
+  }
 }
 
 /* subPage 一番目のsection */
@@ -35,6 +44,9 @@
   position: relative;
   margin: 0 auto;
   padding: 4.5rem 0 10rem;
+  @include mix.mq(tab) {
+    padding: 2rem 0 5.5rem;
+  }
   &--bg01{
     @extend .l-section03;
     background: var.$darkBrown;
@@ -53,17 +65,31 @@
 .l-containerL{
   max-width: mix.$content-l;
   margin: 0 auto;
+  @include mix.mq(pc-s) {
+    width: 95%;
+  }
+  @include mix.mq(tab) {
+    width: 95%;
+  }
 }
 
 /* w960 */
 .l-containerM{
   max-width: mix.$content-m;
   margin: 0 auto;
+  @include mix.mq(pc-s){
+    width: 95%;
+  }
 }
 
 /* half */
 .l-section--half{
   max-width: calc((100% - 56px) / 2);
+
+  @include mix.mq(pc-s){
+    max-width: unset;
+    width: 100%;
+  }
 }
 
 

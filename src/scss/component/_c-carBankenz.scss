@@ -9,6 +9,10 @@
   color: #fff;
   padding: 56px;
   border-radius: 8px;
+  @include mix.mq(tab) {
+    flex-direction: column;
+    padding: 32px 24px;
+  }
   &__title{
     width: 320px;
     margin-bottom: 40px;
@@ -21,12 +25,27 @@
     align-items: center;
     font-size: 40px;
     font-weight: bold;
+    @include mix.mq(tab) {
+      justify-content: center;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 32px;
+    }
     &__image{
       width: 40px;
       height: 40px;
+      @include mix.mq(tab) {
+        width: 2rem;
+        margin-right: 16px;
+      }
     }
     &__inner{
       @include mix.flex(row, space-between, center);
+    }
+  }
+  @include mix.mq(tab) {
+    iframe{
+      width: 100%;
     }
   }
 }

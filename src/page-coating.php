@@ -11,7 +11,7 @@ Template Name: コーティング
     <h1 class="c-title__l">硬度9Hの硬さで塗装を守り<br>
       いつまでも輝き続けるコーティングを。</h1>
     <picture class="movie">
-      <source media="(max-width:799px)" srcset="<?php echo get_theme_img('coating/#'); ?>" sizes="100vw">
+      <source media="(max-width:799px)" srcset="<?php echo get_theme_img('coating/movieImage.jpg'); ?>" sizes="100vw">
       <source media="(min-width:800px)" srcset="<?php echo get_theme_img('coating/movieImage.jpg'); ?>" sizes="100vw">
       <img src="<?php echo get_theme_img('coating/movieImage.jpg'); ?>">
     </picture>
@@ -40,7 +40,7 @@ Template Name: コーティング
 </section>
 
 <!--Merit -->
-<section class="l-section01 p-coating__section02">
+<section class="l-section02 p-coating__section02">
   <div class="l-containerL">
     <div class="c-title">
       <h2 class="c-title__l">9Hガラスコーティングの&lt;クオーツ&gt;の<br><span class="u-gold">メリット</span></h2>

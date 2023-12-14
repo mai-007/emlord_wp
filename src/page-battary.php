@@ -20,16 +20,18 @@ Template Name: バッテリー
       </p>
     </div>
     <picture class="section01__image">
-      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('battary/itemImage01-sp.jpg'); ?> " sizes="100%">
-      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('battary/itemImage01.jpg'); ?> w849" , sizes="849px">
+      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('battery/itemImage01.jpg'); ?> " sizes="100%">
+      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('battery/itemImage01.jpg'); ?> w849" ,
+        sizes="849px">
       <img src="<?php echo get_theme_img('battery/itemImage01.jpg'); ?>" alt="VICTORY FORCE 国内最高性能">
       <a class="section01__image__link" href="https://www.eneos.co.jp/cusumer/ss/service/battery">
         製品情報はこちら
       </a>
     </picture>
     <picture class="section01__image">
-      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('battary/itemImage02-sp.jpg'); ?> " sizes="100%">
-      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('battary/itemImage02.jpg'); ?> w849" , sizes="849px">
+      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('battery/itemImage02.jpg'); ?> " sizes="100%">
+      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('battery/itemImage02.jpg'); ?> w849" ,
+        sizes="849px">
       <img src="<?php echo get_theme_img('battery/itemImage02.jpg'); ?>" alt="Panasonicカーバッテリー各種取り扱い">
       <a class="section01__image__link" href=" https://panasonic.jp/car/battery">
         製品情報はこちら
@@ -85,33 +87,33 @@ Template Name: バッテリー
     ]; ?>
     <div class="c-boxBorder">
       <?php foreach ($batteryPrices as $key => $value) : ?>
-        <div class="p-battery__priceBox">
-          <div class="c-boxBorder__header">
-            <h5 class="c-boxBorder__header__title">
-              <span class="u-square"></span><?php echo $value['title']; ?>
-            </h5>
-          </div>
-          <table class="c-table">
-            <tbody>
-              <tr class="c-table__tr">
-                <th class="c-table__des--short">サイズ</th>
-                <?php foreach ($value['sizes'] as $size) : ?>
-                  <th class="c-table__type">
-                    <?php echo $size; ?>
-                  </th>
-                <?php endforeach; ?>
-              </tr>
-              <tr class="c-table__tr">
-                <th class="c-table__des--short">料 金</th>
-                <?php foreach ($value['prices'] as $price) : ?>
-                  <td class="c-table__price">
-                    <?php echo $price; ?>
-                  </td>
-                <?php endforeach; ?>
-              </tr>
-            </tbody>
-          </table>
+      <div class="p-battery__priceBox">
+        <div class="c-boxBorder__header">
+          <h5 class="c-boxBorder__header__title">
+            <span class="u-square"></span><?php echo $value['title']; ?>
+          </h5>
         </div>
+        <table class="c-table">
+          <tbody>
+            <tr class="c-table__tr">
+              <th class="c-table__des--short">サイズ</th>
+              <?php foreach ($value['sizes'] as $size) : ?>
+              <th class="c-table__type">
+                <?php echo $size; ?>
+              </th>
+              <?php endforeach; ?>
+            </tr>
+            <tr class="c-table__tr">
+              <th class="c-table__des--short">料 金</th>
+              <?php foreach ($value['prices'] as $price) : ?>
+              <td class="c-table__price">
+                <?php echo $price; ?>
+              </td>
+              <?php endforeach; ?>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <?php endforeach; ?>
       <p class="p-battery__priceText">
         ※バッテリー本体のみの価格です。別途<span class="u-red">バッテリー工賃¥1,100</span>が必要です。

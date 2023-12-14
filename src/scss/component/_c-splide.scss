@@ -1,3 +1,6 @@
+@use "./foundation/variables" as var;
+@use "./foundation/mixin" as mix;
+
 .c-splide img{
   width: 100%;
   height: auto;
@@ -11,5 +14,88 @@
   &__page{
     width: 10px;
     height: 10px;
+  }
+}
+
+.splide01{
+  position: relative;
+  .splide__slide{
+    a{
+      @include mix.flex(row, flex-start, center);
+        @include mix.mq(tab){
+          display: block;
+        } 
+    }
+  }
+  .splide__pagination{
+    display: none;
+  }
+  .splide__arrow{
+    position: absolute;
+    width: 10px;
+    height: 18px;
+    background: url('../images/common/arrow_right-small.svg') no-repeat;
+    background-size: contain;
+    opacity: 1;
+    border: none;
+    &--prev{
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        right: 36px;
+        height: 56px;
+        border-left: 1px solid var.$darkBrown;
+        @include mix.mq(tab){
+          height: 40px;
+          right: 20px;
+        } 
+      }
+    }
+    &--next{
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover{
+      filter: var.$gold-filter;
+    }
+  }
+}
+
+.splide02{
+  position: relative;
+  .splide__pagination--ttb{
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    right: 32px;
+    @include mix.mq(tab) {
+      position: absolute;
+      right: 16px;
+      top: -24px;
+      -webkit-transform: none;
+      transform: translate(0, 0);
+    }
+  }
+  .splide__arrow{
+    position: absolute;
+    right: 32px;
+    bottom: -16px;
+    width: 56px;
+    height: 56px;
+    background: url('../images/common/btn01.svg');
+    background-size: cover;
+    opacity: 1;
+    border: none;
+    &--prev{
+      display: none;
+    }
+    &:hover{
+      filter: var.$gold-filter;
+    }
   }
 }

@@ -8,6 +8,10 @@
   background: #fff;
   border-radius: 16px;
   border: 3px solid var.$darkBrown;
+  @include mix.mq(tab) {
+    margin: 0 auto 32px;
+    padding: 16px;
+  }
   &__header{
     margin-bottom: 32px;
     padding-bottom: 24px;
@@ -17,12 +21,21 @@
       color: var.$red;
       font-size: 2.5rem;
       font-family: var.$kaisei;
+      @include mix.mq(tab) {
+        font-size: 1.5rem;
+      }
     }
     &__subTitle{
       width: fit-content;
       padding: 8px;
       background: var.$deepBlue;
       color: #fff;
+      @include mix.mq(tab) {
+        font-size: .875rem;
+        font-weight: bold;
+        padding: 4px;
+        margin-bottom: .5rem;
+      }
     }
     &__feature{
       font-size: 1.2rem;
@@ -34,6 +47,12 @@
       font-size: 1rem;
       display: flex;
       align-items: center;
+      img{
+        @include mix.mq(tab){
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
       &:last-of-type{
         margin-left: 0;
       }
@@ -45,6 +64,9 @@
       margin-left: 1.5rem;
       font-family: var.$kaisei;
       font-size: 2.5rem;
+      @include mix.mq(tab){
+        font-size: 1.5rem;
+      }
     }
     &__recommendText{
       font-family: inherit;
@@ -55,6 +77,9 @@
   &__textM{
     font-size: 1.5rem;
     font-weight: bold;
+    @include mix.mq(tab) {
+      font-size: 1.2rem;
+    }
   }
 }
 /*3-column*/
@@ -64,6 +89,10 @@
   width: calc((100% - 24px) / 3);
   padding: 40px 24px;
   background: #fff;
+  @include mix.mq(tab) {
+    width: 100%;
+    margin-bottom: 32px;
+  }
   &__title{
     font-family: inherit;
     position: relative;
@@ -74,6 +103,9 @@
     line-height: normal;
     margin-bottom: 32px;
     border-bottom: 1px solid var.$gold;
+    @include mix.mq(tab) {
+      font-size: 1.5rem;
+    }
     &:after{
       content: "";
       display: block;
@@ -87,6 +119,9 @@
     &__number{
       font-family: var.$en;
       font-size: 3.5rem;
+      @include mix.mq(tab) {
+        font-size: 2rem;
+      }
     }
   }
   &__text{
@@ -151,12 +186,19 @@
   color: var.$darkBrown;
   border-radius: 16px;
   border: 5px double var.$gold;
+  @include mix.mq(tab) {
+    font-size: 1rem;
+  }
 }
 .c-box04{
   display: flex;
   flex-direction: column-reverse;
   width: calc((100% - 56px) / 2);
   margin-bottom: 56px;
+  @include mix.mq(tab) {
+    width: 100%;
+    margin-bottom: 32px;
+  }
   &__image{
     object-fit: cover;
   }
@@ -165,19 +207,35 @@
     padding: 16px;
     background: var.$red;
     color: #fff;
+    @include mix.mq(tab) {
+      flex-direction: column;
+    }
     &__title{
       font-size: 1.5rem;
       margin-right: 16px;
+      @include mix.mq(tab) {
+        font-size: 1.2rem;
+      }
     }
     &__price{
       font-size: 56px;
       font-weight: bold;
       font-style: italic;
+      @include mix.mq(tab) {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+      }
     }
   }
 }
 .c-box--image{
     @include mix.flex(row, space-between ,center);
+    &__wrap{
+      @include mix.mq(tab) {
+        margin-right: 1px;
+      }
+    }
     &__wrap--50{
       max-width: 8rem;
       margin-bottom: 16px;
@@ -189,6 +247,9 @@
       color: #fff;
       text-align: center;
       font-size: 0.75rem;
+      @include mix.mq(tab) {
+        height: 3rem;
+      }
     }
   }
 

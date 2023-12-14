@@ -5,6 +5,11 @@
   .section01{
     color: #fff;
   }
+  .l-containerM{
+    @include mix.mq(tab) {
+      width: 100%;
+    }
+  }
   .c-title__l{
     font-family: var.$kaisei;
     text-align: center;
@@ -13,10 +18,22 @@
     display: block;
     margin-bottom: 88px;
   }
+  .section03{
+    .c-title__l__text{
+      @include mix.mq(tab) {
+        font-size: 1rem;
+        text-align: left;
+      }
+    }
+  }
   .section04{
     &__title{
       font-size: 2rem;
       margin-bottom: 88px;
+      @include mix.mq(tab) {
+        font-size: 1.5rem;
+        margin-bottom: 32px;
+      }
     }
     .history{
       dl{
@@ -33,6 +50,11 @@
           background-color: var.$gold;
           border-radius: 50%;
           z-index: 2;
+          @include mix.mq(tab) {
+            width: 8px;
+            height: 8px;
+            left: 4px;
+          }
         }
         &:after{
           content: "";
@@ -49,22 +71,35 @@
         min-width: 265px;
         padding-left: 16px;
         @include mix.flex(column, flex-start, flex-start);
+        @include mix.mq(tab) {
+          min-width: 120px;
+        }
         &__ad{
           margin-bottom: 8px;
           padding-left: 16px;
           font-size: 1.5rem;
           font-weight: bold;
           color: var.$gold;
+          @include mix.mq(tab) {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+          }
         }
         &__j{
           font-weight: normal;
           padding-left: 16px;
+          @include mix.mq(tab) {
+            font-size: .875rem;
+          }
         }
       }
       &__event{
         font-size: 1.2rem;
         text-align: left;
         font-weight: normal;
+        @include mix.mq(tab) {
+          font-size: 1rem;
+        }
       }
     }
   }

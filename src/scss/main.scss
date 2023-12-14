@@ -14,7 +14,7 @@
 
 // component --------------------------
 @use "./component/c-button";
-@use "./component/hamburger";
+@use "./component/c-hamburger";
 @use "./component/c-logo";
 @use "./component/c-nav";
 @use "./component/c-mailMember";
@@ -42,6 +42,7 @@
 @use "./component/c-attention";
 @use "./component/c-postNavigation";
 @use "./component/c-pager";
+@use "./component/c-spNav";
 
 // page ----------------------------
 @use "./page/p-frontPage";
