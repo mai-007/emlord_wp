@@ -270,7 +270,7 @@ Template Name: 洗車
     </div>
     <div>
       <table class="c-table">
-        <tbody>
+        <tbody class="js-scrollable">
           <tr>
             <th class="c-table__type--blank">&nbsp;</th>
             <?php foreach ($washType['type'] as $key => $type) : ?>
@@ -398,7 +398,7 @@ Template Name: 洗車
           </p>
         </div>
         <table class="c-table">
-          <tbody>
+          <tbody class="js-scrollable">
             <tr class="c-table__tr">
               <th class="c-table__type">
                 <span class="c-table__type__top">
@@ -484,7 +484,7 @@ Template Name: 洗車
             </p>
           </div>
           <table class="c-table">
-            <tbody>
+            <tbody class="js-scrollable">
               <tr class="c-table__tr">
                 <th class="c-table__type--6">
                   <span class="c-table__type__top">

@@ -17,7 +17,8 @@ Template Name: オイル
     </div>
     <div class="c-title__text">
       <p>
-        エンジンオイル、オートマチックオイル（ＡＴ/ＣＶＴ）、車にはいろいろなオイルが使われています。 オイルを交換しないで長く走行すると、添加剤の消耗や熱・空気による酸化、混入物による汚れが発生し、燃費の悪化やパワーダウンを引き起こします。
+        エンジンオイル、オートマチックオイル（ＡＴ/ＣＶＴ）、車にはいろいろなオイルが使われています。
+        オイルを交換しないで長く走行すると、添加剤の消耗や熱・空気による酸化、混入物による汚れが発生し、燃費の悪化やパワーダウンを引き起こします。
       </p>
       <p>
         また、オイルは使われなくても劣化してしまいます。大切な愛車を長く安全にお乗りいただくため、エムロードでは定期的なオイル交換をお勧めしています。
@@ -71,7 +72,7 @@ Template Name: オイル
     </div>
     <div class="section02__sticker">
       <?php foreach ($stickers as $key => $sticker) : ?>
-        <img src="<?php echo get_theme_img($sticker['image']); ?>" alt="<?php echo $sticker['alt']; ?>">
+      <img src="<?php echo get_theme_img($sticker['image']); ?>" alt="<?php echo $sticker['alt']; ?>">
       <?php endforeach; ?>
     </div>
     <div class="section02__catch">
@@ -87,7 +88,8 @@ Template Name: オイル
       <div class="l-section--half section02__oil__item">
         <img src="<?php echo get_theme_img('oil/oil_image06.jpg'); ?>" alt="">
         <p>
-          【化学合成油】 最新国際規格（API／SP、ILSAC／GF-6）の要求性能を凌駕する、当社技術の粋を集めた100％化学合成油エンジンオイル。 更なる顧客満足度向上を目指すため、省燃費性能、加速性能に加え、当社独自の指標である「乗り心地性」を新たに追求した「新・体感プレミアムエンジンオイル」です。
+          【化学合成油】 最新国際規格（API／SP、ILSAC／GF-6）の要求性能を凌駕する、当社技術の粋を集めた100％化学合成油エンジンオイル。
+          更なる顧客満足度向上を目指すため、省燃費性能、加速性能に加え、当社独自の指標である「乗り心地性」を新たに追求した「新・体感プレミアムエンジンオイル」です。
         </p>
       </div>
       <div class="l-section--half section02__oil__item">
@@ -147,19 +149,19 @@ Template Name: オイル
               "",
             ]
           ]; ?>
-          <tbody>
+          <tbody class="js-scrollable">
             <tr class="c-table__tr">
               <th class="c-table__type--blank">&nbsp;</th>
               <?php foreach ($gasolines['type'] as $key => $type) : ?>
-                <?php if ($type === 'エコカー') : ?>
-                  <th class="c-table__type type colspan">
-                    <?php echo $type; ?>
-                  </th>
-                <?php else : ?>
-                  <th class="c-table__type type">
-                    <?php echo $type; ?>
-                  </th>
-                <?php endif; ?>
+              <?php if ($type === 'エコカー') : ?>
+              <th class="c-table__type type colspan">
+                <?php echo $type; ?>
+              </th>
+              <?php else : ?>
+              <th class="c-table__type type">
+                <?php echo $type; ?>
+              </th>
+              <?php endif; ?>
               <?php endforeach; ?>
             </tr>
             <tr class="c-table__tr">
@@ -167,9 +169,9 @@ Template Name: オイル
                 粘度指数
               </th>
               <?php foreach ($gasolines['viscosity'] as $viscosity) : ?>
-                <th class="c-table__type viscosity">
-                  <?php echo $viscosity; ?>
-                </th>
+              <th class="c-table__type viscosity">
+                <?php echo $viscosity; ?>
+              </th>
               <?php endforeach; ?>
             </tr>
             <tr class="c-table__tr">
@@ -177,7 +179,7 @@ Template Name: オイル
                 ENEOS X<br>PRIME
               </th>
               <?php foreach ($gasolines['prime'] as $prime) : ?>
-                <td class="c-table__price"><?php echo $prime; ?></td>
+              <td class="c-table__price"><?php echo $prime; ?></td>
               <?php endforeach; ?>
             </tr>
             <tr class="c-table__tr">
@@ -185,7 +187,7 @@ Template Name: オイル
                 ENEOS X
               </th>
               <?php foreach ($gasolines['X'] as $key => $x) : ?>
-                <td class="c-table__price"><?php echo $x; ?></td>
+              <td class="c-table__price"><?php echo $x; ?></td>
               <?php endforeach; ?>
             </tr>
           </tbody>
@@ -208,17 +210,17 @@ Template Name: オイル
                 "¥1,700/L",
               ],
             ]; ?>
-            <tbody>
+            <tbody class="js-scrollable">
               <tr>
                 <?php foreach ($diesel['type'] as $type) : ?>
-                  <th class="c-table__type">
-                    <?php echo $type; ?>
-                  </th>
+                <th class="c-table__type">
+                  <?php echo $type; ?>
+                </th>
                 <?php endforeach; ?>
               </tr>
               <tr>
                 <?php foreach ($diesel['price'] as $price) : ?>
-                  <td class="c-table__price"><?php echo $price; ?></td>
+                <td class="c-table__price"><?php echo $price; ?></td>
                 <?php endforeach; ?>
               </tr>
             </tbody>
@@ -242,17 +244,17 @@ Template Name: オイル
                 "¥2,400/L",
               ],
             ]; ?>
-            <tbody>
+            <tbody class="js-scrollable">
               <tr>
                 <?php foreach ($at['type'] as $type) : ?>
-                  <th class="c-table__type">
-                    <?php echo $type; ?>
-                  </th>
+                <th class="c-table__type">
+                  <?php echo $type; ?>
+                </th>
                 <?php endforeach; ?>
               </tr>
               <tr>
                 <?php foreach ($at['price'] as $price) : ?>
-                  <td class="c-table__price"><?php echo $price; ?></td>
+                <td class="c-table__price"><?php echo $price; ?></td>
                 <?php endforeach; ?>
               </tr>
             </tbody>
@@ -286,14 +288,14 @@ Template Name: オイル
           <tbody>
             <tr>
               <?php foreach ($filter['type'] as $type) : ?>
-                <th class="c-table__type">
-                  <?php echo $type; ?>
-                </th>
+              <th class="c-table__type">
+                <?php echo $type; ?>
+              </th>
               <?php endforeach; ?>
             </tr>
             <tr>
               <?php foreach ($filter['price'] as $price) : ?>
-                <td class="c-table__price"><?php echo $price; ?></td>
+              <td class="c-table__price"><?php echo $price; ?></td>
               <?php endforeach; ?>
             </tr>
           </tbody>
@@ -340,8 +342,10 @@ Template Name: オイル
 
     </div>
     <picture class="section03__image">
-      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_point-sp.png'); ?> " sizes="100%">
-      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_point.png'); ?> w849" , sizes="849px">
+      <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_point-sp.png'); ?> "
+        sizes="100%">
+      <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_point.png'); ?> w849" ,
+        sizes="849px">
       <img src="<?php echo get_theme_img('common/banner_point.png'); ?>" alt="">
     </picture>
 </section>

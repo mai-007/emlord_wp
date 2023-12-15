@@ -65,7 +65,7 @@
     <section class="c-instagram l-section--half">
       <div class="c-title--half">
         <h3 class="c-title__m">インスタグラム</h3>
-        <!-- <?php echo do_shortcode('[instagram-feed feed=2]'); ?> -->
+        <?php echo do_shortcode('[instagram-feed feed=2]'); ?>
       </div>
     </section>
   </section>

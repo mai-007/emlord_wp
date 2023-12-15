@@ -382,7 +382,7 @@ Template Name: 車検
         【こんな方におすすめ】<?php echo implode("<br>", $price['recommend']); ?></p>
     </div>
     <table class="c-table">
-      <tbody>
+      <tbody class="js-scrollable">
         <tr>
           <th class="c-table__des--short">
             車種・重量

@@ -2,92 +2,92 @@
 $stores = [
   [
     'name' => '小峰SS',
-    'href' => '/store/omine',
+    'href' => '/omine',
     'qr' => 'qr_omine.gif'
   ],
   [
     'name' => '上南部SS',
-    'href' => '/store/kaminabe',
+    'href' => '/kaminabe',
     'qr' => 'qr_kaminabe.gif'
   ],
   [
     'name' => '建軍SS',
-    'href' => '/store/kengun',
+    'href' => '/kengun',
     'qr' => 'qr_kengun.gif'
   ],
   [
     'name' => '光の森SS',
-    'href' => '/store/hikarinomori',
+    'href' => '/hikarinomori',
     'qr' => 'qr_hikarinomori.gif'
   ],
   [
     'name' => '本渡SS',
-    'href' => '/store/hondo',
+    'href' => '/hondo',
     'qr' => 'qr_hondo.gif'
   ],
   [
     'name' => '菊南SS',
-    'href' => '/store/kikunan',
+    'href' => '/kikunan',
     'qr' => 'qr_kikunan.gif'
   ],
   [
     'name' => '新町SS',
-    'href' => '/store/shinmati',
+    'href' => '/shinmati',
     'qr' => 'qr_shinmachi.gif'
   ],
   [
     'name' => '平田SS',
-    'href' => '/store/hirata',
+    'href' => '/hirata',
     'qr' => 'qr_hirata.gif'
   ],
   [
     'name' => '大矢野SS',
-    'href' => '/store/ooyano',
+    'href' => '/ooyano',
     'qr' => 'qr_ooyano.gif'
   ],
   [
     'name' => 'DDエネオスセブンTATSUDA',
-    'href' => '/store/tatsuda',
+    'href' => '/tatsuda',
     'qr' => 'qr_tatsuda.gif'
   ],
   [
     'name' => '嘉島SS',
-    'href' => '/store/kasima',
+    'href' => '/kasima',
     'qr' => 'qr_kashima.gif'
   ],
   [
     'name' => '熊本インターSS',
-    'href' => '/store/kumamotoIC',
+    'href' => '/kumamotoIC',
     'qr' => ''
   ],
   [
     'name' => '本渡大田町SS',
-    'href' => '/store/ootamachi',
+    'href' => '/ootamachi',
     'qr' => 'qr_oota.gif'
   ],
   [
     'name' => '松橋SS',
-    'href' => '/store/matsuhashi',
+    'href' => '/matsuhashi',
     'qr' => 'qr_matsubase.gif'
   ],
   [
     'name' => '日赤通りSS',
-    'href' => '/store/nisseki',
+    'href' => '/nisseki',
     'qr' => 'qr_nissekidori.gif'
   ],
   [
     'name' => '尾ノ上SS',
-    'href' => '/store/onoue',
+    'href' => '/onoue',
     'qr' => 'qr_onoue.gif'
   ],
   [
     'name' => '世安SS',
-    'href' => '/store/yoyasu',
+    'href' => '/yoyasu',
     'qr' => 'qr_yoyasu.gif'
   ],
   [
     'name' => '菊陽SS',
-    'href' => '/store/kikuyou',
+    'href' => '/kikuyou',
     'qr' => 'qr_kikuyou.gif'
   ],
 ];

@@ -100,7 +100,7 @@ Template Name: ラジエーター
     <div class="section02__contents">
       <?php foreach ($radiatorMenus["menu"] as $menuTitle => $menuDetailes) : ?>
       <table class="c-table">
-        <tbody>
+        <tbody class="js-scrollable">
           <tr class="c-table__tr">
             <th class="c-table__type--blank">&nbsp;</th>
             <?php foreach ($menuDetailes['type'] as $typeIndex => $type) : ?>

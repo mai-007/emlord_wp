@@ -14,24 +14,6 @@
     margin-bottom: 32px;
     font-size: 1.5rem;
   }
-  &.c-business{
-    left: unset;
-    width: fit-content;
-    background: #fff;
-    border-radius: 16px;
-    .c-dropMenu__wrap{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      &:before{
-        left: 37%;
-        transform: translateX(-37%);
-      }
-      .c-service__btn{
-        margin-right: 24px;
-      }
-    }
-  }
   .c-service--business{
     width: max-content;
   }
@@ -43,6 +25,24 @@
   border-radius: 16px;
   border: none;
   background: #fff;
+  &.c-business{
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    left: -280px;
+    .c-service__btn{
+      height: auto;
+      &:hover{
+        img{
+          filter: none;
+        }
+      }
+      }
+      &::before{
+        right: 40%;
+        transform: translateX(-50%);
+      }
+    }
   ul{
     display: flex;
     flex-wrap: wrap;

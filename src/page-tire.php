@@ -93,18 +93,18 @@ Template Name: タイヤ
     ];
 
     foreach ($tireTips as $key => $tips) : ?>
-      <div class="c-box01">
-        <h3 class="c-box01__title">
-          <span class="c-box01__title__number"><?php echo $tips['number']; ?></span>
-          <?php echo $tips['title']; ?>
-        </h3>
-        <div class="l-flexRowToColumn">
-          <p class="c-box01__text">
-            <?php echo $tips['description']; ?>
-          </p>
-          <img src="<?php echo get_theme_img($tips['image']); ?>" alt="" class="c-box01__image">
-        </div>
+    <div class="c-box01">
+      <h3 class="c-box01__title">
+        <span class="c-box01__title__number"><?php echo $tips['number']; ?></span>
+        <?php echo $tips['title']; ?>
+      </h3>
+      <div class="l-flexRowToColumn">
+        <p class="c-box01__text">
+          <?php echo $tips['description']; ?>
+        </p>
+        <img src="<?php echo get_theme_img($tips['image']); ?>" alt="" class="c-box01__image">
       </div>
+    </div>
     <?php endforeach; ?>
   </div>
 </section>
@@ -133,10 +133,10 @@ Template Name: タイヤ
           "走行安全上、タイヤ1本につき2ヶ所(間40cm)までとさせていただきます。",
         ]; ?>
         <?php foreach ($tireChecks as $tireCheck) : ?>
-          <li class="c-title__l__list__item">
-            <img src="<?php echo get_theme_img('common/check-black.svg'); ?>" alt="">
-            <?php echo $tireCheck; ?>
-          </li>
+        <li class="c-title__l__list__item">
+          <img src="<?php echo get_theme_img('common/check-black.svg'); ?>" alt="">
+          <?php echo $tireCheck; ?>
+        </li>
         <?php endforeach; ?>
       </ul>
     </div>
@@ -170,28 +170,30 @@ Template Name: タイヤ
         "770"
       ];
       ?>
-      <tbody>
+      <tbody class="js-scrollable">
         <tr>
           <?php foreach ($types as $type) : ?>
-            <th class="c-table__type c-table__type--top">
-              <span class="c-table__type__top">
-                <?php echo $type; ?>
-            </th>
+          <th class="c-table__type c-table__type--top">
+            <span class="c-table__type__top">
+              <?php echo $type; ?>
+          </th>
           <?php endforeach; ?>
         </tr>
         <tr>
           <?php foreach ($prices as $key => $price) : ?>
-            <td class="c-table__price">
-              ¥<?php echo $price; ?>
-            </td>
+          <td class="c-table__price">
+            ¥<?php echo $price; ?>
+          </td>
           <?php endforeach; ?>
         </tr>
       </tbody>
     </table>
   </div>
   <picture class="section04__image">
-    <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_point-sp.png'); ?> " sizes="100%">
-    <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_point.png'); ?> w849" , sizes="849px">
+    <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_point-sp.png'); ?> "
+      sizes="100%">
+    <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_point.png'); ?> w849" ,
+      sizes="849px">
     <img src="<?php echo get_theme_img('common/banner_point.png'); ?>" alt="">
   </picture>
 </section>

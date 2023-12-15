@@ -17,6 +17,17 @@
   }
 }
 
+/*main-view*/
+.splide.l-mainView{
+  .splide__pagination{
+    display: none;
+  }
+  .splide__arrow{
+    display: none;
+  }
+}
+
+/*information*/
 .splide01{
   position: relative;
   .splide__slide{
@@ -66,6 +77,7 @@
   }
 }
 
+/*car-life*/
 .splide02{
   position: relative;
   .splide__pagination--ttb{

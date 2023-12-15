@@ -25,10 +25,10 @@ Template Name: エアコン
         "エアコンから「キー」という音がする"
       ]; ?>
       <?php foreach ($airconChecks as $value) : ?>
-        <li class="c-title__l__list__item">
-          <img src="<?php echo get_theme_img('common/check-white.svg'); ?>" alt="">
-          <?php echo $value; ?>
-        </li>
+      <li class="c-title__l__list__item">
+        <img src="<?php echo get_theme_img('common/check-white.svg'); ?>" alt="">
+        <?php echo $value; ?>
+      </li>
       <?php endforeach; ?>
     </ul>
     <p class="c-box03">
@@ -110,57 +110,57 @@ Template Name: エアコン
       <?php echo $airconMenus['text']; ?></p>
     <div class="section02__contents">
       <?php foreach ($airconMenus["menu"] as $menuTitle => $menuDetailes) : ?>
-        <?php if (isset($menuDetailes['name'])) : ?>
-          <h5 class="c-option__title">
-            <?php echo $menuTitle; ?>
-          </h5>
-          <table class="c-table">
-            <tbody>
-              <tr class="c-table__tr">
-                <th class="c-table__type--blank">&nbsp;</th>
-                <?php foreach ($menuDetailes['type'] as $typeIndex => $type) : ?>
-                  <th class="c-table__type">
-                    <?php echo $type; ?>
-                  </th>
-                <?php endforeach; ?>
-              </tr>
-              <?php foreach ($menuDetailes['name'] as $name => $price) : ?>
-                <tr class="c-table__tr">
-                  <th class="c-table__des--short u-bgDeepBlue">
-                    <?php echo $name; ?>
-                  </th>
-                  <?php foreach ($price as $value) : ?>
-                    <td class="c-table__price">
-                      <?php echo $value; ?>
-                    </td>
-                  <?php endforeach; ?>
-                </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
-        <?php else : ?>
-          <h5 class="c-option__title">
-            <?php echo $menuTitle; ?>
-          </h5>
-          <table class="c-table">
-            <tbody>
-              <tr>
-                <?php foreach ($menuDetailes['type'] as $typeIndex => $type) : ?>
-                  <th class="c-table__type c-table__type--top">
-                    <?php echo $type; ?>
-                  </th>
-                <?php endforeach; ?>
-              </tr>
-              <tr>
-                <?php foreach ($menuDetailes['prices'] as $value) : ?>
-                  <td class="c-table__price">
-                    <?php echo $value; ?>
-                  </td>
-                <?php endforeach; ?>
-              </tr>
-            </tbody>
-          </table>
-        <?php endif; ?>
+      <?php if (isset($menuDetailes['name'])) : ?>
+      <h5 class="c-option__title">
+        <?php echo $menuTitle; ?>
+      </h5>
+      <table class="c-table">
+        <tbody>
+          <tr class="c-table__tr">
+            <th class="c-table__type--blank">&nbsp;</th>
+            <?php foreach ($menuDetailes['type'] as $typeIndex => $type) : ?>
+            <th class="c-table__type">
+              <?php echo $type; ?>
+            </th>
+            <?php endforeach; ?>
+          </tr>
+          <?php foreach ($menuDetailes['name'] as $name => $price) : ?>
+          <tr class="c-table__tr">
+            <th class="c-table__des--short u-bgDeepBlue">
+              <?php echo $name; ?>
+            </th>
+            <?php foreach ($price as $value) : ?>
+            <td class="c-table__price">
+              <?php echo $value; ?>
+            </td>
+            <?php endforeach; ?>
+          </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+      <?php else : ?>
+      <h5 class="c-option__title">
+        <?php echo $menuTitle; ?>
+      </h5>
+      <table class="c-table">
+        <tbody class="js-scrollable">
+          <tr>
+            <?php foreach ($menuDetailes['type'] as $typeIndex => $type) : ?>
+            <th class="c-table__type c-table__type--top">
+              <?php echo $type; ?>
+            </th>
+            <?php endforeach; ?>
+          </tr>
+          <tr>
+            <?php foreach ($menuDetailes['prices'] as $value) : ?>
+            <td class="c-table__price">
+              <?php echo $value; ?>
+            </td>
+            <?php endforeach; ?>
+          </tr>
+        </tbody>
+      </table>
+      <?php endif; ?>
       <?php endforeach; ?>
     </div>
 

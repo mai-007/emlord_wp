@@ -208,5 +208,15 @@ function submitForm(event) {
 }
 </script>
 <?php endif;?>
+<script src="https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js"></script>
+<script>
+new ScrollHint('.js-scrollable', {
+  applyToParents: true,
+  remainingTime: 5000,
+  i18n: {
+    scrollable: 'スクロールできます'
+  }
+});
+</script>
 
 </html>
