@@ -104,7 +104,7 @@ new Splide("#slider2", {
 //car-life豆知識
 new Splide("#slider3", {
   direction: "ttb", // スライダーの方向を指定
-  heightRatio: 0.75, // スライドの高さをスライダーの幅に対する割合で指定
+  heightRatio: 0.7, // スライドの高さをスライダーの幅に対する割合で指定
   wheel: true, // マウスホイールによるスライダーの移動を有効にする
   waitForTransition: true, // スライダーが移動中にも操作を受け付ける
   type: 'loop',
@@ -157,59 +157,54 @@ function changeImage() {
 // selectにて選択した値によってメール送信先の変更
 function changeEmailRecipient() {
   var selectedValue = document.getElementById("stores").value;
-
-  var emailInput = document.querySelector('input[type="email"]');
+  var form = document.getElementById("myform")
   switch (selectedValue) {
     case "小峰SS":
-      emailInput.dataset.recipient = "27@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=27@mailma.emlord.co.jp";
       break;
     case "上南部SS":
-      emailInput.dataset.recipient = "05@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=05@mailma.emlord.co.jp";
       break;
     case "建軍SS":
-      emailInput.dataset.recipient = "10@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=10@mailma.emlord.co.jp";
       break;
     case "光の森SS":
-      emailInput.dataset.recipient = "03@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=03@mailma.emlord.co.jp";
       break;
     case "本渡SS":
-      emailInput.dataset.recipient = "15@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=15@mailma.emlord.co.jp";
       break;
     case "菊南SS":
-      emailInput.dataset.recipient = "06@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=06@mailma.emlord.co.jp";
       break;
     case "新町SS":
-      emailInput.dataset.recipient = "18@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=18@mailma.emlord.co.jp";
       break;
     case "平田SS":
-      emailInput.dataset.recipient = "19@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=19@mailma.emlord.co.jp";
       break;
     case "大矢野SS":
-      emailInput.dataset.recipient = "12@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=12@mailma.emlord.co.jp";
       break;
     case "DDエネオスセブンTATSUDA":
-      emailInput.dataset.recipient = "08@mailma.emlord.co.jp";
+      form.action = "process_form.php?email=08@mailma.emlord.co.jp";
       break;
     case "嘉島SS":
-      emailInput.dataset.recipient = "23@mailma.emlord.co.jp";
+      form.action = "23@mailma.emlord.co.jp";
       break;
     case "熊本インターSS":
-      emailInput.dataset.recipient = "26@mailma.emlord.co.jp";
+      form.action = "26@mailma.emlord.co.jp";
       break;
   }
 }
 
-function submitForm() {
-  var emailInput = document.getElementById("email");
-  var recipient = emailInput.dataset.recipient;
+// フォームが送信される前にメールアドレスを設定
+function submitForm(event) {
+  // フォームが送信される前に選択した店舗に応じてメールアドレスを設定
+  changeEmailRecipient();
 
-  if (recipient) {
-    emailInput.value = recipient;
-    return true; // フォーム送信を許可
-  } else {
-    alert("エラー: 店舗が選択されていません。");
-    return false; // フォーム送信をキャンセル
-  }
+  // フォームのデフォルトの送信処理を実行
+  event.currentTarget.submit();
 }
 </script>
 <?php endif;?>

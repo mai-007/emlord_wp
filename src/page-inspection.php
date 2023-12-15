@@ -192,7 +192,7 @@ Template Name: 車検
 </section>
 
 <!--frow-->
-<section id="inspectionFrow" class="l-section02--bg02 section06">
+<section id="frow" class="l-section02--bg02 section06">
   <div class="c-title">
     <h3 class="c-title__l">
       車検の流れ

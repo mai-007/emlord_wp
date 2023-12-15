@@ -223,105 +223,105 @@ Template Name: 洗車
   ];
   ?>
   <?php foreach ($washTypes as $washType) : ?>
-    <div class="c-boxBorder l-containerL">
-      <dl class="c-boxBorder__header">
-        <span class="l-flexBetween">
-          <dt class="c-boxBorder__header__title">
-            <span class="u-square"></span>
-            <?php echo $washType['title']; ?>
-          </dt>
-          <dd class="c-boxBorder__header__recommend">
-            所有時間
-            <span class="c-boxBorder__header__time">
-              <?php echo $washType['time']; ?>
-            </span>
-          </dd>
-          <dd class="c-boxBorder__header__recommend">
-            <?php echo $washType["recommend"]; ?>
-            <?php foreach ($washTypes as $washType) : ?>
-              <?php if (isset($washType['score']) && is_array($washType['score'])) : ?>
-                <?php foreach ($washType['score'] as $stars) : ?>
-                  <img src="<?php echo get_theme_img('carWash/star.svg'); ?>" alt="">
-                <?php endforeach; ?>
-              <?php endif; ?>
-            <?php endforeach; ?>
-          </dd>
-        </span>
-      </dl>
-      <p class="c-boxBorder__header__text">
-        <?php echo $washType['text'][0]; ?>
-      </p>
-      <?php if (isset($washType['store']) && is_array($washType['store'])); ?>
-      <p class="c-boxBorder__store">
-        取り扱い店舗
-        <?php foreach ($washType['store'] as $store) : ?>
-          <span class="c-boxBorder__store__value">
-            <?php echo $store; ?>
+  <div class="c-boxBorder l-containerL">
+    <dl class="c-boxBorder__header">
+      <span class="l-flexBetween">
+        <dt class="c-boxBorder__header__title">
+          <span class="u-square"></span>
+          <?php echo $washType['title']; ?>
+        </dt>
+        <dd class="c-boxBorder__header__recommend">
+          所有時間
+          <span class="c-boxBorder__header__time">
+            <?php echo $washType['time']; ?>
           </span>
-        <?php endforeach; ?>
-      </p>
-      <div class="l-flexRowToColumn">
-        <?php foreach ($washType['images'] as $key => $image) : ?>
-          <div class="section02__card">
-            <img class="c-image--radiusBorder" src="<?php echo get_theme_img($image[0]); ?>" alt="">
-            <p><?php echo $image[1]; ?></p>
-          </div>
-        <?php endforeach; ?>
+        </dd>
+        <dd class="c-boxBorder__header__recommend">
+          <?php echo $washType["recommend"]; ?>
+          <?php foreach ($washTypes as $washType) : ?>
+          <?php if (isset($washType['score']) && is_array($washType['score'])) : ?>
+          <?php foreach ($washType['score'] as $stars) : ?>
+          <img src="<?php echo get_theme_img('carWash/star.svg'); ?>" alt="">
+          <?php endforeach; ?>
+          <?php endif; ?>
+          <?php endforeach; ?>
+        </dd>
+      </span>
+    </dl>
+    <p class="c-boxBorder__header__text">
+      <?php echo $washType['text'][0]; ?>
+    </p>
+    <?php if (isset($washType['store']) && is_array($washType['store'])); ?>
+    <p class="c-boxBorder__store">
+      取り扱い店舗
+      <?php foreach ($washType['store'] as $store) : ?>
+      <span class="c-boxBorder__store__value">
+        <?php echo $store; ?>
+      </span>
+      <?php endforeach; ?>
+    </p>
+    <div class="l-flexRowToColumn">
+      <?php foreach ($washType['images'] as $key => $image) : ?>
+      <div class="section02__card">
+        <img class="c-image--radiusBorder" src="<?php echo get_theme_img($image[0]); ?>" alt="">
+        <p><?php echo $image[1]; ?></p>
       </div>
-      <div>
-        <table class="c-table">
-          <tbody>
-            <tr>
-              <th class="c-table__type--blank">&nbsp;</th>
-              <?php foreach ($washType['type'] as $key => $type) : ?>
-                <th class="c-table__type">
-                  <span class="c-table__type__top">
-                    <?php echo $key; ?>
-                  </span>
-                  <?php echo $type; ?>
-                </th>
-              <?php endforeach; ?>
-            </tr>
-            <?php if (!empty($washType['course'])) : ?>
-              <?php foreach ($washType['course'] as $key => $value) : ?>
-                <?php if ($value === end($washType['course'])) : ?>
-                  <tr>
-                    <!-- 最後の要素に対する処理 -->
-                    <th class="c-table__des--short u-bgGold">
-                      <?php echo $value['name']; ?>
-                      <span class="c-table__des__description"><?php echo $value['text']; ?></span>
-                    </th>
-                  <?php else : ?>
-                  <tr>
-                    <th class="c-table__des--short u-bgDeepBlue">
-                      <?php echo $value['name']; ?>
-                      <span class="c-table__des__description">
-                        <?php echo $value['text']; ?>
-                      </span>
-                    </th>
-                  <?php endif; ?>
-                  <?php foreach ($value['prices'] as $price) : ?>
-                    <td class="c-table__price">
-                      ¥<?php echo $price; ?>
-                    </td>
-                  <?php endforeach; ?>
-                  </tr>
-                <?php endforeach; ?>
-          </tbody>
-        </table>
-      </div>
+      <?php endforeach; ?>
+    </div>
+    <div>
+      <table class="c-table">
+        <tbody>
+          <tr>
+            <th class="c-table__type--blank">&nbsp;</th>
+            <?php foreach ($washType['type'] as $key => $type) : ?>
+            <th class="c-table__type">
+              <span class="c-table__type__top">
+                <?php echo $key; ?>
+              </span>
+              <?php echo $type; ?>
+            </th>
+            <?php endforeach; ?>
+          </tr>
+          <?php if (!empty($washType['course'])) : ?>
+          <?php foreach ($washType['course'] as $key => $value) : ?>
+          <?php if ($value === end($washType['course'])) : ?>
+          <tr>
+            <!-- 最後の要素に対する処理 -->
+            <th class="c-table__des--short u-bgGold">
+              <?php echo $value['name']; ?>
+              <span class="c-table__des__description"><?php echo $value['text']; ?></span>
+            </th>
+            <?php else : ?>
+          <tr>
+            <th class="c-table__des--short u-bgDeepBlue">
+              <?php echo $value['name']; ?>
+              <span class="c-table__des__description">
+                <?php echo $value['text']; ?>
+              </span>
+            </th>
+            <?php endif; ?>
+            <?php foreach ($value['prices'] as $price) : ?>
+            <td class="c-table__price">
+              ¥<?php echo $price; ?>
+            </td>
+            <?php endforeach; ?>
+          </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
     <?php else : ?>
-      <tr>
-        <?php foreach ($washType['price'] as $fee) : ?>
-          <td class="c-table__price">
-            ¥<?php echo $fee; ?>
-          </td>
-        <?php endforeach; ?>
-      </tr>
+    <tr>
+      <?php foreach ($washType['price'] as $fee) : ?>
+      <td class="c-table__price">
+        ¥<?php echo $fee; ?>
+      </td>
+      <?php endforeach; ?>
+    </tr>
     <?php endif; ?>
     </tbody>
     </table>
-    </div>
+  </div>
   <?php endforeach; ?>
 </section>
 
@@ -386,60 +386,61 @@ Template Name: 洗車
         ]
       ]; ?>
       <?php foreach ($washOptionM as $option) : ?>
-        <div class="c-option">
-          <h5 class="c-option__title">
-            <?php echo $option['title']; ?>
-          </h5>
-          <div class="c-option__main">
-            <img class="c-image--radiusBorder c-option__main__item" src="<?php echo get_theme_img($option['image']); ?>" alt="">
-            <p class="c-option__main c-option__main__item">
-              <?php echo $option['text']; ?>
-            </p>
-          </div>
-          <table class="c-table">
-            <tbody>
-              <tr class="c-table__tr">
-                <th class="c-table__type">
-                  <span class="c-table__type__top">
-                    SS
-                  </span>
-                </th>
-                <th class="c-table__type">
-                  <span class="c-table__type__top">
-                    S
-                  </span>
-                </th>
-                <th class="c-table__type">
-                  <span class="c-table__type__top">
-                    M
-                  </span>
-                </th>
-                <th class="c-table__type">
-                  <span class="c-table__type__top">
-                    L
-                  </span>
-                </th>
-                <th class="c-table__type">
-                  <span class="c-table__type__top">
-                    LL
-                  </span>
-                </th>
-                <th class="c-table__type">
-                  <span class="c-table__type__top">
-                    XL
-                  </span>
-                </th>
-              </tr>
-              <tr class="c-table__tr">
-                <?php foreach ($option['prices'] as $price) : ?>
-                  <td class="c-table__price">
-                    <?php echo $price; ?>
-                  </td>
-                <?php endforeach; ?>
-              </tr>
-            </tbody>
-          </table>
+      <div class="c-option">
+        <h5 class="c-option__title">
+          <?php echo $option['title']; ?>
+        </h5>
+        <div class="c-option__main">
+          <img class="c-image--radiusBorder c-option__main__item" src="<?php echo get_theme_img($option['image']); ?>"
+            alt="">
+          <p class="c-option__main c-option__main__item">
+            <?php echo $option['text']; ?>
+          </p>
         </div>
+        <table class="c-table">
+          <tbody>
+            <tr class="c-table__tr">
+              <th class="c-table__type">
+                <span class="c-table__type__top">
+                  SS
+                </span>
+              </th>
+              <th class="c-table__type">
+                <span class="c-table__type__top">
+                  S
+                </span>
+              </th>
+              <th class="c-table__type">
+                <span class="c-table__type__top">
+                  M
+                </span>
+              </th>
+              <th class="c-table__type">
+                <span class="c-table__type__top">
+                  L
+                </span>
+              </th>
+              <th class="c-table__type">
+                <span class="c-table__type__top">
+                  LL
+                </span>
+              </th>
+              <th class="c-table__type">
+                <span class="c-table__type__top">
+                  XL
+                </span>
+              </th>
+            </tr>
+            <tr class="c-table__tr">
+              <?php foreach ($option['prices'] as $price) : ?>
+              <td class="c-table__price">
+                <?php echo $price; ?>
+              </td>
+              <?php endforeach; ?>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <?php endforeach; ?>
       <div class="c-option__wrap">
         <?php
@@ -471,74 +472,75 @@ Template Name: 洗車
           ],
         ]; ?>
         <?php foreach ($washOptionS as $option) : ?>
-          <div class="c-option--s">
-            <h5 class="c-option__title">
-              <?php echo $option['title']; ?>
-            </h5>
-            <div class="c-option__main">
-              <img class="c-image--radiusBorder c-option__main__item" src="<?php echo get_theme_img($option['image']); ?>" alt="">
-              <p class="c-option__main c-option__main__item">
-                <?php echo $option['text']; ?>
-              </p>
-            </div>
-            <table class="c-table">
-              <tbody>
-                <tr class="c-table__tr">
-                  <th class="c-table__type--6">
-                    <span class="c-table__type__top">
-                      SS
-                    </span>
-                  </th>
-                  <th class="c-table__type--6">
-                    <span class="c-table__type__top">
-                      S
-                    </span>
-                  </th>
-                  <th class="c-table__type--6">
-                    <span class="c-table__type__top">
-                      M
-                    </span>
-                  </th>
-                  <th class="c-table__type--6">
-                    <span class="c-table__type__top">
-                      L
-                    </span>
-                  </th>
-                  <th class="c-table__type--6">
-                    <span class="c-table__type__top">
-                      LL
-                    </span>
-                  </th>
-                  <th class="c-table__type--6">
-                    <span class="c-table__type__top">
-                      XL
-                    </span>
-                  </th>
-                </tr>
-                <tr class="c-table__tr">
-                  <?php if (count($option['prices']) === 1) : ?>
-                    <?php foreach ($option['prices'] as $price) : ?>
-                      <td colspan="6" class="c-table__price">
-                        <?php echo $price; ?>
-                      </td>
-                    <?php endforeach; ?>
-                  <?php elseif (count($option['prices']) === 2) : ?>
-                    <?php foreach ($option['prices'] as $price) : ?>
-                      <td colspan="3" class="c-table__price">
-                        <?php echo $price; ?>
-                      </td>
-                    <?php endforeach; ?>
-                  <?php else : ?>
-                    <?php foreach ($option['prices'] as $price) : ?>
-                      <td class="c-table__price">
-                        <?php echo $price; ?>
-                      </td>
-                    <?php endforeach; ?>
-                  <?php endif; ?>
-                </tr>
-              </tbody>
-            </table>
+        <div class="c-option--s">
+          <h5 class="c-option__title">
+            <?php echo $option['title']; ?>
+          </h5>
+          <div class="c-option__main">
+            <img class="c-image--radiusBorder c-option__main__item" src="<?php echo get_theme_img($option['image']); ?>"
+              alt="">
+            <p class="c-option__main c-option__main__item">
+              <?php echo $option['text']; ?>
+            </p>
           </div>
+          <table class="c-table">
+            <tbody>
+              <tr class="c-table__tr">
+                <th class="c-table__type--6">
+                  <span class="c-table__type__top">
+                    SS
+                  </span>
+                </th>
+                <th class="c-table__type--6">
+                  <span class="c-table__type__top">
+                    S
+                  </span>
+                </th>
+                <th class="c-table__type--6">
+                  <span class="c-table__type__top">
+                    M
+                  </span>
+                </th>
+                <th class="c-table__type--6">
+                  <span class="c-table__type__top">
+                    L
+                  </span>
+                </th>
+                <th class="c-table__type--6">
+                  <span class="c-table__type__top">
+                    LL
+                  </span>
+                </th>
+                <th class="c-table__type--6">
+                  <span class="c-table__type__top">
+                    XL
+                  </span>
+                </th>
+              </tr>
+              <tr class="c-table__tr">
+                <?php if (count($option['prices']) === 1) : ?>
+                <?php foreach ($option['prices'] as $price) : ?>
+                <td colspan="6" class="c-table__price">
+                  <?php echo $price; ?>
+                </td>
+                <?php endforeach; ?>
+                <?php elseif (count($option['prices']) === 2) : ?>
+                <?php foreach ($option['prices'] as $price) : ?>
+                <td colspan="3" class="c-table__price">
+                  <?php echo $price; ?>
+                </td>
+                <?php endforeach; ?>
+                <?php else : ?>
+                <?php foreach ($option['prices'] as $price) : ?>
+                <td class="c-table__price">
+                  <?php echo $price; ?>
+                </td>
+                <?php endforeach; ?>
+                <?php endif; ?>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <?php endforeach; ?>
       </div>
     </div>
@@ -547,10 +549,12 @@ Template Name: 洗車
 <!--banner-->
 <section class="l-section02 section04">
   <div class="l-containerM c-bannerArea">
-    <a href="../coating">
+    <a href="<?php echo esc_url(home_url('/coating'));?>">
       <picture class="section04__image">
-        <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_coating-sp.png'); ?> " sizes="100%">
-        <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_coating.png'); ?> w849" , sizes="849px">
+        <source media="(max-width: 799px)" srcset="<?php echo get_theme_img('common/banner_coating-sp.png'); ?> "
+          sizes="100%">
+        <source media="(min-width: 800px)" srcset="<?php echo get_theme_img('common/banner_coating.png'); ?> w849" ,
+          sizes="849px">
         <img src="<?php echo get_theme_img('common/banner_coating.png'); ?>" alt="">
       </picture>
     </a>

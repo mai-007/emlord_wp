@@ -41,12 +41,13 @@ Template Name: メール会員
         How to Register
       </p>
     </div>
-
+    <!-- HTML/PHP -->
     <div class="c-box">
       <p class="c-box__text">
         <span class="c-box01__title__number">1.</span>最寄りのサービスステーションをお選びください
       </p>
-      <select name="stores" id="stores" class="section02__select" onchange="changeImage()">
+      <!-- 登録したい店舗をselectで選択してもらう -->
+      <select name="stores" id="stores" class="section02__select" onchange="changeImage(); changeEmailRecipient();">
         <?php include('inc/stores.php'); ?>
         <?php foreach ($stores as $store) : ?>
         <option value="<?php echo $store['name']; ?>" data-qr="<?php echo $store['qr']; ?>">
@@ -66,14 +67,16 @@ Template Name: メール会員
       </div>
 
     </div>
+    <!-- selectで選択した店舗の登録メールアドレスへ入力したメールアドレスからメールを送信する-->
     <div class="c-boxBorder section02__flow2">
       <p class="c-boxBorder__textM u-align-center">またはあなたのアドレスを入力してもOK
       </p>
-      <form method="post">
-        <input type="mail">
-        <button type="submit" value="送信">送 信</button>
+      <form method="post" id="myForm" onsubmit="return submitForm(event)">
+        <input type="email" id="email" name="email" required>
+        <button type="submit">送 信</button>
       </form>
     </div>
+
     <div class="c-attention">
       <h5 class="c-attention__title u-align-center">ご確認ください</h5>
       <p class="c-attention__text">空メール送信後に、登録完了メールが届きます。</p>

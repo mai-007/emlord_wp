@@ -38,7 +38,7 @@
         </button>
       </div>
       <button class="c-button01">
-        <a href="/store/">
+        <a href="<?php echo esc_url(home_url('/store'));?>">
           店舗一覧はこちら
           <img src="<?php echo get_theme_img('common/arrow_right-small-white.svg'); ?>" alt="">
         </a>

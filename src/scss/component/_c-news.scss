@@ -19,6 +19,7 @@
       border-radius: 32px;
       aspect-ratio: 4/3;
       object-fit: cover;
+      filter: brightness(.8);
     }
     &__title{
       max-width: 45%;

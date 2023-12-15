@@ -20,23 +20,28 @@
 
   <ul class="c-nav">
     <?php
-    $navlist = [
-      ['name' => 'サービス一覧', 'href' => '#', 'image' => 'common/icon_service.svg'],
-      ['name' => '店舗一覧', 'href' => '#', 'image' => 'common/icon_store.svg'],
-      ['name' => 'カーライフ豆知識', 'href' => 'column', 'image' => 'common/icon_car.svg'],
-      ['name' => '会社案内', 'href' => 'company', 'image' => 'common/icon_company.svg'],
-      ['name' => '採用情報', 'href' => 'https://www.emlord.co.jp/recruit/', 'image' => 'common/icon_person.svg'],
-      ['name' => '法人向けサービス', 'href' => '#', 'image' => 'common/icon_handshake.svg'],
-    ];
-    foreach ($navlist as $key => $value) {
-      $is_external = false;
-      // 外部リンクかどうかを判定
-      if (filter_var($value['href'], FILTER_VALIDATE_URL)) {
-        $is_external = true;
-      }
-    ?>
+$navlist = [
+  ['name' => 'サービス一覧', 'href' => '#', 'image' => 'common/icon_service.svg'],
+  ['name' => '店舗一覧', 'href' => '#', 'image' => 'common/icon_store.svg'],
+  ['name' => 'カーライフ豆知識', 'href' => 'column', 'image' => 'common/icon_car.svg'],
+  ['name' => '会社案内', 'href' => 'company', 'image' => 'common/icon_company.svg'],
+  ['name' => '採用情報', 'href' => 'https://www.emlord.co.jp/recruit/', 'image' => 'common/icon_person.svg'],
+  ['name' => '法人向けサービス', 'href' => '#', 'image' => 'common/icon_handshake.svg'],
+];
+
+foreach ($navlist as $key => $value) {
+  $is_external = false;
+  $is__link = ($value['href'] === '#');
+
+  // 外部リンクかどうかを判定
+  if (filter_var($value['href'], FILTER_VALIDATE_URL)) {
+    $is_external = true;
+  }
+?>
+
     <li class="c-nav__li" data-tab="<?php echo $key; ?>">
-      <a class="c-nav__item" href="<?php echo esc_url($is_external ? $value['href'] : home_url($value['href'])); ?>"
+      <a class="c-nav__item" <?php if ($is__link) { echo 'style="pointer-events: none;"'; } ?>
+        href="<?php echo esc_url($is_external ? $value['href'] : home_url($value['href'])); ?>"
         <?php if ($is_external) { ?>target="_blank" rel="noopener noreferrer" <?php } ?>>
         <span class="c-nav__item__image">
           <img src="<?php echo get_theme_img($value['image']); ?>" alt="">
@@ -46,11 +51,9 @@
       <?php if (!$is_external) { ?>
       <div class="c-dropMenu" data-panel="<?php echo $key; ?>">
         <?php if ($key == 1) : ?>
-        <div class="c-dropMenu__wrap">
-          <?php include('store-nav.php'); ?>
-        </div>
+        <?php include('store-nav.php'); ?>
         <?php elseif ($key == 5) : ?>
-        <div class="c-dropMenu__wrap p-business">
+        <div class="c-dropMenu__wrap c-business">
           <?php include('business.php'); ?>
         </div>
         <?php else : ?>
@@ -60,6 +63,7 @@
       <?php } ?>
     </li>
     <?php } ?>
+
   </ul>
 
 
